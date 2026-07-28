@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBA301 - Trắc nghiệm ReactJS (50 Câu)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-container">
+        <div class="brand">
+          <div class="logo-badge">⚛️ SBA301</div>
+          <div>
+            <h1>Ôn Trắc Nghiệm ReactJS</h1>
+            <p class="subtitle">Mã đề: <span>SBA301_SP26_FE_826054</span> • 50 câu</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <div class="stat-pill">
+            <span class="stat-label">Tiến độ:</span>
+            <span id="progress-text" class="stat-value">0 / 50</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-layout">
+      <!-- Sidebar / Navigation Grid -->
+      <aside class="sidebar-panel">
+        <div class="card panel-card">
+          <div class="panel-header">
+            <h3>Điều Hướng Nhanh</h3>
+            <span id="mode-badge" class="badge badge-info">Đúng: 0 | Sai: 0</span>
+          </div>
+
+          <!-- Question Grid Navigator -->
+          <div id="question-grid" class="question-grid"></div>
+
+          <div class="legend">
+            <div class="legend-item"><span class="dot dot-unanswered"></span> Chưa chọn</div>
+            <div class="legend-item"><span class="dot dot-correct"></span> Đúng (Xanh)</div>
+            <div class="legend-item"><span class="dot dot-wrong"></span> Sai (Đỏ)</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- Actions -->
+          <div class="control-buttons">
+            <button id="btn-reset-all" class="btn btn-outline btn-block">
+              <span class="icon">🔄</span> Làm Lại Toàn Bộ
+            </button>
+            <button id="btn-retry-wrong" class="btn btn-danger-outline btn-block" disabled>
+              <span class="icon">🎯</span> Làm Lại Các Câu Sai (0)
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="content-panel">
+        <!-- Filter Mode Notice -->
+        <div id="filter-notice" class="filter-notice hidden">
+          <span>⚠️ Đang làm lại: <strong>Các câu sai (<span id="wrong-count-text">0</span> câu)</strong></span>
+          <button id="btn-show-all-mode" class="btn btn-sm btn-outline-light">Hiện tất cả 50 câu</button>
+        </div>
+
+        <!-- Single Question Container -->
+        <div id="questions-container" class="questions-list"></div>
+
+        <!-- Pagination Action Bar -->
+        <div class="pagination-bar">
+          <button id="btn-prev" class="btn btn-outline btn-nav">
+            <span class="icon">←</span> Câu trước (Trái / A)
+          </button>
+          
+          <span id="question-counter-indicator" class="counter-badge">Câu 1 / 50</span>
+
+          <button id="btn-next" class="btn btn-primary btn-nav">
+            Câu tiếp (Phải) <span class="icon">→</span>
+          </button>
+        </div>
+
+        <!-- Keyboard Hints Bar -->
+        <div class="keyboard-hints">
+          <span class="hint-title">⌨️ Phím tắt thao tác nhanh:</span>
+          <div class="hint-tags">
+            <span class="hint-tag"><kbd>←</kbd> <kbd>→</kbd> Chuyển câu</span>
+            <span class="hint-tag"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> Chọn A, B, C, D</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>
