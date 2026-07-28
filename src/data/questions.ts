@@ -17,7 +17,7 @@ export const QUESTIONS: Question[] = [
       "File system operations"
     ],
     answer: 0,
-    explanation: "ReactJS is an open-source JavaScript library focused on building interactive user interfaces (UIs)."
+    explanation: "ReactJS là thư viện JavaScript mã nguồn mở chuyên dùng để xây dựng giao diện người dùng (UI) tương tác."
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const QUESTIONS: Question[] = [
       "Simplified network configuration"
     ],
     answer: 1,
-    explanation: "The Virtual DOM calculates minimal diffs and updates only changed elements in the real DOM, boosting performance."
+    explanation: "Virtual DOM giúp tính toán sự thay đổi tối thiểu (diffing) và chỉ cập nhật đúng phần tử thay đổi trên DOM thực, giúp tăng hiệu năng UI."
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const QUESTIONS: Question[] = [
       "SQL database integration"
     ],
     answer: 1,
-    explanation: "Virtual DOM is a cornerstone core feature of React for high-performance UI rendering."
+    explanation: "Virtual DOM là tính năng nền tảng cốt lõi của React giúp render giao diện nhanh chóng."
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const QUESTIONS: Question[] = [
       "To render the UI."
     ],
     answer: 1,
-    explanation: "The dependency array tells React to re-trigger the useEffect callback only when specified values change."
+    explanation: "Mảng phụ thuộc (dependency array) xác định điều kiện khi nào callback trong useEffect được chạy lại."
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ export const QUESTIONS: Question[] = [
       "onClick={(e) => handleClick(e)}"
     ],
     answer: 1,
-    explanation: "onClick={handleClick()} executes the function immediately during rendering instead of passing a function handler."
+    explanation: "Cú pháp onClick={handleClick()} sẽ gọi hàm ngay lập tức khi render thay vì truyền hàm xử lý sự kiện (event handler)."
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ export const QUESTIONS: Question[] = [
       "Using parentheses: (variable)"
     ],
     answer: 2,
-    explanation: "Curly braces {} are used in JSX to embed any valid JavaScript expression or variable."
+    explanation: "Cặp dấu ngoặc nhọn {} trong JSX được sử dụng để nhúng biểu thức hoặc biến JavaScript."
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ export const QUESTIONS: Question[] = [
       "Components primarily handle database interactions."
     ],
     answer: 0,
-    explanation: "Responsiveness allows components to dynamically adapt to varying screen widths and viewports."
+    explanation: "Tính năng responsive giúp các component tự động điều chỉnh kích thước và giao diện thích ứng với nhiều màn hình khác nhau."
   },
   {
     id: 8,
@@ -101,7 +101,7 @@ export const QUESTIONS: Question[] = [
       "To create database queries."
     ],
     answer: 1,
-    explanation: "React-Bootstrap provides reusable, styled Bootstrap components designed specifically for React."
+    explanation: "React-Bootstrap cung cấp các component UI giao diện chuẩn Bootstrap được tối ưu cho React."
   },
   {
     id: 9,
@@ -113,7 +113,7 @@ export const QUESTIONS: Question[] = [
       "<Data>"
     ],
     answer: 0,
-    explanation: "<Button> is a standard React-Bootstrap UI component."
+    explanation: "<Button> là component nút bấm chuẩn được cung cấp bởi thư viện React-Bootstrap."
   },
   {
     id: 10,
@@ -125,7 +125,7 @@ export const QUESTIONS: Question[] = [
       "By using props.setState()."
     ],
     answer: 2,
-    explanation: "In functional components, state updates are performed using the updater function provided by useState()."
+    explanation: "Trong Functional Component, ta sử dụng hàm cập nhật (setter function) được trả về từ Hook useState()."
   },
   {
     id: 11,
@@ -137,7 +137,7 @@ export const QUESTIONS: Question[] = [
       "The component updates, but it is not recommended."
     ],
     answer: 2,
-    explanation: "Direct state mutation in functional components does not notify React, so the update is ignored and no re-render happens."
+    explanation: "Gán hoặc chỉnh sửa trực tiếp biến state sẽ không kích hoạt quá trình re-render của React nên thay đổi sẽ bị bỏ qua."
   },
   {
     id: 12,
@@ -149,7 +149,7 @@ export const QUESTIONS: Question[] = [
       "useReducer"
     ],
     answer: 1,
-    explanation: "useEffect is designed specifically for side effects in React functional components."
+    explanation: "useEffect là Hook chuyên dùng để quản lý các side effect như gọi API, tương tác DOM hoặc thiết lập timer."
   },
   {
     id: 13,
@@ -161,7 +161,7 @@ export const QUESTIONS: Question[] = [
       "By editing browser headers"
     ],
     answer: 1,
-    explanation: "Props are passed as attributes when instantiating component tags in JSX."
+    explanation: "Props được truyền từ component cha xuống component con dưới dạng các thuộc tính (attributes) trên thẻ JSX."
   },
   {
     id: 14,
@@ -173,7 +173,7 @@ export const QUESTIONS: Question[] = [
       "module.exports = default MyComponent;"
     ],
     answer: 1,
-    explanation: "In ES6 JavaScript modules, 'export default MyComponent;' exports the main symbol."
+    explanation: "Cú pháp 'export default MyComponent;' được dùng trong ES6 module để xuất ra thành phần mặc định."
   },
   {
     id: 15,
@@ -185,7 +185,7 @@ export const QUESTIONS: Question[] = [
       "useCallback"
     ],
     answer: 2,
-    explanation: "useMemo caches the result of expensive calculations between re-renders."
+    explanation: "useMemo được dùng để ghi nhớ (cache) kết quả của các phép tính toán phức tạp giữa các lần re-render."
   },
   {
     id: 16,
@@ -197,7 +197,7 @@ export const QUESTIONS: Question[] = [
       "Enhanced server security."
     ],
     answer: 2,
-    explanation: "Client-side routing allows navigating between pages without requesting full HTML pages from the server."
+    explanation: "Client-side routing cho phép chuyển trang mượt mà không cần tải lại toàn bộ HTML từ server."
   },
   {
     id: 17,
@@ -209,7 +209,7 @@ export const QUESTIONS: Question[] = [
       "Using context.params."
     ],
     answer: 1,
-    explanation: "In React Router v6, useParams() returns an object of key/value pairs of dynamic URL parameters."
+    explanation: "Trong React Router v6, ta dùng Hook useParams() để lấy các tham số tĩnh/động trên URL path."
   },
   {
     id: 18,
@@ -221,7 +221,7 @@ export const QUESTIONS: Question[] = [
       "Using a question mark: ?param"
     ],
     answer: 2,
-    explanation: "Route parameters are prefixed with a colon in path strings, e.g. path=\"/users/:id\"."
+    explanation: "Tham số động trên đường dẫn route được bắt đầu bằng dấu hai chấm, ví dụ: path=\"/users/:id\"."
   },
   {
     id: 19,
@@ -233,7 +233,7 @@ export const QUESTIONS: Question[] = [
       "Content-Length"
     ],
     answer: 2,
-    explanation: "Content-Type: application/json tells the client that the payload is JSON formatted."
+    explanation: "Header Content-Type: application/json cho client biết dữ liệu trả về thuộc định dạng JSON."
   },
   {
     id: 20,
@@ -245,7 +245,7 @@ export const QUESTIONS: Question[] = [
       "To manage local component state."
     ],
     answer: 1,
-    explanation: "Backend servers store/process data, execute business logic, and handle API endpoints."
+    explanation: "Backend server chịu trách nhiệm xử lý logic nghiệp vụ, quản lý dữ liệu và cung cấp các REST API cho React."
   },
   {
     id: 21,
@@ -257,7 +257,7 @@ export const QUESTIONS: Question[] = [
       "To handle client-side rendering exclusively."
     ],
     answer: 1,
-    explanation: "HTTP (Hypertext Transfer Protocol) transfers data across the web between clients and servers."
+    explanation: "HTTP (Hypertext Transfer Protocol) là giao thức truyền tải dữ liệu trên Internet giữa trình duyệt và máy chủ."
   },
   {
     id: 22,
@@ -269,7 +269,7 @@ export const QUESTIONS: Question[] = [
       "callback"
     ],
     answer: 2,
-    explanation: "'await' pauses the execution of async functions until the Promise settles."
+    explanation: "Từ khóa 'await' tạm dừng việc thực thi hàm async cho đến khi Promise được giải quyết (resolved)."
   },
   {
     id: 23,
@@ -281,7 +281,7 @@ export const QUESTIONS: Question[] = [
       "Promise.new(callback)"
     ],
     answer: 0,
-    explanation: "'new Promise((resolve, reject) => ...)' constructs a new JavaScript Promise object."
+    explanation: "Cú pháp 'new Promise(callback)' được dùng để khởi tạo một đối tượng Promise mới trong JavaScript."
   },
   {
     id: 24,
@@ -293,7 +293,7 @@ export const QUESTIONS: Question[] = [
       "By using the useNotFound() hook."
     ],
     answer: 1,
-    explanation: "A wildcard route <Route path=\"*\" element={<NotFound />} /> matches any URL not explicitly defined."
+    explanation: "Sử dụng đường dẫn đại diện path=\"*\" ở cuối để khớp với mọi URL không nằm trong danh sách khai báo."
   },
   {
     id: 25,
@@ -305,7 +305,7 @@ export const QUESTIONS: Question[] = [
       "@RequestHeader"
     ],
     answer: 2,
-    explanation: "@RequestBody maps the incoming HTTP request payload body to a Java object parameter."
+    explanation: "Annotation @RequestBody dùng để tự động ánh xạ nội dung request body (JSON) thành tham số đối tượng Java."
   },
   {
     id: 26,
@@ -317,7 +317,7 @@ export const QUESTIONS: Question[] = [
       "When creating new resource"
     ],
     answer: 1,
-    explanation: "PUT is designed to replace an entire resource payload, whereas PATCH updates selected fields."
+    explanation: "Phương thức PUT được dùng để ghi đè/thay thế toàn bộ tài nguyên, trong khi PATCH dùng để cập nhật một phần."
   },
   {
     id: 27,
@@ -329,7 +329,7 @@ export const QUESTIONS: Question[] = [
       "@RequestHeader"
     ],
     answer: 2,
-    explanation: "@PathVariable extracts placeholders from the URI path template (e.g. /api/users/{id})."
+    explanation: "Annotation @PathVariable dùng để lấy giá trị của biến nằm trực tiếp trên đường dẫn URL."
   },
   {
     id: 28,
@@ -341,7 +341,7 @@ export const QUESTIONS: Question[] = [
       "The underlying database schema"
     ],
     answer: 3,
-    explanation: "REST API documentation describes endpoints, methods, and payloads, not internal database schemas."
+    explanation: "Tài liệu REST API mô tả phương thức, endpoint và payload, không bao gồm cấu trúc bảng CSDL nội bộ."
   },
   {
     id: 29,
@@ -353,7 +353,7 @@ export const QUESTIONS: Question[] = [
       "By creating separate methods for each possible response code."
     ],
     answer: 0,
-    explanation: "@ApiResponses and @ApiResponse document HTTP response codes and descriptions in Swagger/OpenAPI."
+    explanation: "Sử dụng các annotation @ApiResponses và @ApiResponse để tài liệu hóa các mã phản hồi HTTP trong Swagger/OpenAPI."
   },
   {
     id: 30,
@@ -365,7 +365,7 @@ export const QUESTIONS: Question[] = [
       "By using different @ApiResponse annotations."
     ],
     answer: 1,
-    explanation: "The tags attribute in @Tag annotations groups related API endpoints together in Swagger 3."
+    explanation: "Thuộc tính tags trong annotation @Tag dùng để nhóm các API liên quan trong tài liệu Swagger 3."
   },
   {
     id: 31,
@@ -377,7 +377,7 @@ export const QUESTIONS: Question[] = [
       "spring-boot-starter-security"
     ],
     answer: 2,
-    explanation: "spring-boot-starter-test contains testing libraries like JUnit, Hamcrest, Mockito, and Spring Test."
+    explanation: "Module spring-boot-starter-test tích hợp sẵn các công cụ testing như JUnit, Mockito, Hamcrest và Spring Test."
   },
   {
     id: 32,
@@ -389,7 +389,7 @@ export const QUESTIONS: Question[] = [
       "When you only need the data and a \"previous\" indicator."
     ],
     answer: 1,
-    explanation: "Slice avoids executing an extra count query, making it faster than Page when total element count is unnecessary."
+    explanation: "Interface Slice giúp tăng hiệu năng vì không phải thực thi câu lệnh đếm tổng số bản ghi (COUNT query) như Page."
   },
   {
     id: 33,
@@ -401,7 +401,7 @@ export const QUESTIONS: Question[] = [
       "Performance testing."
     ],
     answer: 2,
-    explanation: "Unit testing tests individual methods or classes in isolation."
+    explanation: "Kiểm thử đơn vị (Unit testing) kiểm tra tính đúng đắn của từng hàm/lớp mã nguồn độc lập."
   },
   {
     id: 34,
@@ -413,7 +413,7 @@ export const QUESTIONS: Question[] = [
       "To reduce API functionality."
     ],
     answer: 1,
-    explanation: "JPA simplifies mapping Java objects to database tables for persistent data operations."
+    explanation: "JPA đơn giản hóa công việc truy xuất và lưu trữ dữ liệu vào cơ sở dữ liệu quan hệ."
   },
   {
     id: 35,
@@ -425,7 +425,7 @@ export const QUESTIONS: Question[] = [
       "By increasing the number of database connections."
     ],
     answer: 1,
-    explanation: "JPA provides an Object-Relational Mapping (ORM) framework to map OOP classes to relational database tables."
+    explanation: "JPA đóng vai trò là tầng ánh xạ đối tượng - quan hệ (ORM) chuyển đổi giữa các lớp Java và bảng CSDL."
   },
   {
     id: 36,
@@ -437,7 +437,7 @@ export const QUESTIONS: Question[] = [
       "To define REST API endpoints."
     ],
     answer: 1,
-    explanation: "ReactJS powers the client-side single page application (SPA) user interface and user interactions."
+    explanation: "ReactJS đóng vai trò xây dựng giao diện người dùng và xử lý tương tác phía client trong mô hình SPA."
   },
   {
     id: 37,
@@ -449,7 +449,7 @@ export const QUESTIONS: Question[] = [
       "axios.delete()"
     ],
     answer: 2,
-    explanation: "axios.put() (for full updates) or axios.patch() (for partial updates) update existing server resources."
+    explanation: "Sử dụng axios.put() (thay thế toàn bộ) hoặc axios.patch() (cập nhật một phần) để sửa đổi tài nguyên."
   },
   {
     id: 38,
@@ -461,7 +461,7 @@ export const QUESTIONS: Question[] = [
       "To manage application configuration."
     ],
     answer: 1,
-    explanation: "Spring Security provides comprehensive authentication (who you are) and authorization (what you can do) controls."
+    explanation: "Spring Boot Security cung cấp các tính năng bảo mật gồm xác thực (authentication) và phân quyền (authorization)."
   },
   {
     id: 39,
@@ -473,7 +473,7 @@ export const QUESTIONS: Question[] = [
       "To store the expiration time."
     ],
     answer: 1,
-    explanation: "The JWT header contains metadata specifying the token type (JWT) and signing algorithm (e.g. HS256)."
+    explanation: "Header của JWT chứa thông tin cấu hình như loại token (JWT) và thuật toán ký mã hóa (vd: HS256)."
   },
   {
     id: 40,
@@ -485,7 +485,7 @@ export const QUESTIONS: Question[] = [
       "Create a database schema."
     ],
     answer: 0,
-    explanation: "After setting up dependencies, building the JWT utility token provider class is the core second step."
+    explanation: "Xây dựng lớp tiện ích JWT (JWT Utility Class) để tạo và xác thực token là bước thứ 2 quan trọng."
   },
   {
     id: 41,
@@ -497,7 +497,7 @@ export const QUESTIONS: Question[] = [
       "It manages database indexes"
     ],
     answer: 0,
-    explanation: "Optimistic locking checks for version conflicts before writing changes, preventing concurrent overwrite conflicts."
+    explanation: "Optimistic locking trong JPA kiểm tra phiên bản dữ liệu để ngăn chặn các xung đột khi có nhiều người ghi dữ liệu đồng thời."
   },
   {
     id: 42,
@@ -509,7 +509,7 @@ export const QUESTIONS: Question[] = [
       "Transaction management."
     ],
     answer: 1,
-    explanation: "hbm2ddl automatically generates or updates DDL database table schemas from entity mappings."
+    explanation: "Tính năng hbm2ddl của Hibernate tự động tạo hoặc cập nhật cấu trúc bảng CSDL dựa trên các Entity."
   },
   {
     id: 43,
@@ -521,7 +521,7 @@ export const QUESTIONS: Question[] = [
       "Configuration."
     ],
     answer: 1,
-    explanation: "org.hibernate.Transaction manages database transaction boundaries (begin, commit, rollback)."
+    explanation: "Interface Transaction trong Hibernate được dùng để điều khiển các giao dịch CSDL (begin, commit, rollback)."
   },
   {
     id: 44,
@@ -533,7 +533,7 @@ export const QUESTIONS: Question[] = [
       "The location of the Hibernate configuration file."
     ],
     answer: 2,
-    explanation: "<mapping resource=\"...\"> specifies the XML file mapping a Java persistent class to a relational table."
+    explanation: "Thẻ <mapping resource=\"...\"> khai báo file cấu hình ánh xạ giữa lớp Java và bảng tương ứng trong CSDL."
   },
   {
     id: 45,
@@ -545,7 +545,7 @@ export const QUESTIONS: Question[] = [
       "deleteMany()"
     ],
     answer: 1,
-    explanation: "db.collection.find() selects documents from a MongoDB collection."
+    explanation: "Lệnh db.collection.find() trong MongoDB được sử dụng để tìm kiếm và lấy ra các document trong collection."
   },
   {
     id: 46,
@@ -557,7 +557,7 @@ export const QUESTIONS: Question[] = [
       "SimpleMongoRepository"
     ],
     answer: 2,
-    explanation: "MongoTemplate is the primary implementation of MongoOperations for low-level MongoDB document operations."
+    explanation: "Lớp MongoTemplate cung cấp các phương thức thao tác mức thấp linh hoạt với dữ liệu MongoDB."
   },
   {
     id: 47,
@@ -569,7 +569,7 @@ export const QUESTIONS: Question[] = [
       "List<Book> queryAfterPublishedDateSortedByTitle(LocalDate date);"
     ],
     answer: 0,
-    explanation: "Spring Data JPA parses findByPublishedDateAfterOrderByTitleAsc derived query method names."
+    explanation: "Tên hàm findByPublishedDateAfterOrderByTitleAsc được Spring Data JPA tự động phân tích thành câu truy vấn lọc ngày và sắp xếp tăng dần theo tiêu đề."
   },
   {
     id: 48,
@@ -581,7 +581,7 @@ export const QUESTIONS: Question[] = [
       "Built-in transaction management."
     ],
     answer: 1,
-    explanation: "MongoTemplate offers fine-grained control and flexibility for custom criteria and complex aggregation operations."
+    explanation: "MongoTemplate mang lại sự linh hoạt cao khi cần viết các câu truy vấn phức tạp hoặc gom nhóm dữ liệu (aggregation)."
   },
   {
     id: 49,
@@ -593,7 +593,7 @@ export const QUESTIONS: Question[] = [
       "A tool for managing relational databases."
     ],
     answer: 1,
-    explanation: "MongoDB Atlas is the fully-managed multi-cloud database service created by MongoDB."
+    explanation: "MongoDB Atlas là dịch vụ cơ sở dữ liệu đám mây (Cloud Database Service) được quản lý chính thức bởi MongoDB."
   },
   {
     id: 50,
@@ -605,6 +605,6 @@ export const QUESTIONS: Question[] = [
       "To define the data model."
     ],
     answer: 1,
-    explanation: "User credentials in the connection URI authenticate the client application with the MongoDB Atlas cluster."
+    explanation: "Username và password trong chuỗi kết nối dùng để xác thực quyền truy cập của ứng dụng với cluster MongoDB Atlas trên đám mây."
   }
 ];
