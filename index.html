@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SBA301 - Trắc nghiệm ReactJS (50 Câu)</title>
+  <title>FPTU Quiz Hub - Hệ Thống Ôn Thi Trắc Nghiệm</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="alternate icon" type="image/png" href="./favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,92 +13,170 @@
 </head>
 <body>
   <div id="app">
-    <!-- Header -->
-    <header class="app-header">
-      <div class="header-container">
-        <div class="brand">
-          <div class="logo-badge">⚛️ SBA301</div>
-          <div>
-            <h1>Ôn Trắc Nghiệm ReactJS</h1>
-            <p class="subtitle">Mã đề: <span>SBA301_SP26_FE_826054</span> • 50 câu</p>
+    <!-- ==================== HOME VIEW ==================== -->
+    <div id="home-view" class="view-section">
+      <header class="app-header home-header">
+        <div class="header-container">
+          <div class="brand">
+            <div class="logo-badge">⚡ FU QUIZ HUB</div>
+            <div>
+              <h1>Hệ Thống Ôn Thi Trắc Nghiệm</h1>
+              <p class="subtitle">Ngân hàng câu hỏi trắc nghiệm chuẩn & giải thích chi tiết</p>
+            </div>
+          </div>
+          <div class="header-actions">
+            <div class="stat-pill">
+              <span class="stat-label">Tổng môn:</span>
+              <span class="stat-value" id="home-total-subjects">2 môn</span>
+            </div>
           </div>
         </div>
+      </header>
 
-        <div class="header-actions">
-          <div class="stat-pill">
-            <span class="stat-label">Tiến độ:</span>
-            <span id="progress-text" class="stat-value">0 / 50</span>
+      <main class="home-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <span class="hero-tag">🎯 ÔN THI HIỆU QUẢ</span>
+            <h2 class="hero-title">Chọn môn học để bắt đầu ôn luyện</h2>
+            <p class="hero-desc">Luyện tập trắc nghiệm từng câu, kiểm tra đáp án tức thì, giải thích chi tiết và tính năng làm lại câu sai thông minh.</p>
           </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Container -->
-    <div class="main-layout">
-      <!-- Sidebar / Navigation Grid -->
-      <aside class="sidebar-panel">
-        <div class="card panel-card">
-          <div class="panel-header">
-            <h3>Điều Hướng Nhanh</h3>
-            <span id="mode-badge" class="badge badge-info">Đúng: 0 | Sai: 0</span>
-          </div>
-
-          <!-- Question Grid Navigator -->
-          <div id="question-grid" class="question-grid"></div>
-
-          <div class="legend">
-            <div class="legend-item"><span class="dot dot-unanswered"></span> Chưa chọn</div>
-            <div class="legend-item"><span class="dot dot-correct"></span> Đúng (Xanh)</div>
-            <div class="legend-item"><span class="dot dot-wrong"></span> Sai (Đỏ)</div>
-          </div>
-
-          <div class="divider"></div>
-
-          <!-- Actions -->
-          <div class="control-buttons">
-            <button id="btn-reset-all" class="btn btn-outline btn-block">
-              <span class="icon">🔄</span> Làm Lại Toàn Bộ
-            </button>
-            <button id="btn-retry-wrong" class="btn btn-danger-outline btn-block" disabled>
-              <span class="icon">🎯</span> Làm Lại Các Câu Sai (0)
-            </button>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Main Content Area -->
-      <main class="content-panel">
-        <!-- Filter Mode Notice -->
-        <div id="filter-notice" class="filter-notice hidden">
-          <span>⚠️ Đang làm lại: <strong>Các câu sai (<span id="wrong-count-text">0</span> câu)</strong></span>
-          <button id="btn-show-all-mode" class="btn btn-sm btn-outline-light">Hiện tất cả 50 câu</button>
-        </div>
-
-        <!-- Single Question Container -->
-        <div id="questions-container" class="questions-list"></div>
-
-        <!-- Pagination Action Bar -->
-        <div class="pagination-bar">
-          <button id="btn-prev" class="btn btn-outline btn-nav">
-            <span class="icon">←</span> Câu trước (Trái / A)
-          </button>
           
-          <span id="question-counter-indicator" class="counter-badge">Câu 1 / 50</span>
+          <!-- Global Overview Stats -->
+          <div class="overview-stats-grid">
+            <div class="overview-stat-card">
+              <div class="stat-icon">📚</div>
+              <div class="stat-info">
+                <span class="stat-num" id="global-total-questions">350</span>
+                <span class="stat-name">Tổng số câu hỏi</span>
+              </div>
+            </div>
+            <div class="overview-stat-card">
+              <div class="stat-icon">✅</div>
+              <div class="stat-info">
+                <span class="stat-num" id="global-completed-questions">0</span>
+                <span class="stat-name">Câu đã hoàn thành</span>
+              </div>
+            </div>
+            <div class="overview-stat-card">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-info">
+                <span class="stat-num" id="global-correct-rate">0%</span>
+                <span class="stat-name">Tỷ lệ chính xác</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <button id="btn-next" class="btn btn-primary btn-nav">
-            Câu tiếp (Phải) <span class="icon">→</span>
-          </button>
-        </div>
+        <!-- Subject List Grid -->
+        <section class="subjects-section">
+          <div class="section-title-wrap">
+            <h3 class="section-title">Danh Sách Môn Học</h3>
+            <span class="section-subtitle">Chọn môn để làm bài ngay</span>
+          </div>
 
-        <!-- Keyboard Hints Bar -->
-        <div class="keyboard-hints">
-          <span class="hint-title">⌨️ Phím tắt thao tác nhanh:</span>
-          <div class="hint-tags">
-            <span class="hint-tag"><kbd>←</kbd> <kbd>→</kbd> Chuyển câu</span>
-            <span class="hint-tag"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> Chọn A, B, C, D</span>
+          <div id="subjects-grid" class="subjects-grid">
+            <!-- Dynamically populated via main.ts -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ==================== QUIZ VIEW ==================== -->
+    <div id="quiz-view" class="view-section hidden">
+      <!-- Quiz Header -->
+      <header class="app-header quiz-header">
+        <div class="header-container">
+          <div class="header-left">
+            <button id="btn-back-home" class="btn btn-back" title="Quay lại danh sách môn học">
+              <span class="icon">←</span> Trang Chủ
+            </button>
+            <div class="brand">
+              <div id="quiz-subject-badge" class="logo-badge">⚛️ SBA301</div>
+              <div>
+                <h1 id="quiz-subject-title">Ôn Trắc Nghiệm ReactJS</h1>
+                <p id="quiz-subject-subtitle" class="subtitle">Mã đề: <span>SBA301_SP26_FE</span> • 250 câu</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <div class="stat-pill">
+              <span class="stat-label">Tiến độ:</span>
+              <span id="progress-text" class="stat-value">0 / 50</span>
+            </div>
           </div>
         </div>
-      </main>
+      </header>
+
+      <!-- Main Layout -->
+      <div class="main-layout">
+        <!-- Sidebar / Navigation Grid -->
+        <aside class="sidebar-panel">
+          <div class="card panel-card">
+            <div class="panel-header">
+              <h3>Điều Hướng Nhanh</h3>
+              <span id="mode-badge" class="badge badge-info">Đúng: 0 | Sai: 0</span>
+            </div>
+
+            <!-- Question Grid Navigator -->
+            <div id="question-grid" class="question-grid"></div>
+
+            <div class="legend">
+              <div class="legend-item"><span class="dot dot-unanswered"></span> Chưa chọn</div>
+              <div class="legend-item"><span class="dot dot-correct"></span> Đúng (Xanh)</div>
+              <div class="legend-item"><span class="dot dot-wrong"></span> Sai (Đỏ)</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Actions -->
+            <div class="control-buttons">
+              <button id="btn-reset-all" class="btn btn-outline btn-block">
+                <span class="icon">🔄</span> Làm Lại Toàn Bộ
+              </button>
+              <button id="btn-retry-wrong" class="btn btn-danger-outline btn-block" disabled>
+                <span class="icon">🎯</span> Làm Lại Các Câu Sai (0)
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-panel">
+          <!-- Filter Mode Notice -->
+          <div id="filter-notice" class="filter-notice hidden">
+            <span>⚠️ Đang làm lại: <strong>Các câu sai (<span id="wrong-count-text">0</span> câu)</strong></span>
+            <button id="btn-show-all-mode" class="btn btn-sm btn-outline-light">Hiện tất cả câu</button>
+          </div>
+
+          <!-- Single Question Container -->
+          <div id="questions-container" class="questions-list"></div>
+
+          <!-- Pagination Action Bar -->
+          <div class="pagination-bar">
+            <button id="btn-prev" class="btn btn-outline btn-nav">
+              <span class="icon">←</span> Câu trước (Trái)
+            </button>
+            
+            <span id="question-counter-indicator" class="counter-badge">Câu 1 / 50</span>
+
+            <button id="btn-next" class="btn btn-primary btn-nav">
+              Câu tiếp (Phải) <span class="icon">→</span>
+            </button>
+          </div>
+
+          <!-- Keyboard Hints Bar -->
+          <div class="keyboard-hints">
+            <span class="hint-title">⌨️ Phím tắt thao tác nhanh:</span>
+            <div class="hint-tags">
+              <span class="hint-tag"><kbd>←</kbd> <kbd>→</kbd> Chuyển câu</span>
+              <span class="hint-tag"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> hoặc <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Chọn đáp án</span>
+              <span class="hint-tag"><kbd>Esc</kbd> Về trang chủ</span>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   </div>
 
