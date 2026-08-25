@@ -158,7 +158,25 @@ class AppRouter {
     document.getElementById('btn-reset-pe-db')?.addEventListener('click', () => {
       peSimulator.resetDatabase();
       this.renderPESchemaInspector();
-      alert("Đã khôi phục dữ liệu mẫu ban đầu cho CSDL!");
+      
+      const outContainer = document.getElementById('pe-output-container');
+      if (outContainer) {
+        outContainer.innerHTML = '<p class="pe-empty-text">Đã reset CSDL về trạng thái gốc! Nhấn "▶️ Chạy Lệnh" để kiểm tra.</p>';
+      }
+
+      // Show toast notification
+      const existingToast = document.querySelector('.pe-toast-notification');
+      if (existingToast) existingToast.remove();
+
+      const toast = document.createElement('div');
+      toast.className = 'pe-toast-notification';
+      toast.innerHTML = '🔄 <strong>Đã Reset CSDL!</strong> Toàn bộ bảng và dữ liệu mẫu đã được khôi phục về trạng thái ban đầu.';
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => toast.remove(), 300);
+      }, 2500);
     });
   }
 
@@ -1079,6 +1097,12 @@ class AppRouter {
     this.renderPESchemaInspector();
   }
 
+  private getExamIndex(): number {
+    if (!this.activePEExam) return 1;
+    const match = this.activePEExam.id.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 1;
+  }
+
   private renderPEQuestionTabs() {
     const tabsContainer = document.getElementById('pe-question-tabs');
     if (!tabsContainer || !this.activePEExam) return;
@@ -1092,6 +1116,8 @@ class AppRouter {
         this.currentPEQIndex = idx;
         this.renderPEQuestionTabs();
         this.renderPECurrentQuestion();
+        this.renderPEERDDiagram();
+        this.renderPESchemaInspector();
       });
       tabsContainer.appendChild(tab);
     });
@@ -1195,7 +1221,6 @@ class AppRouter {
     const isShowing = this.isHintShowingMap[q.id] || false;
 
     if (!isShowing) {
-      // Toggling ON: Save current user draft code
       this.peUserDraftMap[q.id] = sqlInput.value;
       this.isHintShowingMap[q.id] = true;
 
@@ -1203,7 +1228,6 @@ class AppRouter {
       btnHint.innerHTML = '🙈 Ẩn Gợi Ý';
       btnHint.classList.add('active-hint');
     } else {
-      // Toggling OFF: Restore user draft code
       this.isHintShowingMap[q.id] = false;
       const restoredCode = this.peUserDraftMap[q.id] !== undefined 
         ? this.peUserDraftMap[q.id] 
@@ -1221,42 +1245,90 @@ class AppRouter {
     const erdContainer = document.getElementById('pe-erd-container');
     if (!erdContainer || !this.activePEExam) return;
 
-    if (this.activePEExam.erdDiagramHtml) {
-      erdContainer.innerHTML = this.activePEExam.erdDiagramHtml;
+    const examIdx = this.getExamIndex();
+    const isQ1 = this.currentPEQIndex === 0;
 
-      const btnZoom = erdContainer.querySelector('#btn-zoom-erd');
-      const modal = document.getElementById('erd-modal');
-      const modalBody = document.getElementById('erd-modal-body');
-      const btnCloseModal = document.getElementById('btn-close-erd-modal');
-
-      btnZoom?.addEventListener('click', () => {
-        if (modal && modalBody && this.activePEExam?.erdDiagramHtml) {
-          modalBody.innerHTML = this.activePEExam.erdDiagramHtml;
-          // Hide zoom button inside modal
-          const modalZoomBtn = modalBody.querySelector('#btn-zoom-erd');
-          if (modalZoomBtn) (modalZoomBtn as HTMLElement).style.display = 'none';
-
-          modal.classList.remove('hidden');
-        }
-      });
-
-      btnCloseModal?.addEventListener('click', () => {
-        modal?.classList.add('hidden');
-      });
-
-      modal?.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          modal.classList.add('hidden');
-        }
-      });
-    } else {
+    if (isQ1) {
+      // Question 1 Chen ERD Diagram
+      const q1ImgPath = `/erd/exam${examIdx}_q1_diagram.png`;
       erdContainer.innerHTML = `
-        <div class="pe-empty-text" style="padding: 1.5rem; text-anchor: middle; text-align: center;">
-          <p>🖼️ Đang cập nhật sơ đồ ERD cho bộ đề này...</p>
-          <small>Vui lòng chuyển sang tab <strong>📋 Danh Sách Bảng</strong> để xem cấu trúc chi tiết.</small>
+        <div class="erd-diagram-wrapper">
+          <div class="erd-diagram-header">
+            <div>
+              <span class="erd-title-badge">📋 SƠ ĐỒ CHEN ERD (CÂU 1 - THIẾT KẾ BẢNG ĐỘC LẬP)</span>
+              <p class="erd-subtitle-text">Tạo bảng & khóa ngoại theo đúng lược đồ thực thể quan hệ Chen Notation của Câu 1.</p>
+            </div>
+            <button id="btn-zoom-erd" class="btn btn-outline-light btn-zoom">
+              🔍 Phóng To Sơ Đồ
+            </button>
+          </div>
+          <div class="erd-image-container" style="text-align: center; background: #fff; border-radius: 8px; padding: 1rem; margin-top: 0.75rem;">
+            <img id="erd-active-img" src="${q1ImgPath}" alt="Question 1 Chen ERD Diagram" style="max-width: 100%; max-height: 480px; object-fit: contain;" />
+          </div>
         </div>
       `;
+    } else {
+      // Questions 2-10 Main Database ERD Diagram
+      if (this.activePEExam.erdDiagramHtml) {
+        erdContainer.innerHTML = this.activePEExam.erdDiagramHtml;
+      } else {
+        const mainImgPath = `/erd/exam${examIdx}_main_diagram.png`;
+        erdContainer.innerHTML = `
+          <div class="erd-diagram-wrapper">
+            <div class="erd-diagram-header">
+              <div>
+                <span class="erd-title-badge">🗄️ SƠ ĐỒ CSDL CHÍNH (CÂU 2 ĐẾN CÂU 10)</span>
+                <p class="erd-subtitle-text">Lược đồ quan hệ các bảng của CSDL thực tế.</p>
+              </div>
+              <button id="btn-zoom-erd" class="btn btn-outline-light btn-zoom">
+                🔍 Phóng To Sơ Đồ
+              </button>
+            </div>
+            <div class="erd-image-container" style="text-align: center; background: #fff; border-radius: 8px; padding: 1rem; margin-top: 0.75rem;">
+              <img id="erd-active-img" src="${mainImgPath}" alt="Main Database ERD Diagram" style="max-width: 100%; max-height: 480px; object-fit: contain;" />
+            </div>
+          </div>
+        `;
+      }
     }
+
+    const btnZoom = erdContainer.querySelector('#btn-zoom-erd');
+    const modal = document.getElementById('erd-modal');
+    const modalBody = document.getElementById('erd-modal-body');
+    const btnCloseModal = document.getElementById('btn-close-erd-modal');
+
+    btnZoom?.addEventListener('click', () => {
+      if (modal && modalBody) {
+        if (isQ1) {
+          modalBody.innerHTML = `
+            <div style="text-align: center; background: #fff; padding: 1.5rem; border-radius: 8px;">
+              <img src="/erd/exam${examIdx}_q1_diagram.png" alt="Question 1 Chen ERD" style="max-width: 100%; height: auto;" />
+            </div>
+          `;
+        } else if (this.activePEExam?.erdDiagramHtml) {
+          modalBody.innerHTML = this.activePEExam.erdDiagramHtml;
+          const modalZoomBtn = modalBody.querySelector('#btn-zoom-erd');
+          if (modalZoomBtn) (modalZoomBtn as HTMLElement).style.display = 'none';
+        } else {
+          modalBody.innerHTML = `
+            <div style="text-align: center; background: #fff; padding: 1.5rem; border-radius: 8px;">
+              <img src="/erd/exam${examIdx}_main_diagram.png" alt="Main Database ERD" style="max-width: 100%; height: auto;" />
+            </div>
+          `;
+        }
+        modal.classList.remove('hidden');
+      }
+    });
+
+    btnCloseModal?.addEventListener('click', () => {
+      modal?.classList.add('hidden');
+    });
+
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
   }
 
   private renderPESchemaInspector() {
@@ -1264,6 +1336,19 @@ class AppRouter {
     if (!treeContainer || !this.activePEExam) return;
 
     const pe = this.activePEExam;
+    const isQ1 = this.currentPEQIndex === 0;
+
+    if (isQ1) {
+      // Question 1 Schema Inspector
+      treeContainer.innerHTML = `
+        <div class="schema-q1-notice" style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h4 style="color: #38bdf8; font-size: 0.95rem; margin-bottom: 0.35rem;">📋 Bảng CSDL Cần Tạo Cho Câu 1</h4>
+          <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Câu 1 yêu cầu bạn viết các câu lệnh <code>CREATE TABLE</code> để tạo các thực thể và mối quan hệ (Primary Key, Foreign Key) theo sơ đồ Chen ERD bên tab <strong>Sơ Đồ ERD</strong>.</p>
+        </div>
+      `;
+      return;
+    }
+
     if (pe.schemaDetails && pe.schemaDetails.length > 0) {
       treeContainer.innerHTML = pe.schemaDetails.map(tbl => `
         <div class="schema-table-card">
