@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FPTU Quiz Hub - Hệ Thống Ôn Thi Trắc Nghiệm</title>
+  <title>FPTU Quiz & PE Simulator - Hệ Thống Ôn Thi & Giả Lập SQL</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="alternate icon" type="image/png" href="./favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,16 +18,16 @@
       <header class="app-header home-header">
         <div class="header-container">
           <div class="brand">
-            <div class="logo-badge">⚡ FU QUIZ HUB</div>
+            <div class="logo-badge">⚡ FU QUIZ & PE HUB</div>
             <div>
-              <h1>Hệ Thống Ôn Thi Trắc Nghiệm</h1>
-              <p class="subtitle">Ngân hàng câu hỏi trắc nghiệm chuẩn & giải thích chi tiết</p>
+              <h1>Hệ Thống Ôn Thi & Giả Lập Thi SQL</h1>
+              <p class="subtitle">Ôn luyện trắc nghiệm & Giả lập môi trường thi thực hành PE SQL 100% Client-side</p>
             </div>
           </div>
           <div class="header-actions">
             <div class="stat-pill">
-              <span class="stat-label">Tổng môn:</span>
-              <span class="stat-value" id="home-total-subjects">2 môn</span>
+              <span class="stat-label">Tổng bài luyện:</span>
+              <span class="stat-value" id="home-total-subjects">13 môn</span>
             </div>
           </div>
         </div>
@@ -37,9 +37,9 @@
         <!-- Hero Section -->
         <section class="hero-section">
           <div class="hero-content">
-            <span class="hero-tag">🎯 ÔN THI HIỆU QUẢ</span>
-            <h2 class="hero-title">Chọn môn học để bắt đầu ôn luyện</h2>
-            <p class="hero-desc">Luyện tập trắc nghiệm từng câu, kiểm tra đáp án tức thì, giải thích chi tiết và tính năng làm lại câu sai thông minh.</p>
+            <span class="hero-tag">🎯 ÔN THI TOÀN DIỆN</span>
+            <h2 class="hero-title">Chọn Chế Độ Luyện Thi FPTU</h2>
+            <p class="hero-desc">Hệ thống hỗ trợ cả 2 hình thức thi: Luyện trắc nghiệm lý thuyết & Giả lập môi trường thi Thực Hành SQL (PE Simulator) với chấm điểm tự động.</p>
           </div>
           
           <!-- Global Overview Stats -->
@@ -47,15 +47,15 @@
             <div class="overview-stat-card">
               <div class="stat-icon">📚</div>
               <div class="stat-info">
-                <span class="stat-num" id="global-total-questions">350</span>
-                <span class="stat-name">Tổng số câu hỏi</span>
+                <span class="stat-num" id="global-total-questions">600+</span>
+                <span class="stat-name">Tổng số câu trắc nghiệm</span>
               </div>
             </div>
             <div class="overview-stat-card">
-              <div class="stat-icon">✅</div>
+              <div class="stat-icon">💻</div>
               <div class="stat-info">
-                <span class="stat-num" id="global-completed-questions">0</span>
-                <span class="stat-name">Câu đã hoàn thành</span>
+                <span class="stat-num">7 Đề PE</span>
+                <span class="stat-name">Thực hành SQL Simulator</span>
               </div>
             </div>
             <div class="overview-stat-card">
@@ -70,9 +70,47 @@
 
         <!-- Subject List Grid -->
         <section class="subjects-section">
+          <!-- Breadcrumb & Back Navigation Bar -->
+          <div id="home-breadcrumb-bar" class="home-breadcrumb-bar hidden">
+            <button id="btn-home-back" class="btn-home-back">
+              ⬅️ Quay lại danh sách môn
+            </button>
+            <div id="home-breadcrumb" class="home-breadcrumb">
+              <!-- Breadcrumbs populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Top-Level Subject Navigation Tabs -->
+          <div class="home-nav-container">
+            <div id="home-subject-nav" class="home-subject-nav">
+              <button class="nav-folder-btn active" data-folder="all">
+                📂 Tất Cả Môn Học
+              </button>
+              <button class="nav-folder-btn" data-folder="sba301">
+                ⚛️ SBA301 (ReactJS)
+              </button>
+              <button class="nav-folder-btn" data-folder="dbi202">
+                🗄️ DBI202 (Cơ Sở Dữ Liệu)
+              </button>
+            </div>
+
+            <!-- DBI202 Sub-Folder Filter Pills (FE vs PE) -->
+            <div id="dbi-subfolder-nav" class="dbi-subfolder-nav hidden">
+              <button class="subfolder-tab active" data-subfolder="all">
+                📁 Tất Cả Đề DBI202
+              </button>
+              <button class="subfolder-tab" data-subfolder="fe">
+                📝 Thư Mục Đề FE (Trắc Nghiệm)
+              </button>
+              <button class="subfolder-tab" data-subfolder="pe">
+                ⚡ Thư Mục Đề PE (Thực Hành SQL)
+              </button>
+            </div>
+          </div>
+
           <div class="section-title-wrap">
-            <h3 class="section-title">Danh Sách Môn Học</h3>
-            <span class="section-subtitle">Chọn môn để làm bài ngay</span>
+            <h3 id="home-section-title" class="section-title">Danh Sách Môn Học & Đề Thi PE</h3>
+            <span id="home-section-subtitle" class="section-subtitle">Chọn đề trắc nghiệm hoặc đề thi thực hành PE SQL</span>
           </div>
 
           <div id="subjects-grid" class="subjects-grid">
@@ -176,6 +214,147 @@
             </div>
           </div>
         </main>
+      </div>
+    </div>
+
+    <!-- ==================== PE SQL SIMULATOR VIEW ==================== -->
+    <div id="pe-view" class="view-section hidden">
+      <header class="app-header pe-header">
+        <div class="header-container">
+          <div class="header-left">
+            <button id="btn-pe-back-home" class="btn btn-back" title="Quay lại trang chủ">
+              <span class="icon">←</span> Trang Chủ
+            </button>
+            <div class="brand">
+              <div id="pe-exam-badge" class="logo-badge">💻 PE SIMULATOR</div>
+              <div>
+                <h1 id="pe-exam-title">Giả Lập Thi Thực Hành PE SQL</h1>
+                <p id="pe-exam-subtitle" class="subtitle">Hệ thống biên dịch & chấm điểm T-SQL tự động</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <button id="btn-reset-pe-db" class="btn btn-outline" title="Khôi phục dữ liệu mẫu ban đầu">
+              🔄 Reset DB Mẫu
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- PE Workbench Split Layout -->
+      <div class="pe-workbench-layout">
+        <!-- Left Pane: Problem Statement & ERD Schema Inspector -->
+        <aside class="pe-left-pane">
+          <div class="card pe-card">
+            <!-- Question Navigation Bar -->
+            <div class="pe-qnav-bar">
+              <span class="pe-panel-label">Danh Sách Câu Hỏi:</span>
+              <div id="pe-question-tabs" class="pe-question-tabs">
+                <!-- Dynamically populated Q1..Q10 -->
+              </div>
+            </div>
+
+            <!-- Problem Statement Container -->
+            <div class="pe-problem-container">
+              <div class="pe-problem-header">
+                <span id="pe-q-id" class="pe-q-tag">CÂU HỎI 1</span>
+                <h2 id="pe-q-title" class="pe-q-title">Đề bài câu hỏi...</h2>
+              </div>
+              <p id="pe-q-desc" class="pe-q-desc">Chi tiết yêu cầu câu hỏi...</p>
+              
+              <!-- Expected Sample Result Output Table -->
+              <div id="pe-expected-container" class="pe-expected-container">
+                <!-- Dynamically populated Expected Result Table -->
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Schema & Table Inspector / ERD Diagram -->
+            <div class="pe-schema-inspector">
+              <div class="inspector-header">
+                <h4>🗄️ Cấu Trúc Bảng CSDL & Sơ Đồ ERD</h4>
+                <div class="schema-view-toggle">
+                  <button id="btn-view-erd" class="btn-toggle-view active" title="Xem sơ đồ liên kết ERD">
+                    🖼️ Sơ Đồ ERD
+                  </button>
+                  <button id="btn-view-tables" class="btn-toggle-view" title="Xem danh sách chi tiết các bảng">
+                    📋 Danh Sách Bảng
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual ERD Diagram Container -->
+              <div id="pe-erd-container" class="pe-erd-container">
+                <!-- Dynamically populated SVG ERD diagram -->
+              </div>
+
+              <!-- Structured Schema Table Tree -->
+              <div id="pe-schema-tree" class="pe-schema-tree hidden">
+                <!-- Dynamically populated tables & columns -->
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Pane: SQL Code Editor & Results Output -->
+        <main class="pe-right-pane">
+          <!-- SQL Code Editor Container -->
+          <div class="card pe-editor-card">
+            <div class="editor-header">
+              <div class="editor-title-wrap">
+                <span class="editor-icon">⚡</span>
+                <span class="editor-title">Trình Soạn Thảo SQL (T-SQL Editor)</span>
+              </div>
+              <div class="editor-controls">
+                <button id="btn-toggle-hint" class="btn btn-warning-outline btn-sm">
+                  💡 Gợi Ý Đáp Án
+                </button>
+                <button id="btn-run-sql" class="btn btn-outline-light btn-sm">
+                  ▶️ Chạy Lệnh (Ctrl + Enter)
+                </button>
+                <button id="btn-submit-pe" class="btn btn-primary btn-sm">
+                  ✅ Nộp Bài & Chấm Điểm
+                </button>
+              </div>
+            </div>
+
+            <div class="editor-textarea-wrapper">
+              <textarea id="pe-sql-input" class="pe-sql-textarea" spellcheck="false" placeholder="-- Viết câu lệnh SQL của bạn ở đây..."></textarea>
+            </div>
+          </div>
+
+          <!-- Execution Results & Auto-Grader Output -->
+          <div class="card pe-results-card">
+            <!-- Output Header & Grade Status -->
+            <div id="pe-grade-status" class="pe-grade-status hidden">
+              <!-- Grade badge status -->
+            </div>
+
+            <div class="results-header">
+              <h4>📊 Kết Quả Thực Thi SQL</h4>
+              <span id="pe-exec-time" class="exec-info">0 rows • 0ms</span>
+            </div>
+
+            <div id="pe-output-container" class="pe-output-container">
+              <p class="pe-empty-text">Nhấn "▶️ Chạy Lệnh" hoặc "✅ Nộp Bài" để xem kết quả trả về.</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERD Fullscreen Modal Lightbox -->
+  <div id="erd-modal" class="erd-modal-overlay hidden">
+    <div class="erd-modal-content">
+      <div class="erd-modal-header">
+        <h3>🖼️ Sơ Đồ ERD Toàn Màn Hình</h3>
+        <button id="btn-close-erd-modal" class="btn-close-modal" title="Đóng cửa sổ">✕</button>
+      </div>
+      <div id="erd-modal-body" class="erd-modal-body">
+        <!-- Dynamically copied SVG -->
       </div>
     </div>
   </div>

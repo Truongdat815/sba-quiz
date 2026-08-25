@@ -1,5360 +1,5414 @@
 import { Question } from './types';
+import { DBI202_EXAM1_QUESTIONS } from './dbi202_exam1';
+import { DBI202_EXAM2_QUESTIONS } from './dbi202_exam2';
+import { DBI202_EXAM3_QUESTIONS } from './dbi202_exam3';
+import { DBI202_EXAM4_QUESTIONS } from './dbi202_exam4';
+import { DBI202_EXAM5_QUESTIONS } from './dbi202_exam5';
+import { DBI202_EXAM6_QUESTIONS } from './dbi202_exam6';
+import { DBI202_EXAM7_QUESTIONS } from './dbi202_exam7';
+import { DBI202_EXAM8_QUESTIONS } from './dbi202_exam8';
+import { DBI202_EXAM9_QUESTIONS } from './dbi202_exam9';
+import { DBI202_EXAM10_QUESTIONS } from './dbi202_exam10';
+import { DBI202_EXAM11_QUESTIONS } from './dbi202_exam11';
+import { DBI202_EXAM12_QUESTIONS } from './dbi202_exam12';
 
-export const DBI202_QUESTIONS: Question[] = [
+export { DBI202_EXAM1_QUESTIONS, DBI202_EXAM2_QUESTIONS, DBI202_EXAM3_QUESTIONS, DBI202_EXAM4_QUESTIONS, DBI202_EXAM5_QUESTIONS, DBI202_EXAM6_QUESTIONS, DBI202_EXAM7_QUESTIONS, DBI202_EXAM8_QUESTIONS, DBI202_EXAM9_QUESTIONS, DBI202_EXAM10_QUESTIONS, DBI202_EXAM11_QUESTIONS, DBI202_EXAM12_QUESTIONS };
+
+export const ALL_DBI202_QUESTIONS: Question[] = [
   {
-    id: 1,
-    question: "What are the disadvantages of network data model?",
-    options: [
-      "Not support the high-level query language",
-      "Not support the relationships between nodes",
-      "Not support the database management system",
-      "Not support the storage method Of very large amounts of data"
+    "id": 1,
+    "question": "In the context of",
+    "options": [
+      "The ability to perform multiple queries simultaneously",
+      "Ensuring data is consistent, accurate, and reliable",
+      "The ability to recover data after a failure",
+      "Encrypting data to protect it from unauthorized access"
     ],
-    answer: 0,
-    explanation: "Mô hình mạng (Network data model) là mô hình dữ liệu cũ, điều hướng thông qua con trỏ (pointers), không hỗ trợ ngôn ngữ truy vấn bậc cao mang tính khai báo như SQL."
+    "answer": 1
   },
   {
-    id: 2,
-    question: "What is information?",
-    options: [
-      "A collection of unprocessed data",
-      "A collection Of processed data",
-      "A collection of processed information",
-      "A collection of unprocessed information"
+    "id": 2,
+    "question": "The Isolation property in transactions ensures that:",
+    "options": [
+      "Each transaction is encrypted",
+      "No two transactions run concurrently",
+      "Transactions do not interfere with each other",
+      "Only one user accesses the system"
     ],
-    answer: 1,
-    explanation: "Thông tin (Information) là dữ liệu đã qua xử lý (Processed data) để mang lại ý nghĩa và ngữ cảnh cho người sử dụng."
+    "answer": 2
   },
   {
-    id: 3,
-    question: "In query compiler, which unit builds a tree structure from the text form of the query?",
-    options: [
-      "A query parser",
-      "A query preprocessor",
-      "A query optimizer",
-      "A query processor"
+    "id": 3,
+    "question": "database administrator: a person or persons responsible for the structure or schema of the database.",
+    "options": [
+      "True",
+      "False"
     ],
-    answer: 0,
-    explanation: "Query Parser (Bộ phân tích cú pháp truy vấn) có nhiệm vụ kiểm tra cú pháp câu lệnh SQL và xây dựng cây cú pháp (Parse Tree) từ văn bản câu truy vấn."
+    "answer": 0
   },
   {
-    id: 4,
-    question: "Which of the following is the appropriate characteristic of a database?",
-    options: [
-      "Because a database is created to suit the format of the data, it cannot respond flexibly to data format changes",
-      "The procedure for making backups is complicated.",
-      "It is difficult to share data between operations due to an exclusive control function.",
-      "It can be accessed by multiple users at the same time due to an exclusive control function."
+    "id": 4,
+    "question": "Which syntax is commonly used for the rename operation in Relational Algebra?",
+    "options": [
+      "RENAME relation TO new relation",
+      "RENAME attribute IN relation TO new attribute",
+      "ALTER TABLE relation RENAME TO new relation",
+      "SELECT * FROM relation AS new relation"
     ],
-    answer: 0,
-    explanation: "Cơ sở dữ liệu cho phép nhiều người dùng truy cập và thao tác đồng thời nhờ cơ chế khóa và kiểm soát truy cập đồng thời (Concurrency / Exclusive control)."
+    "answer": 3
   },
   {
-    id: 5,
-    question: "In query compiler, which unit transforms the initial query plan into the best available sequence of operations on the actual data?",
-    options: [
-      "A query parser",
-      "A query preprocessor",
-      "A query optimizer",
-      "A query processor"
+    "id": 5,
+    "question": "Which of the following best defines",
+    "options": [
+      "collection of unorganized files",
+      "program used to analyze data",
+      "structured collection of data",
+      "spreadsheet"
     ],
-    answer: 0,
-    explanation: "Query Optimizer (Bộ tối ưu hóa truy vấn) ước lượng chi phí (Cost estimation) và chuyển đổi cây truy vấn ban đầu thành kế hoạch thực thi tối ưu nhất (Execution Plan)."
+    "answer": 2
   },
   {
-    id: 6,
-    question: "Which statement about the network data model is true?",
-    options: [
-      "It supports high-level query languages like SQL.",
-      "It only allows one parent per record.",
-      "It organizes data using tables and relations.",
-      "It allows each record to have multiple parents and children."
+    "id": 6,
+    "question": "The rows of",
+    "options": [
+      "Schemas",
+      "Tuples",
+      "Domains",
+      "Attributes"
     ],
-    answer: 0,
-    explanation: "Trong mô hình dữ liệu mạng (Network model), mỗi bản ghi (record) có thể có nhiều bản ghi cha (parents) và nhiều bản ghi con (children), tạo thành cấu trúc đồ thị mạng (Graph)."
+    "answer": 1
   },
   {
-    id: 7,
-    question: "What is a database?",
-    options: [
-      "Organized collection of information that cannot be accessed, updated, and managed",
-      "Collection Of data or information without organizing",
-      "Organized collection of data or information that can be accessed, updated, and managed",
-      "Organized collection Of data that cannot be updated"
-    ],
-    answer: 2,
-    explanation: "Cơ sở dữ liệu (Database) là tập hợp dữ liệu hoặc thông tin có cấu trúc và được tổ chức để có thể dễ dàng truy cập, quản lý và cập nhật."
-  },
-  {
-    id: 8,
-    question: "In the relational model, what is the main purpose of using a primary key in a table?",
-    options: [
-      "To allow duplicate records",
-      "TO identify each row' uniquely",
-      "To store data temporarily",
-      "TO improve database aesthetics"
-    ],
-    answer: 0,
-    explanation: "Trong mô hình quan hệ, mục đích chính của Khóa chính (Primary Key) là để định danh duy nhất (uniquely identify) từng hàng (tuple/row) trong bảng."
-  },
-  {
-    id: 9,
-    question: "returns a relation instance containing all tuples that occur in both R and S",
-    options: [
-      "Intersection",
-      "Set-difference",
+    "id": 7,
+    "question": "Which of the following operations cannot be used in relational algebra? (Choose two answers) (ChQn 2 dåp ån)",
+    "options": [
       "Union",
-      "D. Cross product"
+      "Divide",
+      "Select",
+      "Loop"
     ],
-    answer: 0,
-    explanation: "Phép giao (Intersection, ký hiệu ∩) trả về một quan hệ chứa tất cả các bộ (tuples) cùng xuất hiện ở cả hai quan hệ R và S."
+    "answer": [
+      1,
+      3
+    ]
   },
   {
-    id: 10,
-    question: "The values appearing in given attributes of any tuple in the referencing relation must likewise cccur in specified integrity attributes of at least one tuple in the referenced relation, according to constraint.",
-    options: [
-      "Referential",
-      "Primary",
-      "Referencing",
-      "Specific"
+    "id": 8,
+    "question": "Which operation is not part of basic relational algebra?",
+    "options": [
+      "Projection",
+      "Join",
+      "Sorting",
+      "Selection"
     ],
-    answer: 0,
-    explanation: "Ràng buộc toàn vẹn tham chiếu (Referential Integrity Constraint) quy định rằng giá trị của khóa ngoại trong bảng tham chiếu phải tồn tại trong khóa chính của bảng được tham chiếu."
+    "answer": 2
   },
   {
-    id: 11,
-    question: "Consider the relation , D) and functional dependencies: Find key of the above relation.",
-    options: [
-      "The key is the A column",
-      "The key includes two columns (A,C)",
-      "The key is the A column or C column",
-      "The key is the C column"
+    "id": 9,
+    "question": "Which SQL command is used to define",
+    "options": [
+      "ALTER TABLE",
+      "SELECT",
+      "CREATE TABLE",
+      "INSERT"
     ],
-    answer: 0,
-    explanation: "Với R(A, B, C, D) và phụ thuộc hàm A → B, C → D: bao đóng (AC)+ = {A, B, C, D}. Do đó khóa của quan hệ là tập hợp hai thuộc tính (A, C)."
+    "answer": 2
   },
   {
-    id: 12,
-    question: "In a network data model, a node can be linked to multiple other nodes. What is this relationship called?",
-    options: [
-      "many-to-one",
-      "one-to-many",
-      "many-to-many",
-      "one-to-one"
+    "id": 10,
+    "question": "Cäu IO. Which relational algebra operator removes attributes from a relation? A. Selection (o) B. Projection (n) C. Join (x) D. Union (u)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
     ],
-    answer: 0,
-    explanation: "Trong mô hình mạng, một nút có thể liên kết với nhiều nút khác theo cả hai chiều, đại diện cho mối quan hệ nhiều - nhiều (Many-to-Many)."
+    "answer": 1
   },
   {
-    id: 13,
-    question: "A(n) ________ is a property of the entire relation, rather than of the individual tuples in which each tuple is unique.",
-    options: [
-      "Row",
-      "Key",
-      "Attribute",
-      "Field"
+    "id": 11,
+    "question": "What is the purpose of the RENAME operation in relational algebra? (Choose three answers) (ChQn 3 dåp ån)",
+    "options": [
+      "To avoid ambiguity, especially when joining relations with the same attribute names.",
+      "To make query expressions clearer and easier to read.",
+      "To resolve naming conflicts in operations like UNION",
+      "To search, index, and join tables quickly."
     ],
-    answer: 1,
-    explanation: "Khóa (Key) là thuộc tính hoặc tập thuộc tính có tính chất áp dụng cho toàn bộ quan hệ, đảm bảo mỗi bản ghi trong quan hệ là duy nhất."
+    "answer": 0
   },
   {
-    id: 14,
-    question: "Which operation is commonly used to display all the properties derived from the original property?",
-    options: [
-      "Union",
-      "Intersection",
-      "Closure",
-      "D. Projection"
+    "id": 12,
+    "question": "Which of the following is the main requirement of 1 NF (First Normal Form)?",
+    "options": [
+      "No column in the table should contain repeating values or arrays.",
+      "Each table contains only one foreign key.",
+      "Each table has at least one primary key.",
+      "All non-key attributes must be fully dependent on the primary key."
     ],
-    answer: 0,
-    explanation: "Bao đóng (Closure, ký hiệu X+) của tập thuộc tính là phép toán dùng để tìm tất cả các thuộc tính có thể được suy dẫn từ tập thuộc tính ban đầu."
+    "answer": 0
   },
   {
-    id: 15,
-    question: "Given relation R(X, Y, Z, W) with the set of functional dependencies: F = { X → Y, Y → Z, Z → W } Which of the following is a key for R?",
-    options: [
-      "X",
-      "Y",
-      "XZ",
-      "XY"
+    "id": 13,
+    "question": "Question 13",
+    "options": [
+      "trivial FD",
+      "non-trivial FD",
+      "key of relation",
+      "super key of relation"
     ],
-    answer: 0,
-    explanation: "Với F = { X → Y, Y → Z, Z → W }, tính bao đóng của X: X+ = {X, Y, Z, W} chứa toàn bộ thuộc tính của R, do đó X là khóa (Key) của R."
+    "answer": 0
   },
   {
-    id: 16,
-    question: "If two entities in an ER model share the same attribute name but represent different meanings, what should be done during schema transformation?",
-    options: [
-      "Alvvays add entity name to the attribute name to make the meaning clear.",
-      "Rename one of the attributes to avoid ambiguity",
-      "Merge both entities",
-      "Ignore the attribute names"
+    "id": 14,
+    "question": "The subset of",
+    "options": [
+      "No proper subset is a super key",
+      "All subsets are super keys",
+      "Subset is a super key",
+      "Each subset is a super key"
     ],
-    answer: 0,
-    explanation: "Khi hai thực thể có cùng tên thuộc tính nhưng mang ngữ nghĩa khác nhau, trong quá trình chuyển đổi sang lược đồ quan hệ cần đổi tên một trong hai thuộc tính (Rename) để tránh trùng lặp, nhập nhằng."
+    "answer": 0
   },
   {
-    id: 17,
-    question: "In SQL, Which of the following statements is correct?",
-    options: [
-      "All relations in 2NF are also in BCNF",
-      "All relations in INF are also in BCNF",
-      "All relations in 3NF are also in BCNF",
-      "D. For any relation schema, there is a dependency-preserving decomposition into 3NF"
+    "id": 15,
+    "question": "Consider and FD's B,",
+    "options": [
+      "-9 C,",
+      "—+ D,",
+      "—+",
+      ". Which of the following is the {A}+ ?"
     ],
-    answer: 0,
-    explanation: "Theo lý thuyết cơ sở dữ liệu, đối với mọi lược đồ quan hệ luôn tồn tại một phép phân rã bảo toàn phụ thuộc hàm đạt dạng chuẩn 3NF."
+    "answer": 1
   },
   {
-    id: 18,
-    question: "Given R as a relation, which of the following statements is correct about normalizing data in 3NF form:",
-    options: [
-      "If R: Has a primary key, no repeating groups, no multivalued attributes/composite attributes",
-      "If R: Has a primary key, no repeating groups, no multivalued attributes/complex attributes, no partial functional dependencies _",
-      "If R: Has a primary key, no repeating groups, no multivalued/composite attributes, no transitive dependencies",
-      "If R: Has a primary key, no repeating groups, no multivalued attributes/complex attributes, no transitive functional dependencies, no partial functional dependences. E. If R: has complete functional dependency _"
+    "id": 16,
+    "question": "Consider the relation: OrderDetail (orderNumber, productCode, productName, quantity, dateOrdered, salesDiscount) And FDs { orderNumber, productCode —+ quantity, orderNumber -9 dateOrdered, productCode —i productName, salesDiscount And the key of OrderDetail is {orderNumber, productCode}. Which of the following is full dependency on the key?",
+    "options": [
+      "orderNumber, productCode quantity",
+      "orderNumber -+ dateOrdered",
+      "productCode —+ productName",
+      "productCode —i productName, salesDiscount"
     ],
-    answer: 0,
-    explanation: "Điều kiện đạt dạng chuẩn 3NF: Phải đạt 2NF (không có phụ thuộc hàm từng phần vào khóa chính) và không có phụ thuộc hàm bắc cầu (No transitive functional dependencies)."
+    "answer": 0
   },
   {
-    id: 19,
-    question: "Which of the following violates INF (First Normal Form)?",
-    options: [
-      "Having a NULL in a column",
-      "Repeating groups Of values in a column",
-      "Having a primary key and all single attributes",
-      "Not exist multi-value attributes"
+    "id": 17,
+    "question": "Question 17",
+    "options": [
+      "INF",
+      "2NF",
+      "3NF",
+      "All of the mentioned"
     ],
-    answer: 0,
-    explanation: "Vi phạm dạng chuẩn 1 (1NF) xảy ra khi có các nhóm giá trị lặp lại (Repeating groups) hoặc thuộc tính đa trị (Multivalued attributes) trong một cột."
+    "answer": 3
   },
   {
-    id: 20,
-    question: "Which diagram is used to model entities and relationships?",
-    options: [
-      "UML class diagram",
-      "Flowchart",
-      "E../R diagram",
-      "Dependency graph"
+    "id": 18,
+    "question": "Question 18",
+    "options": [
+      "INF",
+      "2NF",
+      "3NF",
+      "4NF"
     ],
-    answer: 2,
-    explanation: "Sơ đồ Thực thể - Mối quan hệ (E/R Diagram - Entity Relationship Diagram) được dùng để mô hình hóa các thực thể và mối quan hệ giữa chúng trong thiết kế CSDL."
+    "answer": 0
   },
   {
-    id: 21,
-    question: "In the entity-relationship model, what is the entity?",
-    options: [
+    "id": 19,
+    "question": "What are some benefits of normalization when converting an ERD to",
+    "options": [
+      "Increased storage space efficiency",
+      "Reduced update anomalies",
+      "Simplified database queries",
+      "Enhanced data security"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 20,
+    "question": "Which normalization form eliminates transitive dependency?",
+    "options": [
+      "INF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 21,
+    "question": "What is the relationship between",
+    "options": [
+      "One-to-one relationship.",
+      "Many-to-many relationship.",
+      "Many-to-one relationship.",
+      "One-to-many relationship."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 22,
+    "question": "What type of attribute in an ER diagram is represented with",
+    "options": [
+      "Multivalued attribute",
+      "Derived attribute",
+      "Composite attribute",
+      "Primary attribute"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 23,
+    "question": "An E/R diagram is",
+    "options": [
+      "Entity",
+      "Attributes",
       "Relationships",
-      "Relationships between objects",
-      "Objects and relationships between objects",
-      "Data objects"
+      "All of the others"
     ],
-    answer: 3,
-    explanation: "Trong mô hình E/R, Thực thể (Entity) đại diện cho các đối tượng dữ liệu cụ thể (Data objects) trong thế giới thực."
+    "answer": 3
   },
   {
-    id: 22,
-    question: "In relational database design, which of the following is known as a set of entities of the same type that share the same properties or attributes?",
-    options: [
-      "Entity Relation model",
-      "Entity set",
-      "Field set",
-      "Record set"
+    "id": 24,
+    "question": "Question 24",
+    "options": [
+      "Entity Real-world thing, distinguishable from other objects, in ERD.",
+      "Diagram",
+      "Relationship",
+      "Primary entity"
     ],
-    answer: 0,
-    explanation: "Tập thực thể (Entity Set) là tập hợp các thực thể cùng loại, chia sẻ chung các thuộc tính hoặc đặc tính."
+    "answer": 0
   },
   {
-    id: 23,
-    question: "In SQL, ERD use three types of principle elements to form relationships:",
-    options: [
-      "Entity sets, Constraints and Relationships",
-      "Attributes, Constraints, and Relationships",
-      "Entity sets, Attributes, and Relationships",
-      "Entity sets, Attributes and Constraints"
+    "id": 25,
+    "question": "Which of the following statements is correct when converting from the ERD model to the relational model?",
+    "options": [
+      "The order of the columns is not important",
+      "The order of both rows and columns is important",
+      "The order of the rows is important",
+      "The order of the columns is important"
     ],
-    answer: 2,
-    explanation: "Trong mô hình E/R, thuộc tính có thể chia nhỏ thành các thành phần nhỏ hơn (ví dụ: FullName = FirstName + LastName, Address = Street + City) gọi là Thuộc tính phức hợp (Composite attribute)."
+    "answer": 0
   },
   {
-    id: 24,
-    question: "In an ERD, which of the follow.'ing best describes a one-to-many (1 relationship?",
-    options: [
-      "Each instance of Entity A is related to exactly one instance of Entity B",
-      "Each instance Of Entity A is related to many instances Of Entity B",
-      "Each instance of both entities is related to exactly one other instance",
-      "Entities are not related at all"
+    "id": 26,
+    "question": "The key for",
+    "options": [
+      "Zero or more attributes",
+      "The set of attributes of supporting relationships",
+      "It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set",
+      "The set of attributes of supporting entity sets"
     ],
-    answer: 0,
-    explanation: "Quan hệ 1 - Nhiều (One-to-Many): Mỗi giảng viên (Teacher) có thể giảng dạy nhiều môn học (Subjects), nhưng mỗi môn học chỉ do một giảng viên phụ trách."
+    "answer": 2
   },
   {
-    id: 25,
-    question: "How are weak entity sets represented in an Entity Relationship Diagram (ERD)?",
-    options: [
-      "With rectangle",
-      "With diamond shape",
-      "With a double-line rectangle",
-      "With a dashed oval"
+    "id": 27,
+    "question": "Which of the following is expressed by an E-R diagram?",
+    "options": [
+      "Relation between process and relationship",
+      "Relation between entity and process",
+      "Relation between processes",
+      "Relation between entities"
     ],
-    answer: 0,
-    explanation: "Để loại bỏ giá trị trùng lặp trong kết quả truy vấn SQL, ta sử dụng từ khóa DISTINCT ngay sau mệnh đề SELECT."
+    "answer": 3
   },
   {
-    id: 26,
-    question: "What happens to derived attributes when converting an ERD to a relational model?",
-    options: [
-      "They become primary keys in the related tables",
-      "They are calculated and stored as regular attributes in the related tables",
-      "They become foreign keys in the related tables",
-      "They are ignored during the conversion process"
+    "id": 28,
+    "question": "To convert from ER Diagram to Relational Model, I-M relationship:",
+    "options": [
+      "Put key attribute of one-side to M-side",
+      "Put key attribute of M-side to one-side",
+      "Generate 1 relation, Primary key of this relation combined from two relations",
+      "Build a table with two columns, one column for each participating entity set's primary key."
     ],
-    answer: 3,
-    explanation: "Toán tử LIKE kết hợp với ký tự đại diện % được dùng để tìm kiếm chuỗi mẫu (Pattern matching) trong SQL."
+    "answer": 0
   },
   {
-    id: 27,
-    question: "How are many-to-many relationships typically represented in the relational model?",
-    options: [
-      "By adding attributes to one of the related tables",
-      "By creating a new table with foreign keys from both related tables",
-      "By denormalizing the database",
-      "By creaüng a new table for each related entity"
+    "id": 29,
+    "question": "There is",
+    "options": [
+      "agrees",
+      "disagrees",
+      "is not relative",
+      "differs with"
     ],
-    answer: 0,
-    explanation: "Mệnh đề ORDER BY được sử dụng để sắp xếp các dòng kết quả trả về theo thứ tự tăng dần (ASC) hoặc giảm dần (DESC)."
+    "answer": 0
   },
   {
-    id: 28,
-    question: "The predicate in a where clause can involve Boolean operations such as and. The result of true and unknown false and unknown is while unknown and unknown is",
-    options: [
-      "Unknown, unknowm, false",
-      "True, false, unknown",
-      "True, unknown, unknown",
-      "Unknown, false, unknown"
+    "id": 30,
+    "question": "In SQL, after grouping data using the GROUP BY clause, the groups based on specific conditions.",
+    "options": [
+      "Where",
+      "Having",
+      "Group by",
+      "With clause is used to filter the"
     ],
-    answer: 3,
-    explanation: "Trong logic 3 giá trị của SQL: TRUE AND UNKNOWN = UNKNOWN, FALSE AND UNKNOWN = FALSE, UNKNOWN AND UNKNOWN = UNKNOWN."
+    "answer": 1
   },
   {
-    id: 29,
-    question: "Which SQL clause is used to add a new column to an existing table?",
-    options: [
-      "ADD COLUMN",
-      "ALTER TABLE ADD COLUMN",
-      "INSERT INTO",
-      "CREATE COLUMN"
+    "id": 31,
+    "question": "Question 31",
+    "options": [
+      "UPDATE",
+      "ALTER",
+      "MODIFY",
+      "CHANGE"
     ],
-    answer: 0,
-    explanation: "Mệnh đề GROUP BY gom các dòng có cùng giá trị thành các nhóm; các hàm tổng hợp như SUM, COUNT, AVG được tính toán riêng biệt cho từng nhóm đó."
+    "answer": 1
   },
   {
-    id: 30,
-    question: "Which statement is used to disable a foreign key constraint named fk_name during INSERT and UPDATE transactions in table B?",
-    options: [
-      "ALTER TABLE B DROP CONSTRAINT fk name",
-      "ALTER TABLE B DISABLE CONSTRAINT fk name",
-      "ALTER TABLE B DISABLE fk name",
-      "ALTER TABLE B NOCHECK CONSTRAINT fk name"
+    "id": 32,
+    "question": "Which of the following is false about",
+    "options": [
+      "Whereas only one foreign key is allowed in a table.",
+      "It refers to the field in a table which is the primary key of another table.",
+      "It can contain duplicate values and a table in a relational database.",
+      "It can also contain NULL values."
     ],
-    answer: 3,
-    explanation: "Hàm AVG() trong SQL tính giá trị trung bình của cột số và tự động bỏ qua (ignore) các giá trị NULL."
+    "answer": 0
   },
   {
-    id: 31,
-    question: "Which SQL statement selects all rows frorn table called Contest, with column ContestDate having values greater or equal to May 25,2006?",
-    options: [
-      "SELECT FROM Contest WHERE ContestDate '05/25/2006'",
-      "SELECT FROM Contest GROUPBY ContestDate '05/25,'2006'_",
-      "SELECT FROM Contest WHERE ContestDate < '0525/2006'",
-      "SELECT FROM Contest HAVING ContestDate '05/25/2006'."
+    "id": 33,
+    "question": "The ORDER BY clause can only be used in cases",
+    "options": [
+      "GROUP BY queries",
+      "SELECT queries",
+      "HAVING queries",
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Tập thuộc tính {maker, model} là khóa chính (Primary Key) xác định duy nhất sản phẩm của từng nhà sản xuất."
+    "answer": 1
   },
   {
-    id: 32,
-    question: "What is the value of the query SELECT ' Agnes ' + NULL + ' Allison '",
-    options: [
-      "Agnes",
-      "Allison",
-      "NULL",
-      "Agnes Allison"
+    "id": 34,
+    "question": "While executing",
+    "options": [
+      "Inner Join",
+      "Right Join",
+      "Full Outer Join",
+      "Left Join"
     ],
-    answer: 0,
-    explanation: "Trong SQL, chuỗi cộng với NULL ('Agnes' + NULL + 'Allison') theo chuẩn SQL Server sẽ trả về giá trị NULL."
+    "answer": 3
   },
   {
-    id: 33,
-    question: "Given two relations: Printer(maker, model, type) PC(model, speed, ram, hd, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN (SELECT model FROM PC);",
-    options: [
-      "Makers of all devices",
-      "Makers that also build PCs",
-      "Makers of non-PC devices",
-      "Makers of PCs only"
+    "id": 35,
+    "question": "Delete command operates on",
+    "options": [
+      "One",
+      "Two",
+      "Several",
+      "Null relation."
     ],
-    answer: 2,
-    explanation: "Truy vấn con loại trừ các model là PC, do đó câu lệnh trả về danh sách các nhà sản xuất các thiết bị không phải PC (Makers of non-PC devices)."
+    "answer": 0
   },
   {
-    id: 34,
-    question: "In SQL query, choose the correct statement about the order of execution",
-    options: [
-      "SELECT - FROM - WHERE - GROUP BY - HAVING - ORDER BY",
-      "SELECT FROM - GROUP BY - WHERE - HAVING - ORDER BY",
-      "SELECT - FROM - HAVING - GROUP BY- WHERE -ORDER BY",
-      "SELECT - FROM - OREDER BY - WHERE - HAVING -GROUP BY"
+    "id": 36,
+    "question": "Which keyword is used in SQL to filter grouped results?",
+    "options": [
+      "WHERE",
+      "TOP",
+      "GROUP BY",
+      "HAVING"
     ],
-    answer: 0,
-    explanation: "Mệnh đề HAVING được dùng để đặt điều kiện lọc trên các nhóm sau khi đã gom nhóm bằng GROUP BY (trong khi WHERE lọc từng dòng trước khi gom nhóm)."
+    "answer": 3
   },
   {
-    id: 35,
-    question: "Which of the following belongs to DDL (data definition language)?",
-    options: [
-      "create, alter, drop",
-      "Insert, update, delete, select",
-      "Truncate, select, invoke",
-      "D. Deny, create, drop"
+    "id": 37,
+    "question": "Which statement best describes the DELETE command?",
+    "options": [
+      "Deletes all rows and cannot be rolled back",
+      "Deletes the table structure and all its data",
+      "Deletes specific rows and can be rolled back",
+      "Deletes only columns that exist in DELETE command."
     ],
-    answer: 0,
-    explanation: "Thực thể yếu (Weak Entity) là thực thể không có đủ thuộc tính để tạo thành khóa chính riêng, phải phụ thuộc vào thực thể xác định (Identifying entity)."
+    "answer": 2
   },
   {
-    id: 36,
-    question: "Foreign key is the one in which the of one relation is referenced in another relation",
-    options: [
-      "Foreign key",
-      "Primary key",
-      "References",
-      "D. Check constraint"
+    "id": 38,
+    "question": "In query optimization, why is it beneficial for the database engine to use indexes?",
+    "options": [
+      "To reduce table size",
+      "To enforce foreign key constraints",
+      "To speed up data retrieval",
+      "To convert text to binary"
     ],
-    answer: 0,
-    explanation: "Khóa ngoại (Foreign Key) là một cột hoặc tập cột tham chiếu đến Khóa chính (Primary Key) của một bảng khác để tạo mối quan hệ giữa hai bảng."
+    "answer": 2
   },
   {
-    id: 37,
-    question: "Transaction processing is associated with everything belov.' except",
-    options: [
-      "Producing detail, summery, or exception reports",
-      "Recording a business activity",
-      "Confirming an action or triggering a response",
-      "Maintaining data"
+    "id": 39,
+    "question": "Two concurrent executing transactions Tl and T 2 are allowed to update the same record in an uncontrolled manner. In such",
+    "options": [
+      "Transaction failure",
+      "Dirty read problem",
+      "Lost update problem",
+      "Inconsistent database state"
     ],
-    answer: 0,
-    explanation: "Dạng chuẩn BCNF (Boyce-Codd Normal Form) yêu cầu mọi phụ thuộc hàm không tầm thường X → Y thì X bắt buộc phải là một Siêu khóa (Superkey)."
+    "answer": 2
   },
   {
-    id: 38,
-    question: "In an employee table to include the attributes whose value always have some value which of the following constraint must be used?",
-    options: [
+    "id": 40,
+    "question": "In database transactions, which isolation level is most restrictive?",
+    "options": [
+      "READ UNCOMMITTED",
+      "READ COMMITTED",
+      "REPEATABLE READ",
+      "SERIALIZABLE"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 41,
+    "question": "Which is the SQL statement that creates an updatable view? (In this question, all the tables in the SQL statements are updatable)",
+    "options": [
+      "CREATE VIEW AS SELECT DISTINCT Product_No FROM Order",
+      "CREATE VIEW Product_Name, Order_Quantity) AS SELECT Order_No, Product_Name, Order_Quantity FROM Order, Product WHERE Order.Product_No = Product.Product_No",
+      "CREATE VIEW Order_Quantity) AS SELECT Product_No, FROM Order GROUP BY Product_No",
+      "CREATE VIEW Product_Name) AS SELECT Product_No, Product Name FROM Product WHERE Product Unit Price > 1000"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 42,
+    "question": "In SQL, what is",
+    "options": [
+      "virtual table based on the result of a SELECT query",
+      "physical table containing aggregated data",
+      "temporary table used for transactions",
+      "stored procedure with read-only access"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 43,
+    "question": "Which two statements correctly describe stored procedures? (Choose two correct answers) (ChQn 2 dåp ån)",
+    "options": [
+      "They can return multiple result sets",
+      "They are compiled each time they run",
+      "They support conditional logic like IF...ELSE",
+      "They replace the need for triggers"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 44,
+    "question": "Which indexes can be automatically created by defining constraints in",
+    "options": [
+      "PRIMARY KEY",
+      "CHECK",
+      "UNIQUE",
+      "FOREIGN KEY"
+    ],
+    "answer": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": 45,
+    "question": "Given",
+    "options": [
+      "The average laptop price with model = 1",
+      "The price of all laptops",
+      "The price of laptop with model = 1",
+      "The model of laptop with price = 1 - @model"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 46,
+    "question": "Which of the following describes an SQL cursor?",
+    "options": [
+      "It allows you to traverse the result set of a query and process each row individually",
+      "It is a precompiled collection of one or more SQL statements that can be executed as a single unit",
+      "field within a database",
+      "Cursors are not related to SQL"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 47,
+    "question": "How many types of variables are there in Stored Procedure?",
+    "options": [
+      "Default variable and input variable",
+      "Default variable and output variable",
+      "Input variable and output variable",
+      "Local variables and global variables"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 48,
+    "question": "Which of the following methods fetch data from cursor to access data?",
+    "options": [
+      "First, last, next, prior, absolute, relative",
+      "First, last, next",
+      "First, last, next, prior",
+      "First, absolute, relative"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 49,
+    "question": "Which files are created automatically by SQL Server when you create",
+    "options": [
+      "primary data file and secondary data file",
+      "primary data file and log file",
+      "index file and log file",
+      "secondary data file and log file E. backup file and metadata file"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 50,
+    "question": "In an employee table to include the attributes whose value always have some value which of the following constraint must be used?",
+    "options": [
       "Null",
       "Not null",
       "Unique",
       "Distinct"
     ],
-    answer: 0,
-    explanation: "Mất mát thông tin (Lossy decomposition) xảy ra khi nối lại các bảng đã phân rã tạo ra các bộ dữ liệu giả (Spurious tuples)."
+    "answer": 1
   },
   {
-    id: 39,
-    question: "The deadlock state can be changed back to stable state by using ________ statement.",
-    options: [
-      "Deadlock",
-      "Abort",
-      "Commit",
-      "Rollback"
+    "id": 51,
+    "question": "What is NOT true about the cursor in SQL?",
+    "options": [
+      "It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server.",
+      "The cursor allows users to process data from a result set, one row at a time.",
+      "Cursors are an alternative to commands, which operate on all rows in a result set at the same time.",
+      "Unlike commands, cursors can be used to update data on a row-by-row basis."
     ],
-    answer: 3,
-    explanation: "Trạng thái bế tắc (Deadlock) được DBMS giải quyết bằng cách hủy và hoàn tác (Rollback) một trong các giao dịch đang xung đột để đưa hệ thống về trạng thái ổn định."
+    "answer": 0
   },
   {
-    id: 40,
-    question: "What is the difference between a view and a table in SQL?",
-    options: [
-      "Tables can be updated, while the view is displaying data from the query",
-      "Views can store data permanently, while tables are temporary",
-      "Tables are created with the CREATE TABLE statement, while views use CREATE VIEW",
-      "D. Vlews and tables are functionally equivalent in SQL"
+    "id": 52,
+    "question": "What is",
+    "options": [
+      "Organized collection of information that cannot be accessed, updated, and managed",
+      "Collection of data or information without organizing",
+      "Organized collection of data or information that can be accessed, updated, and managed",
+      "Organized collection of data that cannot be updated"
     ],
-    answer: 2,
-    explanation: "Thuộc tính dẫn xuất (Derived attribute) là thuộc tính có giá trị được tính toán từ các thuộc tính khác (ví dụ: Tuổi được tính từ Ngày sinh)."
+    "answer": 2
   },
   {
-    id: 41,
-    question: "Domain constraints, functional dependency and referential integrity are special forms of",
-    options: [
-      "Foreign key",
-      "Primary key",
-      "Assertion",
-      "D. Referential constraint"
+    "id": 53,
+    "question": "What happens to derived attributes when converting an ERD to",
+    "options": [
+      "They become primary keys in the related tables",
+      "They are calculated and stored as regular attributes in the related tables",
+      "They become foreign keys in the related tables",
+      "They are ignored during the conversion process"
     ],
-    answer: 0,
-    explanation: "Thuộc tính đa trị (Multivalued attribute) có thể chứa nhiều hơn một giá trị cho một thực thể (ví dụ: một người có nhiều số điện thoại)."
+    "answer": 3
   },
   {
-    id: 42,
-    question: "Which of the following is not mentioned how does a local variable is defined using T-SQL?",
-    options: [
-      "The name of the local variable should begin with sign as the first character of its name.",
-      "A local variable is defined using T-SQL by using statement \"DECLARE'",
-      "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
-      "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length."
+    "id": 54,
+    "question": "Which statement about the network data model is true?",
+    "options": [
+      "It supports high-level query languages like SQL.",
+      "It only allows one parent per record.",
+      "It organizes data using tables and relations.",
+      "It allows each record to have multiple parents and children."
     ],
-    answer: 0,
-    explanation: "Bảng cầu / Bảng trung gian (Junction table) chứa khóa ngoại tham chiếu đến cả hai bảng để biểu diễn mối quan hệ nhiều - nhiều (N:N)."
+    "answer": 3
   },
   {
-    id: 43,
-    question: "In which line of the following code is the error? 1: CREATE TRIGGER trigger1 2: ON dbo.EMPLOYEE 3: AFTER FOR INSERT AS 4: BEGIN 5: INSERT INTO EMPLOYEE_BACKUP 6: SELECT * FROM INSERTED 7: END",
-    options: [
-      "Line 1",
-      "Line 2",
-      "Line 3",
-      "Line 5"
+    "id": 55,
+    "question": "Given that Cartoons and Murder Mysteries are special Movie genres, what is the relationship between entities Cartoons, Murder Mysteries and Movie?",
+    "options": [
+      "is-a relationship",
+      "ais relationship",
+      "supporting relationship",
+      "referential integrity relationship"
     ],
-    answer: 2,
-    explanation: "Trong T-SQL, từ khóa AFTER và FOR có ý nghĩa tương đương khi định nghĩa trigger, không được viết liền 'AFTER FOR' mà chỉ chọn một trong hai từ khóa."
+    "answer": 0
   },
   {
-    id: 44,
-    question: "Which type of user-defined function in SQL returns a single value?",
-    options: [
+    "id": 56,
+    "question": "Which type of user-defined function in SQL returns",
+    "options": [
       "Scalar function",
       "Table-valued function",
       "Inline function",
-      "D. Aggregate function"
+      "Aggregate function"
     ],
-    answer: 0,
-    explanation: "Tính bền vững (Durability) trong ACID đảm bảo rằng một khi giao dịch đã hoàn tất thành công (Commit), các thay đổi dữ liệu sẽ được lưu vĩnh viễn ngay cả khi hệ thống gặp sự cố mất điện."
+    "answer": 0
   },
   {
-    id: 45,
-    question: "In SQL, what is the purpose of the CLOSE statement in relation to cursors?",
-    options: [
-      "To close the database connection",
-      "TO close the cursor and release associated resources",
-      "To close the transaction",
-      "D. TO close the result set"
+    "id": 57,
+    "question": "Triggers are stored blocks of code that have to be called in order to operate.",
+    "options": [
+      "True",
+      "False"
     ],
-    answer: 0,
-    explanation: "Mức cô lập Serializable là mức cô lập cao nhất trong SQL, ngăn chặn tất cả các hiện tượng Dirty Read, Non-repeatable Read và Phantom Read."
+    "answer": 1
   },
   {
-    id: 46,
-    question: "A variable is local, and its value is not preserved by the DBMS after a run-ning of the function or procedure.",
-    options: [
+    "id": 58,
+    "question": "The predicate in",
+    "options": [
+      "Unknown, unknown, false",
+      "True, false, unknown",
+      "True, unknown, unknown",
+      "Unknown, false, unknown"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 59,
+    "question": "Cäu IO. In which of the following is a single-entity instance of one type related to many entity instances of another type? A. One-to-One Relationship B. One-to-Many Relationship C. Many-to-Many Relationship D. Composite Relationship",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 60,
+    "question": "What is an SQL virtual table that is constructed from other tables?",
+    "options": [
+      "Just another table",
+      "view",
+      "relation",
+      "Query results"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 61,
+    "question": "What is information?",
+    "options": [
+      "collection of unprocessed data",
+      "collection of processed data",
+      "collection of processed information",
+      "collection of unprocessed information"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 62,
+    "question": "In an ERD, what role does",
+    "options": [
+      "It uniquely identifies each record in a table",
+      "It establishes relationships between tables",
+      "It determines the data type of attributes",
+      "It defines the cardinality of relationships"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 63,
+    "question": "(Choose 3 answers) Which one of the following is NOT",
+    "options": [
+      "DELETE",
+      "CREATE DATABASE",
+      "INSERT",
+      "USE"
+    ],
+    "answer": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 64,
+    "question": "In an ERD, which of the following best describes",
+    "options": [
+      "Each instance of Entity",
+      "is related to exactly one instance of Entity",
+      "Each instance of Entity",
+      "is related to many instances of Entity"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 65,
+    "question": "data model is a notation for describing data or information. The description generally consists",
+    "options": [
+      "Structure of the data",
+      "Operations on the data",
+      "Constraints on the data.",
+      "All of the others"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 66,
+    "question": "In the entity-relationship model, what is the entity?",
+    "options": [
+      "Relationships",
+      "Relationships between objects",
+      "Objects and relationships between objects",
+      "Data objects"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 67,
+    "question": "In an ERD, what does",
+    "options": [
+      "An attribute",
+      "relationship",
+      "primary key",
+      "foreign key"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 68,
+    "question": "How are weak entity sets represented in an Entity Relationship Diagram (ERD)?",
+    "options": [
+      "With rectangle",
+      "With diamond shape",
+      "With a double-line rectangle",
+      "With a dashed oval"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 69,
+    "question": "DB1202 SP26_RE I Multiple Choice Question 29 (Choose 2 answers) During database design, why is it necessary to identify candidate keys? Choose two answers",
+    "options": [
+      "To reduce data type complexity.",
+      "To normalize tables faster",
+      "To select the most appropriate primary key",
+      "To remove NULL values"
+    ],
+    "answer": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 70,
+    "question": "Given two relations R(A, B, C) and S(C, D). Which of the following relational algebra expressions is equivalent to the SQL query: SELECT A, D FROM R JOIN S ON R.C = S.C?",
+    "options": [
+      "π A,D (R ⋈ S)",
+      "π A,D (σ R.C=S.C (R × S))",
+      "σ R.C=S.C (π A,D (R × S))",
+      "Both π A,D (R ⋈ S) and π A,D (σ R.C=S.C (R × S))"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 71,
+    "question": "DB1202 SP26_RE I Multiple Choice Question 15 (Choose 1 answer) Domain constraints, functional dependency and referential integrity are special forms of",
+    "options": [
+      "Foreign key",
+      "Primary key",
+      "Assertion",
+      "Referential constraint"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 72,
+    "question": "In which scenario would denormalization be considered",
+    "options": [
+      "When maximizing disk usage is a priority",
+      "When minimizing data redundancy is the main goal",
+      "When performance of read-heavy queries is critical",
+      "When multiple developers are working on schema design"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 73,
+    "question": "Consider",
+    "options": [
+      "and C->E. What is/are the key(s) for R",
+      "AD"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 74,
+    "question": "What are the disadvantages of network data model?",
+    "options": [
+      "Not support the high-level query language",
+      "Not support the relationships between nodes",
+      "Not support the database management system",
+      "Not support the storage method of very large amounts of data"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 75,
+    "question": "variable is local, and its value is not preserved by the DBMS after a run-ning of the function or procedure.",
+    "options": [
       "DECLARE",
       "RETURN",
       "CALL",
       "EXEC"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) cấu trúc B-Tree giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trong các truy vấn có điều kiện WHERE hoặc JOIN."
+    "answer": 0
   },
   {
-    id: 47,
-    question: "The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the \"Customers\" table: CREATE PROCEDURE Select.AllCustomers @City nvarchar(30), @PostalCode nvarchar( 10) BEGIN SELECT FROM Customers WHERE City = @City AND PostalCode = @PostalCode; END; GO Which of the following is the way to execute a procedure?",
-    options: [
-      "EXEC SelectAllCustomers @City — = 'WAI IDP',",
-      "EXECUTE SelectAllCustomers 'London', 'WAIIDP' OUTPUT",
-      "EXEC @Cit = 'London', @PostalCode = 'WAIIDP;",
-      "EXECUTE SelectAllCustomers"
+    "id": 76,
+    "question": "Question 27",
+    "options": [
+      "many-to-one",
+      "one-to-many",
+      "many-to-many",
+      "one-to-one"
     ],
-    answer: 0,
-    explanation: "Cú pháp thực thi Stored Procedure có truyền tham số trong SQL Server là: EXEC ProcedureName @Param1 = Value1, @Param2 = Value2;"
+    "answer": 2
   },
   {
-    id: 48,
-    question: "Assume that you are required to develop an application to manage courses at the university, which requires Structured data (tables, rows, columns), strict consistency, and the need to use complex queries. The enforcement of ACID properties (Atomicity, Consistency, Isolation, Durability). In the context of databases, which most appropriate data model should you choose for developing this application?",
-    options: [
-      "relational data model (example:Microsoft SQL Server, MySQL,",
-      "document- based data model (example: MongoDB, Cassandra, Couch DB)",
-      "key-value data model (example : Redis, DynamoDB, Riak)",
-      "Hierachical data model"
+    "id": 77,
+    "question": "In SQL, what is the primary advantage of using stored procedures?",
+    "options": [
+      "They allow for the creation of tables",
+      "They enhance security by restricting access to data",
+      "They provide a way to encapsulate and reuse a set of SQL statements",
+      "They are more efficient than regular SQL queries"
     ],
-    answer: 0,
-    explanation: "Ứng dụng cần dữ liệu có cấu trúc, quan hệ chặt chẽ và tuân thủ ACID nghiêm ngặt nên sử dụng mô hình cơ sở dữ liệu quan hệ (Relational data model: SQL Server, MySQL, PostgreSQL)."
+    "answer": 2
   },
   {
-    id: 49,
-    question: "Given the relational schema R(A, B, C, D, E) and the set of functional dependencies: F = { AB → C, C → D, D → E } What is the closure of the attribute set {A, B}?",
-    options: [
-      "{A, B}",
-      "{A, B, C}",
-      "{A, B, C, D}",
-      "{A, B, C, D, E}"
+    "id": 78,
+    "question": "I Multiple Choice Question 18 (Choose 2 answers) Assume that all tables, columns are ready, and each customer can place one or more orders. How can you retrieve all customers who have not made any purchases? (choose two options)",
+    "options": [
+      "SELECT c_CustomerID, c.CustomerName, c.Email, c.CreatedDate FROM dbo.Customers AS c VWERE NOT EXISTS ( SELECT 1 FROM dboOrders AS o WHERE o.CustomerlD = c CustornerlD",
+      "SELECT c_CustomerID, c_CustomerName, c_Email, c.CreatedDate FROM db0Customers AS c LEFT JOIN dboorders AS o ON c CustomerlD o.CustomerlD WHERE corderlD IS NULL;",
+      "SELECT c.CustomerlD, c.CustomerName, c.Email, c.CreatedDate FROM dbo_CustomersAS c INNER JOIN dbo_OrdersASo ON c_CustomerlD = o_CustomerlD WHERE corderlD IS NULL;",
+      "SELECT c_CustomerlD, c_CustomerName, c_Email, c_CreatedDate FROM c RIGHT JOIN db0.oroers AS o ON coustomerlD = o.CustomerlD WHERE o OrderlD IS NULL; Hinh trong dé"
     ],
-    answer: 3,
-    explanation: "Với R(A, B, C, D, E) và AB → C, C → D, D → E: bao đóng của {A, B} là {A, B}+ = {A, B, C, D, E} chứa toàn bộ thuộc tính."
+    "answer": 0
   },
   {
-    id: 50,
-    question: "Which of the following is an example of a composite attribute?",
-    options: [
-      "StudentlD with unique value",
-      "FullName (split into FirstName and LastName)",
-      "EmailAddress with multi-values",
-      "D. DateOfBirth value is accepted with format"
+    "id": 79,
+    "question": "Consider the relation R(A, B, C, D) with functional dependencies: AB -> C, C -> A, AB -> D. What are the candidate keys of R?",
+    "options": [
+      "AB",
+      "BC",
+      "AB and BC",
+      "ABC"
     ],
-    answer: 0,
-    explanation: "Trigger là khối lệnh tự động thực thi khi xảy ra các thao tác DML (INSERT, UPDATE, DELETE) trên bảng dữ liệu."
+    "answer": 2
   },
   {
-    id: 51,
-    question: "Which of the following is a function of a DBMS?",
-    options: [
-      "Designing web pages",
-      "Give users the ability to query the data",
-      "Performing system backups",
-      "Compiling source code"
+    "id": 80,
+    "question": "The highest normal form for relation schema R(ABCD) with functional dependencies F C->ABD} is:",
+    "options": [
+      "2NF",
+      "INF",
+      "3NF",
+      "BCNF"
     ],
-    answer: 1,
-    explanation: "Mô hình mạng (Network model) sử dụng các con trỏ (pointers/links) để liên kết trực tiếp giữa các bản ghi thay vì dùng bảng quan hệ."
+    "answer": 2
   },
   {
-    id: 52,
-    question: "A person or persons responsible for the structure or schema of the database is",
-    options: [
-      "A user",
-      "A Coder",
-      "A Customer",
-      "A database administrator"
+    "id": 81,
+    "question": "In query compiler, which unit builds",
+    "options": [
+      "query parser",
+      "query preprocessor",
+      "query optimizer",
+      "query processor"
     ],
-    answer: 0,
-    explanation: "Thông tin (Information) là dữ liệu đã được xử lý (Processed data) để có ý nghĩa trong việc ra quyết định."
+    "answer": 0
   },
   {
-    id: 53,
-    question: "The people whose jobs require access to the database for querying, updating, and generating reports; the database primarily exists for their use. What type of this user?",
-    options: [
-      "DBA",
-      "End users",
-      "Database designer",
-      "System Analysts and Application Programmers"
+    "id": 82,
+    "question": "Which of the following is the appropriate characteristic of",
+    "options": [
+      "Because a database is created to suit the format of the data, it cannot respond flexibly to data format changes.",
+      "The procedure for making backups is complicated.",
+      "It is difficult to share data between operations due to an exclusive control function.",
+      "It can be accessed by multiple users at the same time due to an exclusive control function."
     ],
-    answer: 0,
-    explanation: "Query Parser phân tích cú pháp câu lệnh SQL và tạo ra cây phân tích cú pháp (Parse tree)."
+    "answer": 3
   },
   {
-    id: 54,
-    question: "Consider the tw•o relations from our running movie database: Movies(title, year, length, genre, studioName, producerC#) MovieExec(name, address, cert#, netWorth) The producerC# component of each Movies tuple must also appear in the cert# component of some MovieExec tuple How can we express this integrity constraint in relational algebra?",
-    options: [
-      "n_(producerC#) (MovieExec)",
-      "n_(producerC#) (Movies)C n_(cert#) (MovieExec)",
-      "n_(cert#) (MovieExec)C n_(producerC#) (Movies)",
-      "(MovieExec)"
+    "id": 83,
+    "question": "Which of the following is not mentioned how does",
+    "options": [
+      "The name of the local variable should begin with \"@@\" sign as the first character of its name.",
+      "local variable is defined using T-SQL by using statement \"DECLARE\".",
+      "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
+      "The data type of local variable is declared after its name and assigned a system-supplied or user- defined data type and a length."
     ],
-    answer: 0,
-    explanation: "Ràng buộc toàn vẹn thực thể (Entity Integrity) quy định Khóa chính (Primary Key) không được phép chứa giá trị NULL."
+    "answer": 0
   },
   {
-    id: 55,
-    question: "Database data models usually have a way to go describe limitations on what the data can be, is called",
-    options: [
-      "Constraints on the data",
-      "Operations on the data",
-      "Structure of the data",
-      "D. definition of data"
+    "id": 84,
+    "question": "What is the main disadvantage of having too many indexes on",
+    "options": [
+      "Improved query performance",
+      "Increased storage space",
+      "Enhanced data integrity",
+      "Fast data modification operations"
     ],
-    answer: 0,
-    explanation: "Trong đại số quan hệ: Điều kiện ràng buộc toàn vẹn tham chiếu biểu diễn rằng tập hợp khóa ngoại của Movies phải là tập con (⊆) của tập khóa chính trong MovieExec."
+    "answer": 1
   },
   {
-    id: 56,
-    question: "In relational DBMS, what is the difference between PRIMARY KEY and UNIQUE KEY?",
-    options: [
-      "UNIQUE KEY allows NULL value but PRIMARY KEY does not",
-      "UNIQUE KEY and PRIMARY KEY are completely the same",
-      "A table can have more than one PRIMARY KEY constraint but only one UNIQUE KEY",
-      "A table can have more than one UNIQUE KEY constraint and multiple PRIMARY KEYs"
+    "id": 85,
+    "question": "Consider the relation R(A, B, C, D) and functional dependencies: AB -> C, C -> D, D -> A. Find the candidate key(s) of R.",
+    "options": [
+      "AB",
+      "BC",
+      "BD",
+      "AB, BC, and BD"
     ],
-    answer: 0,
-    explanation: "Điểm khác biệt quan trọng giữa PRIMARY KEY và UNIQUE KEY: UNIQUE KEY cho phép chứa giá trị NULL (trong SQL Server là 1 giá trị NULL), còn PRIMARY KEY tuyệt đối không được NULL."
+    "answer": 3
   },
   {
-    id: 57,
-    question: "For the following relations and a Set operation: Employee Name I City I Gender Nguyen Trung Truc I HCM I Male Le Hong Son I HCM I Male Customer Name I City I Gender Nguyen Trung Truc I HCM I Male Tran Tuyet Nhi I HN I Female Employee IJ Customer What is the result Of the Union operation?",
-    options: [
-      "Name I City I Gender Nguyen Trung Truc I HCM I Male Le Hong Son I HCM I Male",
-      "Name I City :Gender Nguyen Trung Truc I HCM I Male Tran Tuyet Nhi I HN I Female",
-      "Name I City I Gender Nguyen Trung Truc I HCM I Male Le Hong Son I HCM I Male Nguyen Trung Truc I HCM I Male Tran Tuyet Nhi I HN I Female",
-      "Name I City I Gender Nguyen Trung Truc I HCM I Male Le Hong Son I HCM I Male Tran Tuyet Nhi I HN I Female"
+    "id": 86,
+    "question": "Which two statements about foreign key constraints are true? (Choose two correct answers)",
+    "options": [
+      "They enforce referential integrity",
+      "They allow orphaned rows in child tables",
+      "They can be defined using ALTER TABLE",
+      "They replace the need for primary keys"
     ],
-    answer: 0,
-    explanation: "Phép hợp (Union) trong đại số quan hệ kết hợp các dòng từ hai quan hệ và tự động loại bỏ các dòng trùng lặp."
+    "answer": 0
   },
   {
-    id: 58,
-    question: "In a binary relationship with cardinality (1 , N), what does it signify?",
-    options: [
-      "One entity can be related to multiple instances of another entity, but not vice versa",
-      "Multiple instances Of one entity can relate to multiple instances Of another entity",
-      "One entity can relate to only one instance of another entity",
-      "Each instance of one entity must relate toa unique Instance of another entity"
+    "id": 87,
+    "question": "Consider the table: Which functional dependency exists in the above table?",
+    "options": [
+      "ID NAME",
+      "Password -+ email",
+      "Password —NAME",
+      "NAME email"
     ],
-    answer: 0,
-    explanation: "Phép chiếu (Projection, ký hiệu π) chọn lọc các cột (thuộc tính) cụ thể từ quan hệ và loại bỏ các cột còn lại."
+    "answer": 0
   },
   {
-    id: 59,
-    question: "What is a superkey?",
-    options: [
-      "A minimal set of attributes that uniquely identifies a row.",
-      "Any set Of attributes that contains a key _",
-      "An attribute that is not part of any key",
-      "D. A foreign key in a table."
+    "id": 88,
+    "question": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified attributes of at least one tuple in the referenced relation, according to constraint. integrity",
+    "options": [
+      "Referential",
+      "Primary",
+      "Referencing",
+      "Specific"
     ],
-    answer: 0,
-    explanation: "Phép chọn (Selection, ký hiệu σ) lọc ra các dòng (tuples) thỏa mãn một biểu thức điều kiện xác định."
+    "answer": 0
   },
   {
-    id: 60,
-    question: "Which statement best represents Armstrong's Axiom of Decomposition?",
-    options: [
-      "If A → B and B → C, then A → C",
-      "If A → B, then AC → BC",
-      "If A → BC, then A → B and A → C",
-      "If A → B and A → C, then A → BC"
+    "id": 89,
+    "question": "Given R as",
+    "options": [
+      "If R: Has a primary key, no repeating groups, no multivalued attributes/composite attributes",
+      "If R: Has a primary key, no repeating groups, no multivalued attributes/complex attributes, no partial functional dependencies.",
+      "If R: Has a primary key, no repeating groups, no multivalued/composite attributes, no transitive dependencies.",
+      "If R: Has a primary key, no repeating groups, no multivalued attributes/complex attributes, no transitive functional dependencies, no partial functional dependencies. E. If R: has complete functional dependency."
     ],
-    answer: 2,
-    explanation: "Luật phân rã Armstrong (Decomposition Axiom): Nếu A → BC thì suy ra A → B và A → C."
+    "answer": 3
   },
   {
-    id: 61,
-    question: "Suppose we have a relation and functional dependencies: F = { F → A, A → B, B → C, BC → A, A → D, E → A, D → E } Which of the following is NOT a candidate key?",
-    options: [
-      "A",
-      "F",
-      "E",
-      "D"
+    "id": 90,
+    "question": "returns",
+    "options": [
+      "Intersection",
+      "Set-difference",
+      "Union",
+      "Cross-product"
     ],
-    answer: 0,
-    explanation: "Thuộc tính A có thể suy dẫn ra tất cả các thuộc tính khác qua chuỗi phụ thuộc hàm, do đó A là một khóa ứng viên (Candidate Key)."
+    "answer": 0
   },
   {
-    id: 62,
-    question: "Which of the following is NOT one of Armstrong's primary axioms for inference of functional dependencies?",
-    options: [
-      "Reflexivity: If Y ⊆ X, then X → Y",
-      "Augmentation: If X → Y, then XZ → YZ",
-      "Transitivity: If X → Y and Y → Z, then X → Z",
-      "Decomposition: If X → YZ, then X → Y and Y → Z"
+    "id": 91,
+    "question": "I Multiple Choice Question 32 (Choose 1 answer) Assume that the table Cars and it's columns are ready Which of the following to update the \"colour\" field to \"Sitver• for all records where model is \"Escape\" from Cars table?",
+    "options": [
+      "UPDATE cars SET colour = 'Silver' WHERE model = 'Escape';",
+      "UPDATE Cars SET = 'Escape' WHERE colour = 'Silver';",
+      "UPDATE Cars SET colour = 'Sliver'",
+      "UPDATE FROM Cars SET colour 'Silver' WHERE model = Escape'; Hinh trong dé"
     ],
-    answer: 3,
-    explanation: "Luật cơ bản của Armstrong bao gồm: Tính phản xạ (Reflexivity), Tính tăng trưởng (Augmentation), và Tính bắc cầu (Transitivity). Luật phân rã là luật phái sinh."
+    "answer": 0
   },
   {
-    id: 63,
-    question: "Consider a relation with functional dependencies. Which of the following is a trivial functional dependency of the relation?",
-    options: [
-      "AB → A",
-      "AD → ABC",
-      "C → CB",
-      "AB → CD"
+    "id": 92,
+    "question": "Question 43",
+    "options": [
+      "Attributes",
+      "Fields",
+      "Tuples",
+      "Keys"
     ],
-    answer: 0,
-    explanation: "Phụ thuộc hàm tầm thường (Trivial functional dependency) là phụ thuộc hàm dạng X → Y trong đó Y là tập con của X (ví dụ: AB → A)."
+    "answer": 2
   },
   {
-    id: 64,
-    question: "Problems such as redundancy that occur when we try to cram too much into a single relation are called",
-    options: [
+    "id": 93,
+    "question": "DB1202 SP26_RE I Multiple Choice Question 34 (Choose 1 answer) The transaction methods is used with the Connection object to save or cancel changes made to the data source.",
+    "options": [
+      "Begin Transaction, Rollback Transaction",
+      "Begin Transaction, Commit Transaction",
+      "Begin Transaction, Commit Transaction, Rollback Transaction",
+      "Commit Transaction, Rollback Transaction"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 94,
+    "question": "Which of the following aggregate functions does not ignore nulls in its results?",
+    "options": [
+      "MIN",
+      "MAX",
+      "COUNT",
+      "COUNT"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 95,
+    "question": "If two entities in an ER model share the same attribute name but represent different meanings, what should be done during schema transformation?",
+    "options": [
+      "Always add entity name to the attribute name to make the meaning clear.",
+      "Rename one of the attributes to avoid ambiguity",
+      "Merge both entities",
+      "Ignore the attribute names"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 96,
+    "question": "Given relation R(X, Y, Z, W) with the set of functional dependencies: XY -> Z, Z -> W, W -> X. Which of the following is a candidate key of R?",
+    "options": [
+      "XY",
+      "YZ",
+      "YW",
+      "All of XY, YZ, and YW"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 97,
+    "question": "What is the result of",
+    "options": [
+      "Union of tables",
+      "Intersection of tables",
+      "Cartesian product",
+      "Natural join"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 98,
+    "question": "In query compiler, which unit transforms the initial query plan into the best available sequence of operations on the actual data?",
+    "options": [
+      "query parser",
+      "query preprocessor",
+      "query optimizer",
+      "query processor"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 99,
+    "question": "Which of the following accurately represents the purpose of",
+    "options": [
+      "To maintain data integrity and consistency.",
+      "To define access permissions",
+      "To ensure a sequence of operations is completed fully or not at all",
+      "To allow concurrent modifications without restrictions"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 100,
+    "question": "Question 6",
+    "options": [
+      "UPDATE",
+      "ALTER",
+      "MODIFY",
+      "CHANGE"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 101,
+    "question": "Consider the relation: OrderDetail (orderNumber, productCode, productName, quantity, dateOrdered, salesDiscount) And FDs { orderNumber, productCode -+ quantity, orderNumber -+ dateOrdered, productCode -+ productName, salesDiscount } And the key of OrderDetail is {orderNumber, productCode}. Which of the following is full dependency on the key?",
+    "options": [
+      "orderNumber, productCode quantity",
+      "orderNumber -+ dateOrdered",
+      "productCode —+ productName",
+      "productCode —i productName, salesDiscount"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 102,
+    "question": "Cäu IO. Which of the following operations cannot be used in relational algebra? (Choose two answers) A. Union B. Divide C. Select D. Loop",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 103,
+    "question": "Which relational algebra operator removes attributes from",
+    "options": [
+      "Selection (o)",
+      "Projection (n)",
+      "Join (x)",
+      "Union (u)"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 104,
+    "question": "What is the purpose of the RENAME operation in relational algebra? (Choose three answers)",
+    "options": [
+      "To avoid ambiguity, especially when joining relations with the same attribute names.",
+      "To make query expressions clearer and easier to read.",
+      "To resolve naming conflicts in operations like UNION",
+      "To search, index, and join tables quickly."
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "id": 105,
+    "question": "Question 33",
+    "options": [
+      "INF",
+      "2NF",
+      "3NF",
+      "4NF"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 106,
+    "question": "Question 40",
+    "options": [
+      "Entity Real-world thing, distinguishable from other objects, in ERD.",
+      "Diagram",
+      "Relationship",
+      "Primary entity"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 107,
+    "question": "Question 42",
+    "options": [
+      "INF",
+      "2NF",
+      "3NF",
+      "All of the mentioned"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 108,
+    "question": "Which two statements correctly describe stored procedures? (Choose two correct answers)",
+    "options": [
+      "They can return multiple result sets",
+      "They are compiled each time they run",
+      "They support conditional logic like IF...ELSE",
+      "They replace the need for triggers"
+    ],
+    "answer": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": 109,
+    "question": "Problems such as redundancy that occur when we try to cram too much into",
+    "options": [
       "Normal Form",
       "Anomalies",
-      "Relations",
-      "None of the otherss"
+      "Decomposing Relations",
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Quan hệ đạt chuẩn 2NF khi nó đã ở dạng chuẩn 1NF và không tồn tại phụ thuộc hàm từng phần của thuộc tính không khóa vào bất kỳ khóa chính nào."
+    "answer": 1
   },
   {
-    id: 65,
-    question: "What is the purpose of data normalization in the context of the database design?",
-    options: [
+    "id": 110,
+    "question": "What is the full form of DBMS?",
+    "options": [
+      "Data of Binary Management System",
+      "Database Management System",
+      "Database Management Service",
+      "Data Backup Management System"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 111,
+    "question": "In SQL,",
+    "options": [
+      "The UPDATE command is applicable to all views.",
+      "The fields in a view are fields from one or more real tables in the database.",
+      "The database engine recreates the view every time a user queries it.",
+      "view always shows up-to-date data."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 112,
+    "question": "Which of the following is an appropriate characteristic of",
+    "options": [
+      "Because a database is created to suit the format of the data, it cannot respond flexibly to data format changes.",
+      "The procedure for making backups is complicated.",
+      "It is difficult to share data between operations due to an exclusive control function.",
+      "It can be accessed by multiple users at the same time due to an exclusive control function."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 113,
+    "question": "Which key does not accept",
+    "options": [
+      "Unique Key",
+      "Primary Key",
+      "Foreign Key",
+      "Candidate Key"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 114,
+    "question": "Which of the following is used to define code that is fired when certain actions or events occur?",
+    "options": [
+      "You use an application Trigger to fire when certain actions or events occur.",
+      "You use an application Cursor to fire when certain actions or events occur.",
+      "You use an application Replace to fire when certain actions or events occur.",
+      "You use an application Keyword to fire when certain actions or events occur."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 115,
+    "question": "Cäu IO. Foreign key constraints are created by using the ' another table. A. REFER B. REFERENCES C. REFERENTIAL D. All of the others keyword to refer to the primary key of",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 116,
+    "question": "Question 11",
+    "options": [
+      "Primary Key",
+      "Foreign Key",
+      "Super key",
+      "Candidate Key"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 117,
+    "question": "The % wildcard, when used with the LIKE keyword, represents",
+    "options": [
+      "Has a minimum length of 0 characters",
+      "Has a minimum length of 1 character, a maximum length of n characters",
+      "Has a minimum length of 1 character, a maximum length of 255 characters",
+      "Has a minimum length of 1 character, a maximum length of 256 characters E. None of the above answers"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 118,
+    "question": "The intersection operator is used to get the",
+    "options": [
+      "Different",
+      "Common",
+      "All",
+      "Repeating tuples."
+    ],
+    "answer": 1
+  },
+  {
+    "id": 119,
+    "question": "Suppose there is",
+    "options": [
+      "-9 EG,",
+      "-9 A, BE -+ C, BC —i D, CG BD, ACD -9 B, CE -9 AG}. Compute the closure {AB}+.",
+      "ABCD",
+      "ABCDE"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 120,
+    "question": "In relational database design, which of the following is",
+    "options": [
+      "Entity Relationship model",
+      "Entity set",
+      "Field set",
+      "Record set"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 121,
+    "question": "Transaction processing is associated with everything below except:",
+    "options": [
+      "Producing detail, summary, or exception reports",
+      "Recording a business activity",
+      "Confirming an action or triggering a response",
+      "Maintaining data"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 122,
+    "question": "To modify the schema of an existing relation, use:",
+    "options": [
+      "CREATE TABLE",
+      "MODIFY TABLE",
+      "ALTER TABLE",
+      "DROP TABLE"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 123,
+    "question": "Which of the following is NOT correct about how",
+    "options": [
+      "The name of the local variable should begin with the \"@@\" sign as the first character of its name.",
+      "local variable is defined using T-SQL with the statement DECLARE.",
+      "When a variable is first declared, its value is set to NULL. To assign a value, use the SET statement.",
+      "The data type of a local variable is declared after its name, assigned a system-supplied or user- defined data type and a length."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 124,
+    "question": "Which operation is commonly used to display selected columns (attributes) from the original relation?",
+    "options": [
+      "Union",
+      "Intersection",
+      "Closure",
+      "Projection"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 125,
+    "question": "In the relational model of data, what is the result of an algebraic query language?",
+    "options": [
+      "Data series",
+      "Data file",
+      "Relation",
+      "Database"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 126,
+    "question": "Regarding the difference between WHERE and HAVING in SQL, which of the following is true?",
+    "options": [
+      "WHERE filters data on aggregated values, HAVING filters on non-aggregated ones.",
+      "WHERE is written after GROUP BY, while HAVING comes before GROUP BY.",
+      "WHERE filters data on non-aggregated values, HAVING filters on aggregated ones.",
+      "Both HAVING and WHERE are written before GROUP BY, and HAVING comes before WHERE."
+    ],
+    "answer": 2
+  },
+  {
+    "id": 127,
+    "question": "What is the purpose of data normalization in the context of database design?",
+    "options": [
       "Ensure data security",
       "Avoid information anomalies",
       "Make sure data is inherited",
-      "D. Ensuring better data storage"
+      "Ensuring better data storage"
     ],
-    answer: 0,
-    explanation: "Dạng chuẩn 3NF loại bỏ các phụ thuộc hàm bắc cầu (Transitive functional dependencies) giữa các thuộc tính không khóa."
+    "answer": 1
   },
   {
-    id: 66,
-    question: "Which normalization level ensures that there are no repeating groups in tables?",
-    options: [
-      "First Normal Form (INF)",
-      "Second Normal Form (2NF)",
-      "Third Normal Form (3NF)",
-      "Boyce-Codd Normal Form (BCNF)"
+    "id": 128,
+    "question": "Which SQL command is used to undo changes made by",
+    "options": [
+      "COMMIT",
+      "ROLLBACK",
+      "SAVEPOINT",
+      "UNDO"
     ],
-    answer: 0,
-    explanation: "Một tập thuộc tính K là Siêu khóa (Superkey) nếu K xác định duy nhất mọi thuộc tính trong quan hệ (K+ chứa toàn bộ thuộc tính của R)."
+    "answer": 1
   },
   {
-    id: 67,
-    question: "Which of the following statements is true regarding Third Normal Form (3NF)?",
-    options: [
-      "It eliminates transitive dependencies",
-      "It allows for redundant data",
-      "It only considers partial dependencies",
-      "It doesn't address any anomalies in a database"
+    "id": 129,
+    "question": "What data structure represents the hierarchical data model?",
+    "options": [
+      "Array structure",
+      "Table structure",
+      "Tree structure",
+      "Pointer structure"
     ],
-    answer: 0,
-    explanation: "Trong sơ đồ E/R: Thuộc tính khóa (Key attribute) thường được biểu diễn bằng hình elip có gạch chân dưới tên thuộc tính."
+    "answer": 2
   },
   {
-    id: 68,
-    question: "SSN Converting entity set to relation",
-    options: [
-      "Employees(SSN, Name, Address, Street, City) Employees",
-      "Employees(SSN, Name, Street, City)",
-      "Employees(SSN, Name, Address)",
-      "Employees(SSN, Name, Address) Employees(SSN , Street, City)"
+    "id": 130,
+    "question": "data model is a notation for describing data or information. The description generally consists of:",
+    "options": [
+      "Structure of the data",
+      "Operations on the data",
+      "Constraints on the data",
+      "All of the others"
     ],
-    answer: 0,
-    explanation: "Chuyển đổi thực thể có thuộc tính phức hợp: Các thuộc tính thành phần của thuộc tính phức hợp sẽ trở thành các cột trực tiếp trong bảng quan hệ."
+    "answer": 3
   },
   {
-    id: 69,
-    question: "Given the ERD: Customer(1) --- [Makes] --- (n) Order Customer attributes: CustomerId, FirstName, LastName, Email, PhoneNumber Order attributes: OrderId, OrderDate How many attributes does the table 'ORDER' contain when converted to relational schema?",
-    options: [
-      "0",
-      "1",
-      "2",
-      "3"
+    "id": 131,
+    "question": "Consider the join of",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
     ],
-    answer: 3,
-    explanation: "Quan hệ 1:N giữa Customer (1) và Order (N): Bảng Order sẽ có các thuộc tính riêng (OrderId, OrderDate) cộng thêm khóa ngoại CustomerId tham chiếu từ bảng Customer, tổng cộng là 3 thuộc tính."
+    "answer": 0
   },
   {
-    id: 70,
-    question: "What is the purpose of a foreign key in an ERD?",
-    options: [
-      "ltdefines the data type of attributes",
-      "It determines the cardinality Of relationships",
-      "It serves as the primary identifier for a table",
-      "It establishes a link between two tables"
+    "id": 132,
+    "question": "Which is the correct statement about Stored Procedures?",
+    "options": [
+      "It is a set of SQL statements used to perform a certain task and works like a function in other programming languages",
+      "It is a single SQL statement used to perform a certain task and works like a function in other programming languages",
+      "It is a set of SQL statements used to perform many different tasks and works like a function in other programming languages",
+      "and b are correct"
     ],
-    answer: 0,
-    explanation: "Mối quan hệ nhiều - nhiều (N:N) trong mô hình E/R khi chuyển đổi sang CSDL quan hệ bắt buộc phải tạo một bảng trung gian (Junction table / Bridge table)."
+    "answer": 0
   },
   {
-    id: 71,
-    question: "Which of the following statements about relational databases is true?",
-    options: [
-      "The database is built on a relational data model.",
-      "The database is created from excel software.",
-      "Relational databases are only relations with attributes that are not primary keys.",
-      "Relational database is the relationship between rows and columns in a data table."
+    "id": 133,
+    "question": "Question 34",
+    "options": [
+      "Many-to-one",
+      "One-to-many",
+      "Many-to-many",
+      "One-to-one"
     ],
-    answer: 0,
-    explanation: "Mệnh đề WHERE lọc dữ liệu trước khi gom nhóm, không thể sử dụng trực tiếp các hàm tổng hợp như SUM, COUNT trong WHERE (phải dùng HAVING)."
+    "answer": 2
   },
   {
-    id: 72,
-    question: "Which of the following best describes an entity in an ERD (Entity-Relationship Diagram)?",
-    options: [
-      "A table with rows and columns",
-      "A real-world object or concept with attributes",
-      "A set of rows, columns, and constraints",
-      "D. A table with rows, columns, and domain constraints"
+    "id": 134,
+    "question": "Fill in the correct keyword to update the instructor relation.UPDATE instructor salary = salary * 1.05;",
+    "options": [
+      "WHERE",
+      "SET",
+      "FROM",
+      "SELECT"
     ],
-    answer: 0,
-    explanation: "Từ khóa DISTINCT loại bỏ các bản ghi trùng lặp trong tập kết quả trả về của câu lệnh SELECT."
+    "answer": 1
   },
   {
-    id: 73,
-    question: "In ER modeling, what does a weak entity require in order to be uniquely identified?",
-    options: [
-      "A surrogate key",
-      "A composite attribute with a identity constraint",
-      "A relationship with an identifying entity",
-      "A multi-valued attribute"
+    "id": 135,
+    "question": "What is relational algebra?",
+    "options": [
+      "Relational algebra is a set of operations on relations",
+      "Relational algebra is the decomposition of relations",
+      "Relational algebra is eliminated from relations",
+      "Relational algebra is gone from relations"
     ],
-    answer: 2,
-    explanation: "Phép nối tự nhiên (NATURAL JOIN) tự động kết hợp các dòng từ hai bảng dựa trên tất cả các cột có cùng tên và cùng kiểu dữ liệu giữa hai bảng."
+    "answer": 0
   },
   {
-    id: 74,
-    question: "What is a derived attribute in an ERD?",
-    options: [
-      "An attribute that is calculated from other attributes",
-      "An attribute that cannot be calculated",
-      "An attribute that is the primary key of an entity",
-      "An attribute that represents a relationship"
+    "id": 136,
+    "question": "The result of which operation contains all pairs of tuples from the two relations, regardless of whether their attribute values match?",
+    "options": [
+      "Join",
+      "Cartesian product",
+      "Intersection",
+      "Set difference"
     ],
-    answer: 0,
-    explanation: "LEFT OUTER JOIN giữ lại toàn bộ các dòng từ bảng bên trái; các cột của bảng bên phải không khớp điều kiện sẽ nhận giá trị NULL."
+    "answer": 1
   },
   {
-    id: 75,
-    question: "How are composite attributes represented in the relational model?",
-    options: [
+    "id": 137,
+    "question": "Which transaction methods are used with the Connection object to save or cancel changes made to the data source?",
+    "options": [
+      "Begin Transaction, Rollback Transaction",
+      "Begin Transaction, Commit Transaction",
+      "Begin Transaction, Commit Transaction, Rollback Transaction",
+      "Commit Transaction, Rollback Transaction"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 138,
+    "question": "Select the most correct answer:",
+    "options": [
+      "An index is not a data structure used to speed access to tuples of a relation, given values of one or more attributes.",
+      "The key to an index cannot be any attribute or set of attributes, and need not be the key to the relation.",
+      "We can think of the index as a binary search tree of (key, locations) pairs in which a key is not associated with a set of locations of the tuples.",
+      "An index is a data structure used to speed access to tuples of a relation, given values of one or more attributes."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 139,
+    "question": "How are composite attributes represented in the relational model?",
+    "options": [
       "As individual attributes in the related tables",
       "By creating a new table for each composite attribute",
       "By using a single attribute in the related tables",
       "By using a composite key in the related tables"
     ],
-    answer: 0,
-    explanation: "RIGHT OUTER JOIN giữ lại toàn bộ các dòng từ bảng bên phải; các cột của bảng bên trái không khớp sẽ nhận giá trị NULL."
+    "answer": 0
   },
   {
-    id: 76,
-    question: "What does the ON UPDATE CASCADE option do in SQL Server when defined for a foreign key constraint?",
-    options: [
-      "Automatically updates the foreign key value when the referenced primary key is updated",
-      "Automatically deletes the foreign key row when the referenced rovv' is updated",
-      "Prevents the update of foreign key values",
-      "Sets the foreign key value to NULL when the referenced primary key is updated"
+    "id": 140,
+    "question": "The ability to query data, as well as insert, delete, and alter tuples, is offered by:",
+    "options": [
+      "TCL (Transaction Control Language)",
+      "DCL (Data Control Language)",
+      "DDL (Data Definition Language)",
+      "DML (Data Manipulation Language)"
     ],
-    answer: 0,
-    explanation: "FULL OUTER JOIN kết hợp kết quả của cả LEFT JOIN và RIGHT JOIN, giữ lại toàn bộ các dòng từ cả hai bảng."
+    "answer": 3
   },
   {
-    id: 77,
-    question: "Which of the following wildcard characters matches any sequence of zero or more characters in a string comparison in SQL (LIKE clause)?",
-    options: [
-      "_",
-      "%",
-      "*",
-      "?"
+    "id": 141,
+    "question": "Which of the following statements is true regarding Third Normal Form (3NF)?",
+    "options": [
+      "It eliminates transitive dependencies",
+      "It allows for redundant data",
+      "It only considers partial dependencies",
+      "It doesn't address any anomalies in a database"
     ],
-    answer: 1,
-    explanation: "Trong SQL, ký tự đại diện '%' khớp với chuỗi gồm 0 hoặc nhiều ký tự bất kỳ trong mệnh đề so sánh LIKE."
+    "answer": 0
   },
   {
-    id: 78,
-    question: "Which of the following date functions is correct in SQL Server to extract the year part?",
-    options: [
-      "SELECT DATEPART(year, '2024-01-10');",
-      "SELECT DATEPART('2024-01-10', year);",
-      "SELECT PARTDATE(year, '2024-01-10');",
-      "SELECT GETDATE(year, '2024-01-10');"
+    "id": 142,
+    "question": "Which normalization level ensures that each attribute is dependent only on the primary key?",
+    "options": [
+      "First Normal Form (1 NF)",
+      "Second Normal Form (2NF)",
+      "Third Normal Form (3NF)",
+      "Boyce-Codd Normal Form (BCNF)"
     ],
-    answer: 0,
-    explanation: "Hàm DATEPART(datepart, date) trong SQL Server: Tham số đầu tiên là phần ngày cần lấy (year, month, day) và tham số thứ hai là giá trị ngày tháng."
+    "answer": 1
   },
   {
-    id: 79,
-    question: "What does the following SQL query return? SELECT name FROM Products WHERE price > 100;",
-    options: [
-      "All product names with price less than 100",
-      "All product names regardless of price",
-      "Product names with price greater than 100",
-      "Syntax error"
+    "id": 143,
+    "question": "Question 46",
+    "options": [
+      "query parser",
+      "query preprocessor",
+      "query optimizer",
+      "query processor"
     ],
-    answer: 2,
-    explanation: "Hàm DATEDIFF(datepart, startdate, enddate) trả về khoảng chênh lệch thời gian giữa hai mốc ngày tháng."
+    "answer": 0
   },
   {
-    id: 80,
-    question: "",
-    options: [
-      "must always be composed of 0.•.'0 or more columns.",
-      "can only be one column.",
-      "identifies a row.",
-      "D. identifies a column."
+    "id": 144,
+    "question": "Through",
+    "options": [
+      "Always updateable",
+      "Can never update",
+      "Some cases can be updated, some cases cannot",
+      "If the VIEW sees a table, it can be updated E. All of the mentioned answers are wrong"
     ],
-    answer: 2,
-    explanation: "Hàm COUNT(*) đếm tổng số dòng trong bảng (bao gồm cả dòng có chứa giá trị NULL)."
+    "answer": 2
   },
   {
-    id: 81,
-    question: "Given a relation: R(A,B,C,D) with the key is A, the foreign key is D And the query : \"select A, count(D) from R group by D\" What is the output of the query?",
-    options: [
-      "It will return all rows from the R table",
-      "It returns only the A column where the value in D column is grouped",
-      "This query will cause an error in standard SQL",
-      "There is no GROUP BY with a HAVING clause-"
+    "id": 145,
+    "question": "What data type is best suited for",
+    "options": [
+      "Varchar(30)",
+      "Nvarchar(30)",
+      "Text(30)",
+      "Char(30)"
     ],
-    answer: 2,
-    explanation: "Mệnh đề GROUP BY gom các dòng có cùng giá trị trong các cột được chỉ định lại với nhau để thực hiện các phép tính tổng hợp."
+    "answer": 1
   },
   {
-    id: 82,
-    question: "Which of the following SQL statements returns all rows from Cars where year is greater than 2019?",
-    options: [
-      "SELECT * FROM Cars WHERE year > 2019;",
-      "SELECT * FROM Cars HAVING year > 2019;",
-      "SELECT * FROM Cars WHEN year > 2019;",
-      "SELECT * FROM Cars WHERE year = 2019;"
+    "id": 146,
+    "question": "Domain constraints, functional dependency, and referential integrity are special forms of:",
+    "options": [
+      "Foreign key",
+      "Primary key",
+      "Assertion",
+      "Referential constraint"
     ],
-    answer: 0,
-    explanation: "Cú pháp chuẩn để lọc các bản ghi có năm sản xuất lớn hơn 2019: SELECT * FROM Cars WHERE year > 2019;"
+    "answer": 2
   },
   {
-    id: 83,
-    question: "Which of the following statements is false regarding SQL Correlated sub-queries?",
-    options: [
-      "A correlated subquery is not evaluated once for each row processed by the parent statement.",
-      "Correlated subqueries are used for row-by-row processing.",
-      "Each subquery is executed once for every row of the outer query.",
-      "Subqueries always process the innermost query first and the work outward."
+    "id": 147,
+    "question": "Which statement best represents Armstrong's Axiom of Decomposition?",
+    "options": [
+      "If BC, then",
+      "and",
+      "and C, then",
+      "If B, then AC BC B, then B"
     ],
-    answer: 0,
-    explanation: "Câu lệnh INSERT INTO dùng để thêm một hoặc nhiều dòng dữ liệu mới vào bảng quan hệ."
+    "answer": 0
   },
   {
-    id: 84,
-    question: "Which SQL statement will correctly update the salary of all employees by 10% where job title is 'Manager'?",
-    options: [
-      "UPDATE Employees SET salary = salary * 1.1 WHERE job = 'Manager';",
-      "UPDATE Employees WHERE job = 'Manager' SET salary = salary * 1.1;",
-      "UPDATE Employees SET salary + 1.1 WHERE job = 'Manager';",
-      "MODIFY Employees SET salary = salary * 1.1 WHERE job = 'Manager';"
+    "id": 148,
+    "question": "What is an index?",
+    "options": [
+      "An index is a database table attribute that speeds up data search within a table.",
+      "An index is the same as an alias.",
+      "An index is a special way to join 2 or more tables.",
+      "An index is a database row attribute that speeds up data search within a table."
     ],
-    answer: 0,
-    explanation: "Cú pháp chuẩn để cập nhật lương tăng 10%: UPDATE Employees SET salary = salary * 1.1 WHERE job = 'Manager';"
+    "answer": 0
   },
   {
-    id: 85,
-    question: "Which SQL command is used to create a non-clustered index on the EmployeeName column in the Employees table?",
-    options: [
-      "CREATE INDEX EmployeeName_lndex ON Employees(EmployeeName);",
-      "CREATE NONCLUSTERED INDEX EmployeeName_lndex ON Employees(EmployeeName);",
-      "CREATE PRIMARY KEY INDEX EmployeeName_lndex ON Employees(EmployeeName);",
-      "CREATE CLUSTERED INDEX EmployeeName Index ON Employees(EmployeeName);"
+    "id": 149,
+    "question": "Which of the following is NOT",
+    "options": [
+      "Minimum duplication of data",
+      "Redundancy of data",
+      "Single-user access only",
+      "Support for the ACID property"
     ],
-    answer: 0,
-    explanation: "Câu lệnh DELETE FROM tableName WHERE condition; xóa các dòng thỏa mãn điều kiện lọc mà không xóa cấu trúc của bảng."
+    "answer": 2
   },
   {
-    id: 86,
-    question: "What is not the purpose of the index in MS-SQL Server?",
-    options: [
-      "To use less hardware resources",
-      "TO enhance the query performance",
-      "To provide an index to a record",
-      "TO perform fast in searching"
+    "id": 150,
+    "question": "Question 4",
+    "options": [
+      "ResultSet object is used to execute SQL queries and update statements in JDBC.",
+      "Connection",
+      "Statement",
+      "CallableStatement"
     ],
-    answer: 0,
-    explanation: "Khung nhìn (VIEW) là một bảng ảo (Virtual Table) dựa trên tập kết quả của một câu truy vấn SQL, không lưu trữ dữ liệu vật lý riêng biệt."
+    "answer": 2
   },
   {
-    id: 87,
-    question: "In which objects can Transaction be used?",
-    options: [
-      "View, User-defined function",
-      "User-defined function, Store Procedure",
-      "Store Procedure, Trigger, View",
-      "D. User-defined function, Store Procedure, Trigger E. All of the mentioned answers are wrong"
+    "id": 151,
+    "question": "Which of the following is an example of",
+    "options": [
+      "StudentlD with a unique value",
+      "FullName (split into FirstName and LastName)",
+      "EmailAddress with multiple values",
+      "DateOfBirth accepted in the format \"dd/mm/yyyy\""
     ],
-    answer: 0,
-    explanation: "Lợi ích của VIEW bao gồm: Bảo mật dữ liệu (ẩn các cột nhạy cảm), đơn giản hóa truy vấn phức tạp và đảm bảo tính độc lập dữ liệu."
+    "answer": 1
   },
   {
-    id: 88,
-    question: "What are the ACID properties of DBMS Transactions?",
-    options: [
-      "Atomicity, Consistency, Isolation, Durability",
-      "Atomicity, Consistency, Interpolate, Database",
-      "Atomicity, Consistency, Inconsistent, Durability",
-      "Automatic, Concurrent, Inconsistent, Deadlock-freedom"
+    "id": 152,
+    "question": "Which function gets the day value (of the month) in SQL?",
+    "options": [
+      "DAYOFMONTH(date)",
+      "DATE(date)",
+      "DAY(date)",
+      "MONTHDAY(date) E. None of the above answers"
     ],
-    answer: 0,
-    explanation: "Mức độ cô lập Read Committed chỉ cho phép đọc dữ liệu đã được commit bởi các giao dịch khác, ngăn chặn Dirty Read."
+    "answer": 2
   },
   {
-    id: 89,
-    question: "What's the default behavior if autocommit is ON?",
-    options: [
-      "Manual COMMIT needed",
-      "Every command is saved",
-      "No command is saved",
-      "D. only SELECT works"
+    "id": 153,
+    "question": "In relational database design, which normal form eliminates multi-valued attributes and ensures that data is organized at",
+    "options": [
+      "INF",
+      "2NF",
+      "3NF",
+      "4NF"
     ],
-    answer: 0,
-    explanation: "Giao dịch (Transaction) là một chuỗi các thao tác cơ sở dữ liệu được thực hiện như một đơn vị công việc duy nhất tuân thủ tính nguyên tử (Atomicity)."
+    "answer": 0
   },
   {
-    id: 90,
-    question: "Which one of the follov'ing is not true for a view'?",
-    options: [
-      "View never contains derived columns.",
-      "A view definition is permanently stored as part Of the database.",
-      "View is a virtual table.",
-      "Vlew is derived from other tables."
+    "id": 154,
+    "question": "Which one of the following is NOT",
+    "options": [
+      "DELETE",
+      "CREATE DATABASE",
+      "INSERT",
+      "USE"
     ],
-    answer: 0,
-    explanation: "Lệnh ROLLBACK hoàn tác tất cả các thay đổi do giao dịch thực hiện kể từ thời điểm bắt đầu giao dịch hoặc từ điểm lưu (Savepoint)."
+    "answer": 0
   },
   {
-    id: 91,
-    question: "How can you pass parameters to a stored procedure?",
-    options: [
-      "Using @parameter_name = value",
-      "Using value",
-      "using :parameter_name = value",
-      "Using param_name value"
+    "id": 155,
+    "question": "Cäu IO. How are many-to-many relationships typically represented in the relational model? A. By adding attributes to one of the related tables B. By creating a new table with foreign keys from both related tables C. By denormalizing the database D. By creating a new table for each related entity",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
     ],
-    answer: 0,
-    explanation: "Lệnh COMMIT xác nhận lưu vĩnh viễn tất cả các thay đổi của giao dịch vào cơ sở dữ liệu."
+    "answer": 1
   },
   {
-    id: 92,
-    question: "Suppose we have defined VIEW ParamountMovies from the Movies table. When we execute the command: DROP TABLE Movies; Which of the following statements is correct?",
-    options: [
-      "The Movies table goes away, but VIEW ParamountMovies can still be used.",
-      "The Movies table goes away and VIEW ParamountMovies cannot be used.",
-      "The Movies table cannot be dropped because VIEW ParamountMovies still references it.",
-      "The Movies table cannot be dropped, but VIEW ParamountMovies is dropped."
+    "id": 156,
+    "question": "What is the main purpose of",
+    "options": [
+      "To write SQL queries for the database",
+      "To define the physical structure of tables and indexes",
+      "To represent high-level business entities and relationships",
+      "To optimize database performance by normalization and decomposition"
     ],
-    answer: 1,
-    explanation: "Khi xóa bảng gốc bằng lệnh DROP TABLE, khung nhìn (VIEW) phụ thuộc vào bảng đó sẽ mất nguồn dữ liệu và không thể tiếp tục sử dụng được."
+    "answer": 2
   },
   {
-    id: 93,
-    question: "Which command is used to remove a relation (table) completely from an SQL database?",
-    options: [
-      "DROP TABLE",
-      "DELETE TABLE",
-      "PURGE TABLE",
-      "REMOVE TABLE"
+    "id": 157,
+    "question": "The CREATE TRIGGER statement is used to create",
+    "options": [
+      "for insert, on",
+      "on, for insert",
+      "for, insert",
+      "None of the mentioned"
     ],
-    answer: 0,
-    explanation: "Lệnh DROP TABLE xóa hoàn toàn định nghĩa bảng, toàn bộ dữ liệu, chỉ mục và trigger liên quan khỏi cơ sở dữ liệu."
+    "answer": 1
   },
   {
-    id: 94,
-    question: "When is it recommended to use a cursor in SQL?",
-    options: [
+    "id": 158,
+    "question": "Assume there is",
+    "options": [
+      "The primary key is the ID column, the unique key is the TAX NUMBER column",
+      "The primary key is the TAX NUMBER column, the unique key is the ID column",
+      "The primary key includes two columns (ID, TAX NUMBER) and there should not be a unique key",
+      "The primary key is the TAX NUMBER column, and there should not be a unique key"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 159,
+    "question": "Consider the relation R(A, B, C, D, E, F, G, K) with functional dependencies AB —+ C, B C, C —+ AD, D E, CF -+ B, G K. What is the closure of {AB}?",
+    "options": [
+      "{ABCDE}",
+      "{ABCDEF}",
+      "{CDE}",
+      "{ABCD} E. {ABCFG}"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 160,
+    "question": "What does an RDBMS consist of?",
+    "options": [
+      "Collection of Tables",
+      "Collection of Records",
+      "Collection of Keys",
+      "Collection of Fields"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 161,
+    "question": "stored procedure in SQL is a:",
+    "options": [
+      "Block of functions",
+      "Group of Transact-SQL statements compiled into a single execution plan",
+      "Group of distinct SQL statements",
+      "None of the mentioned"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 162,
+    "question": "Which of the following is used to delete rows where \"model\" is \"ford\" from the Cars table?",
+    "options": [
+      "DELETE FROM Cars WHERE model = 'ford';",
+      "DELETE Cars WHERE model = 'ford';",
+      "DELETE FROM Cars WITH TIE model IS 'ford';",
+      "DELETE model = 'ford' WHERE cars;"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 163,
+    "question": "What does the attribute domain define in the relational model?",
+    "options": [
+      "The primary key of the table",
+      "The foreign key references",
+      "The cardinality of relationships",
+      "The data type and range of values that an attribute can hold"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 164,
+    "question": "What does the relational algebra operation \"Projection\" do?",
+    "options": [
+      "Selects rows based on a condition.",
+      "Combines rows from two tables.",
+      "Selects columns from a table.",
+      "Renames a table."
+    ],
+    "answer": 2
+  },
+  {
+    "id": 165,
+    "question": "According to the technology deployed by the database management system, which of the following is correct?",
+    "options": [
+      "Locks are used to maintain transactional integrity and consistency.",
+      "Cursors are used to maintain transactional integrity and consistency.",
+      "Procedures are used to maintain transactional integrity and consistency.",
+      "Functions are used to maintain transactional integrity and consistency."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 166,
+    "question": "Which statement is used to disable",
+    "options": [
+      "ALTER TABLE",
+      "DROP CONSTRAINT fk name",
+      "ALTER TABLE",
+      "DISABLE CONSTRAINT fk name"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 167,
+    "question": "The deadlock state can be changed back to",
+    "options": [
+      "DELETE",
+      "DEADLOCK",
+      "COMMIT",
+      "ROLLBACK"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 168,
+    "question": "In SQL, what is the purpose of the CLOSE statement in relation to cursors?",
+    "options": [
+      "To close the database connection",
+      "To close the cursor and release associated resources",
+      "To close the transaction",
+      "To close the result set"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 169,
+    "question": "Which normalization level ensures that there are no repeating groups in tables?",
+    "options": [
+      "First Normal Form (1 NF)",
+      "Second Normal Form (2NF)",
+      "Third Normal Form (3NF)",
+      "Boyce-Codd Normal Form (BCNF)"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 170,
+    "question": "When is it recommended to use",
+    "options": [
       "Always, as cursors are the most efficient way to process data",
       "When processing data row by row is necessary or unavoidable",
       "Only when creating complex joins between tables",
       "Never, as set-based operations are always more efficient"
     ],
-    answer: 0,
-    explanation: "Khi cần xử lý từng dòng dữ liệu tuần tự theo logic nghiệp vụ phức tạp mà câu lệnh set-based SQL không thể xử lý trực tiếp, ta sử dụng CURSOR."
+    "answer": 1
   },
   {
-    id: 95,
-    question: "What makes stored procedures faster than sending a Transact-SQL statement to SQL Server?",
-    options: [
-      "They are not faster.",
-      "The query plan is compiled and cached on the server _",
-      "The Transact-SQL statements are shorter.",
-      "D. There are less commands available, so parsing time is shorter."
+    "id": 171,
+    "question": "Which constraint ensures that the values of certain attributes in",
+    "options": [
+      "Foreign key constraint",
+      "Primary key constraint",
+      "Check constraint",
+      "Unique constraint"
     ],
-    answer: 0,
-    explanation: "Stored Procedure thực thi nhanh hơn câu lệnh SQL thô vì nó đã được biên dịch và tối ưu hóa trước, đồng thời kế hoạch thực thi (Execution Plan) được lưu trong bộ nhớ đệm (Cache)."
+    "answer": 1
   },
   {
-    id: 96,
-    question: "Which of the following is not a typical trigger action ?",
-    options: [
-      "Insert",
+    "id": 172,
+    "question": "Suppose relation RI(A, B) and relation R2(C, each have tuples. Which tuples are contained in the result of the query below?SELECT RI .B, R2.C FROM RI RIGHT JOIN R2 ON RI .",
+    "options": [
+      "= (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (d, NULL); (e, NULL)",
+      "(2, 101); (b, 102); (c, 103); (a, 104); (a, 105)",
+      "(a, 101); (b, 102); (e, 103)",
+      "(a, 101); (a, 104); (b, 102); (c, 103); (e, NULL)"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 173,
+    "question": "Consider the relation R(A, B, C, D) with functional dependencies",
+    "options": [
+      "and -+ Find the key of this relation. The key is column",
+      "The key includes two columns (A,",
+      "The key is column or column",
+      "The key is column C"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 174,
+    "question": "Which one of the following is NOT true for",
+    "options": [
+      "view never contains derived columns.",
+      "view definition is permanently stored as part of the database.",
+      "view is a virtual table.",
+      "view is derived from other tables."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 175,
+    "question": "Which of the following is",
+    "options": [
+      "Sorting",
+      "Indexing",
+      "Selection",
+      "Comping"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 176,
+    "question": "Given that Cartoons and Murder Mysteries are special Movie genres, what is the relationship between the entities Cartoons, Murder Mysteries, and Movie?",
+    "options": [
+      "Is-a relationship",
+      "A-is relationship",
+      "Supporting relationship",
+      "Referential integrity relationship"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 177,
+    "question": "What is Boyce-Codd Normal Form (BCNF)?",
+    "options": [
+      "The weakest normal form.",
+      "normal form where every determinant is a candidate key.",
+      "normal form that allows redundancy.",
+      "The same as first normal form."
+    ],
+    "answer": 1
+  },
+  {
+    "id": 178,
+    "question": "Which command is used to remove",
+    "options": [
+      "DROP TABLE",
+      "DELETE",
+      "PURGE",
+      "REMOVE"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 179,
+    "question": "Let El and E2 be two entities in an E/R diagram with simple single-valued attributes. RI and R2 are two relationships between El and E2, where RI is one-to-many and R2 is many-to-many. RI and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 180,
+    "question": "Question 44",
+    "options": [
+      "query parser",
+      "query preprocessor",
+      "query optimizer",
+      "query processor"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 181,
+    "question": "What are the ACID properties of DBMS transactions?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Atomicity, Consistency, Interpolate, Database",
+      "Atomicity, Consistency, Inconsistent, Durability",
+      "Automatic, Concurrent, Inconsistent, Deadlock-freedom"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 182,
+    "question": "Which of the following is correct?",
+    "options": [
+      "SELECT DATEPART(DATE, 'IO-jan-24')",
+      "SELECT DATEPART('I O-jan-24', DATE)",
+      "SELECT DATEPART('I O-jan-24', DAY)",
+      "SELECT DATEPART(DAY, '1 0-jan-24')"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 183,
+    "question": "Question 47",
+    "options": [
+      "-+ B, what can be said about B?",
+      "is also a superkey",
+      "is a determinant",
+      "is functionally dependent on"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 184,
+    "question": "In which objects can",
+    "options": [
+      "View, User-defined function",
+      "User-defined function, Stored Procedure",
+      "Stored Procedure, Trigger, View",
+      "User-defined function, Stored Procedure, Trigger E. All of the mentioned answers are wrong"
+    ],
+    "answer": 4
+  },
+  {
+    "id": 185,
+    "question": "Consider two relations MovieStar(name, address, gender, birthdate) and MovieExec(name, address, cert, netWorth). You want the names and addresses of all female movie stars who are also movie executives with",
+    "options": [
+      "SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieExec WHERE networth > 10000000",
+      "SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE net-Worth > 10000000",
+      "SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieExec WHERE networth > 10000000",
+      "None of the others"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 186,
+    "question": "Database data models usually have",
+    "options": [
+      "Constraints on the data",
+      "Operations on the data",
+      "Structure of the data",
+      "Definition of data"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 187,
+    "question": "The name of",
+    "options": [
+      "Schema",
+      "Tuple",
+      "Domain",
+      "Attribute"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 188,
+    "question": "The operation that combines two relations by merging pairs of tuples, one from each relation, into",
+    "options": [
       "Select",
-      "Update",
-      "Delete"
+      "Join",
+      "Union",
+      "Intersection"
     ],
-    answer: 0,
-    explanation: "Trigger trong CSDL thường được kích hoạt tự động sau hoặc thay thế cho các thao tác DML (INSERT, UPDATE, DELETE). SELECT không phải là sự kiện kích hoạt trigger thông thường."
+    "answer": 1
   },
   {
-    id: 97,
-    question: "Which of the following best describes Atomicity in transactions?",
-    options: [
-      "Transactions rum in parallel",
-      "Transactions are executed step by step",
-      "All operations in a transaction succeed or none are applied",
-      "Data is stored permanently"
+    "id": 189,
+    "question": "Suppose we have",
+    "options": [
+      "2NF",
+      "INF",
+      "3NF",
+      "BCNF"
     ],
-    answer: 2,
-    explanation: "Tính nguyên tử (Atomicity) trong ACID đảm bảo rằng một giao dịch hoặc là được thực hiện trọn vẹn thành công tất cả các bước, hoặc là không có bước nào được thực hiện (All or Nothing)."
+    "answer": 3
   },
   {
-    id: 98,
-    question: "What is a NULL constraint?",
-    options: [
-      "A constraint that allows only NULL values",
-      "A constraint that prevents NULL values in a column.",
-      "A constraint that sets default values to NULL",
-      "D. A constraint that converts NULL values to a specific data type."
+    "id": 190,
+    "question": "Which of the following best describes an anomaly that normalization helps to eliminate in relational database design?",
+    "options": [
+      "Inconsistent data types within a table",
+      "Redundant data that leads to storage inefficiency",
+      "Insertion, update, or deletion anomalies",
+      "Lack of referential integrity between tables"
     ],
-    answer: 0,
-    explanation: "Ràng buộc NOT NULL đảm bảo rằng cột không được phép chứa giá trị rỗng (NULL), bắt buộc phải có giá trị khi thêm hoặc cập nhật bản ghi."
+    "answer": 2
   },
   {
-    id: 99,
-    question: "What is the main difference between DELETE and TRUNCATE in SQL?",
-    options: [
-      "DELETE cannot be rolled back, while TRUNCATE can.",
-      "TRUNCATE deletes all data in a table faster and logs minimally (DDL), while DELETE can delete specific rows based on WHERE condition (DML).",
-      "DELETE is for tables, while TRUNCATE is only for Views.",
-      "There is no difference between DELETE and TRUNCATE."
+    "id": 191,
+    "question": "In an employee table, to ensure an attribute always has",
+    "options": [
+      "NULL",
+      "NOT NULL",
+      "UNIQUE",
+      "DISTINCT"
     ],
-    answer: 1,
-    explanation: "TRUNCATE xóa toàn bộ dữ liệu trong bảng nhanh hơn và ghi ít log hơn (thao tác DDL), trong khi DELETE có thể xóa theo điều kiện WHERE và ghi log từng dòng (thao tác DML)."
+    "answer": 1
   },
   {
-    id: 100,
-    question: "Which data model introduced the concept of tables with ro•ws and columns?",
-    options: [
+    "id": 192,
+    "question": "What is the primary goal of normalization in database design?",
+    "options": [
+      "To increase data redundancy",
+      "To simplify data retrieval",
+      "To introduce duplicate data",
+      "To violate functional dependencies"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 193,
+    "question": "Normalization is:",
+    "options": [
+      "The process of ensuring that each table has a key",
+      "The process whereby a limit is put on the number of fields a record can contain",
+      "The process of organizing data efficiently and minimizing repetition, helping maintain data consistency and reducing the risk of errors",
+      "The process of ensuring that a relational database has at least two tables"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 194,
+    "question": "The Data Definition Language (DDL) in SQL is used to:",
+    "options": [
+      "Insert, update, and delete data from a database",
+      "Define and modify the structure of database objects such as tables, views, and indexes",
+      "Query and retrieve data from a database",
+      "Manage user permissions and access rights"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 195,
+    "question": "Cäu IO. What happens if an error occurs during a transaction and it is not explicitly handled or rolled back? A. The transaction is automatically committed B. The transaction is automatically rolled back C. The database becomes read-only D. The transaction remains in a pending state",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 196,
+    "question": "What is the purpose of",
+    "options": [
+      "It defines the data type of attributes",
+      "It determines the cardinality of relationships",
+      "It serves as the primary identifier for a table",
+      "It establishes a link between two tables"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 197,
+    "question": "Converting an E/R design to",
+    "options": [
+      "Turning each entity set into a relation with the same set of attributes",
+      "Replacing a relationship by a relation whose attributes are the keys for the connected entity sets",
+      "All of the others",
+      "None of the others"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 198,
+    "question": "What are logical constraints?",
+    "options": [
+      "The relationships between attributes are represented by relational operations",
+      "The relationships between attributes are represented by comparison operators",
+      "The relationships between attributes are represented by mathematical expressions",
+      "The relationships between attributes are represented by functional dependencies"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 199,
+    "question": "To convert",
+    "options": [
+      "Remove redundant data",
+      "Ensure each attribute has a unique value",
+      "Split the table into smaller tables",
+      "Ensure each attribute contains atomic values"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 200,
+    "question": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified attributes of at least one tuple in the referenced relation, according to which integrity constraint?",
+    "options": [
+      "Referential",
+      "Primary",
+      "Referencing",
+      "Specific"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 201,
+    "question": "In relational algebra, the natural join operation can be viewed as:",
+    "options": [
+      "projection followed by a union",
+      "selection followed by a projection",
+      "Cartesian product followed by a selection and projection",
+      "product followed by a union"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 202,
+    "question": "An ERD uses three types of principal elements to form relationships:",
+    "options": [
+      "Entity sets, Constraints, and Relationships",
+      "Attributes, Constraints, and Relationships",
+      "Entity sets, Attributes, and Relationships",
+      "Entity sets, Attributes, and Constraints"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 203,
+    "question": "What is the difference between DELETE and TRUNCATE in SQL?",
+    "options": [
+      "DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table",
+      "DELETE is faster and does not generate logs",
+      "TRUNCATE allows rollback, but DELETE does not",
+      "TRUNCATE can delete specific rows, while DELETE removes all rows"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 204,
+    "question": "mön quan luön tap vién ké 5 thänh vién VE trang luyen tap Thi cuöi Icy (FE) Bö dé ånh cüa ky thi cuöi — xem tCrng ånh thåo luan ngay dudi ånh dö. Admin Test • 5 ngäy trudc Admin Test • 5 ngäy trudc Admin Test • 5 ngäy trudc Admin Test • 5 ngäy trudc Admin Test • 5 ngäy trudc DB1202 - SU25 - RE [SU25] Admin Test • 6 ngäy trur&c DB1202 -SU25 - 85 - 1 [SU25] Admin Test • 6 ngäy trur&c Admin Test • 5 ngåy trurdc Admin Test • 5 ngåy trurdc Admin Test • 5 ngåy trurdc Admin Test • 5 ngåy trurdc Admin Test • 5 ngåy trurdc DB1202 - SU25 - Final Exam [SU25] Admin Test • 6 ngåy trurdc DB1202 - SU 2024 - RE [SU24] Admin Test • 6 ngåy trurdc",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 205,
+    "question": "Which of the following statements is/are TRUE? (1)",
+    "options": [
+      "column with a FOREIGN KEY constraint does not allow duplicate values. (2)",
+      "FOREIGN KEY constraint can be defined to refer to columns with the UNIQUE constraint in another table.",
+      "Both statements are True",
+      "Both statements are False"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 206,
+    "question": "Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the result of the query below? SELECT C, AVG(D) FROM R GROUP BY C HAVING AVG(D) > 1000 ORDER BY c;",
+    "options": [
+      "(101, 11 500); (1 02, 2500)",
+      "(101, 2300); (102, 1250) c. (101, 5); (1 02, 2)",
+      "(101, 11500); (102, 1250)"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 207,
+    "question": "Choose the correct statement about the impact of declaring",
+    "options": [
+      "PRIMARY KEY: does not allow NULL values. UNIQUE: allows NULL values.",
+      "PRIMARY KEY: allows NULL values. UNIQUE: does not allow NULL values.",
+      "PRIMARY KEY: does not allow NULL values. UNIQUE: does not allow NULL values.",
+      "PRIMARY KEY: allows NULL values. UNIQUE: allows NULL values."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 208,
+    "question": "Suppose relation R(A, B) has tuples. Which tuples are contained in the result of the query below? SELECT * FROM R WHERE",
+    "options": [
+      "LIKE 'a%' UNION SELECT * FROM R WHERE",
+      "> 7;",
+      "(3, 5); (h, 8)"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 209,
+    "question": "Question 30",
+    "options": [
+      "-9",
+      "and",
+      "—i C, which rule allows us to infer",
+      "—i C?"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 210,
+    "question": "The people whose jobs require access to the database for querying, updating, and generating reports (the database primarily exists for their use) are which type of user?",
+    "options": [
+      "DBA",
+      "End users",
+      "Database designer",
+      "System Analysts and Application Programmers"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 211,
+    "question": "In SQL, what does the acronym ACID stand for concerning transactions?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Association, Concurrency, Integrity, Database",
+      "Aggregate, Criteria, Index, Delete",
+      "All Columns, Insertion, Deletion"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 212,
+    "question": "How can you delete",
+    "options": [
+      "DELETE FUNCTION function name",
+      "REMOVE FUNCTION function name",
+      "DROP FUNCTION function name",
+      "ERASE FUNCTION function name"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 213,
+    "question": "In an UPDATE statement, what does the WHERE clause determine?",
+    "options": [
+      "The order of update",
+      "The columns to be updated",
+      "The condition for selecting rows to be updated",
+      "The table to be updated"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 214,
+    "question": "In the relational model of data,",
+    "options": [
+      "Structure",
+      "Relationship",
+      "Constraints",
+      "Operations"
+    ],
+    "answer": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 215,
+    "question": "What is NOT",
+    "options": [
+      "To use fewer hardware resources",
+      "To enhance query performance",
+      "To provide an index to a record",
+      "To perform fast searching"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 216,
+    "question": "Which operation is NOT typically associated with relational data manipulation?",
+    "options": [
+      "Deleting attributes",
+      "Inserting tuples into a relation",
+      "Modifying tuples in a relation",
+      "Deleting tuples from a relation"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 217,
+    "question": "To convert from an ER Diagram to the Relational Model,",
+    "options": [
+      "Putting the key attribute of the one-side into the M-side",
+      "Putting the key attribute of the M-side into the one-side",
+      "Generating 1 relation whose primary key is combined from two relations",
+      "Building a table with two columns, one for each participating entity set's primary key"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 218,
+    "question": "DELETE command operates on how many relations?",
+    "options": [
+      "One",
+      "Two",
+      "Several",
+      "Null"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 219,
+    "question": "In the relational model, what does \"functional dependency\" imply?",
+    "options": [
+      "One attribute uniquely determines another attribute",
+      "Each relation depends on another relation",
+      "Relations can be modified without affecting each other",
+      "All attributes must be independent of each other"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 220,
+    "question": "Which of the following is FALSE about database triggers?",
+    "options": [
+      "It automatically runs when an event occurs in the database server",
+      "DML triggers are frequently used for enforcing business rules and data integrity",
+      "The same trigger action cannot be defined for more than one user action (for example, INSERT and UPDATE) within a single CREATE TRIGGER statement",
+      "When a trigger fires, results are returned to the calling application, just like with stored procedures."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 221,
+    "question": "When does the Inserted temporary trigger table become populated?",
+    "options": [
+      "With INSERT and UPDATE triggers",
+      "With DELETE triggers only",
+      "With INSERT, UPDATE, and DELETE triggers",
+      "With UPDATE and DELETE triggers"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 222,
+    "question": "What is the difference between",
+    "options": [
+      "Tables can be updated, while a view displays data from a query",
+      "Views can store data permanently, while tables are temporary",
+      "Tables are created with the CREATE TABLE statement, while views use CREATE VIEW",
+      "Views and tables are functionally equivalent in SQL"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 223,
+    "question": "table can be in 3NF but not in INF.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 224,
+    "question": "Which of the following is the correct way to execute",
+    "options": [
+      "EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WAI 1 DP';",
+      "EXECUTE SelectAllCustomers 'London', 'WAI 1 DP' OUTPUT",
+      "EXEC @City = 'London', @PostaICode - - 'WAI IDP'",
+      "EXECUTE SelectAIICustomers"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 225,
+    "question": "The descriptive property possessed by each entity set is:",
+    "options": [
+      "Entity",
+      "Attribute",
+      "Relation",
+      "Model"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 226,
+    "question": "In the entity-relationship model, what is an entity?",
+    "options": [
+      "Relationships",
+      "Relationships between objects",
+      "Objects and relationships between objects",
+      "Data objects"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 227,
+    "question": "For two relations Employee and Customer sharing the columns (Name, City, Gender), what is the result of the Union operation between Employee and Customer?",
+    "options": [
+      "Only the rows common to both relations",
+      "All rows from Employee only",
+      "All rows from Customer only",
+      "All distinct rows from both relations, with duplicates removed"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 228,
+    "question": "How many joins are required to join 6 tables in",
+    "options": [
+      "12"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 229,
+    "question": "In SQL, after grouping data using the GROUP BY clause, which clause is used to filter the groups based on specific conditions?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "WITH"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 230,
+    "question": "Suppose we need to sort all students in the STUDENTS(id, name, age) table in descending order of name and descending order of age. Which command should we use?",
+    "options": [
+      "SELECT * FROM Students ORDER BY name, age DESC",
+      "SELECT * FROM Students ORDER BY name DESC, age DESC",
+      "Both",
+      "and"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 231,
+    "question": "To ensure that each row in",
+    "options": [
+      "CHECK",
+      "UNIQUE",
+      "PRIMARY KEY",
+      "FOREIGN KEY"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 232,
+    "question": "real-world thing, distinguishable from other objects, in an ERD is called:",
+    "options": [
+      "Entity",
+      "Diagram",
+      "Relationship",
+      "Primary entity"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 233,
+    "question": "Two concurrently executing transactions Tl and T 2 are allowed to update the same record in an uncontrolled manner. If the database system has no concurrency module, which of the following problems may occur?",
+    "options": [
+      "Transaction failure",
+      "Dirty read problem",
+      "Lost update problem",
+      "Inconsistent database state"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 234,
+    "question": "Generally, what parts does",
+    "options": [
+      "Structure of the data, operations on the data, and constraints on the data",
+      "Metadata of the data, action logs, and data files",
+      "Keys on the table, records accepted in the table, and attributes of the table",
+      "Data schema, domain of attributes, and keys"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 235,
+    "question": "Cäu IO. Which of the following SQL statements returns only matching records between Customers and Saleslnvoice based on custlD? A. SELECT * FROM Customers LEFT JOIN Saleslnvoice ON Customers.custlD = Saleslnvoice.custlD; B. SELECT * FROM Customers INNER JOIN Saleslnvoice ON Customers.custlD = Saleslnvoice.custlD; C. SELECT * FROM Customers RIGHT JOIN Saleslnvoice ON Customers.custlD = Saleslnvoice.custlD; D. SELECT * FROM Customers FULL JOIN Saleslnvoice ON Customers.custlD = Saleslnvoice.custlD;",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 236,
+    "question": "In which of the following is",
+    "options": [
+      "One-to-One Relationship",
+      "One-to-Many Relationship",
+      "Many-to-Many Relationship",
+      "Composite Relationship"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 237,
+    "question": "Which property of ACID transactions ensures that",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 238,
+    "question": "key:",
+    "options": [
+      "must always be composed of two or more columns",
+      "can only be one column",
+      "identifies a row",
+      "identifies a column"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 239,
+    "question": "Which SQL statement is used to remove an existing index from",
+    "options": [
+      "DROP INDEX",
+      "REMOVE INDEX",
+      "DELETE INDEX",
+      "UNINDEX TABLE"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 240,
+    "question": "Which of the following best describes",
+    "options": [
+      "One entity is related to one other entity",
+      "One entity is related to many other entities",
+      "Many entities are related to many other entities",
+      "None of the others"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 241,
+    "question": "Which SQL statement is used to declare",
+    "options": [
+      "OPEN",
+      "DECLARE",
+      "CREATE CURSOR",
+      "BEGIN CURSOR"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 242,
+    "question": "Which data model introduced the concept of tables with rows and columns?",
+    "options": [
       "Hierarchical Model",
       "Network Model",
       "Object-Oriented Model",
       "Relational Model"
     ],
-    answer: 3,
-    explanation: "Mô hình quan hệ (Relational model) do E.F. Codd đề xuất đã đưa ra khái niệm tổ chức dữ liệu dưới dạng các bảng gồm các hàng (rows/tuples) và các cột (columns/attributes)."
+    "answer": 3
   },
   {
-    id: 101,
-    question: "Choose a right answer.",
-    options: [
-      "A SQL environment is the framework under which data may exist and SQL operations on data may be executed",
+    "id": 243,
+    "question": "Which SQL statement creates an updatable view?",
+    "options": [
+      "CREATE VIEW AS SELECT DISTINCT Product_No FROM \"Order\"",
+      "CREATE VIEW Product_Name, Order_Quantity) AS SELECT Order_No, Product_Name, Order_Quantity FROM \"Order\", Product WHERE \"Order\".Product_No = Product.Product No",
+      "CREATE VIEW Order_Quantity) AS SELECT Product_No, FROM \"Order\" GROUP BY Product_No",
+      "CREATE VIEW Product_Name) AS SELECT Product_No, Product Name FROM Product WHERE Product Unit Price > 1000"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 244,
+    "question": "view's definition can be modified using which statement, while a view's data can be modified using which statement?",
+    "options": [
+      "ALTER VIEW, ALTER",
+      "ALTER VIEW, EDIT",
+      "ALTER VIEW, UPDATE",
+      "UPDATE, ALTER VIEW"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 245,
+    "question": "How do you execute",
+    "options": [
+      "EXECUTE name_sp",
+      "EXEC name_sp",
+      "CALL name_sp",
+      "All of the answers above E."
+    ],
+    "answer": 4
+  },
+  {
+    "id": 246,
+    "question": "In the query below, which keyword must be inserted?lNSERT INTO Students INTO B. SET C. WHERE D. VALUES (32, N'lona Bush',",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 247,
+    "question": "Which operator is used to produce",
+    "options": [
+      "Selection",
+      "Projection",
+      "Intersection",
+      "All of the others"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 248,
+    "question": "If R is neither many-one from E to F nor from F to E, then we say R is:",
+    "options": [
+      "Many-one",
+      "One-one",
+      "Many-many",
+      "All of the others"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 249,
+    "question": "Which SQL clause is used to add",
+    "options": [
+      "ADD COLUMN",
+      "ALTER TABLE ADD COLUMN",
+      "INSERT INTO",
+      "CREATE COLUMN"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 250,
+    "question": "You need to develop an application to manage university courses, which requires structured data (tables, rows, columns), strict consistency, complex queries, and enforcement of ACID properties. Which data model is most appropriate?",
+    "options": [
+      "Relational data model (e.g. Microsoft SQL Server, MySQL)",
+      "Document-based data model (e.g. MongoDB, Cassandra, CouchDB)",
+      "Key-value data model (e.g. Redis, DynamoDB, Riak)",
+      "Hierarchical data model"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 251,
+    "question": "How can you invoke",
+    "options": [
+      "Using the EXECUTE statement",
+      "Using the CALL statement",
+      "Using the SELECT statement",
+      "Using the RUN statement"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 252,
+    "question": "relation R(X, Y, Z) has functional dependencies XY -9 Z and Z Y. Assuming X, Y, Z are single attributes and {X, Y} is the only candidate key, what is the highest normal form that R satisfies?",
+    "options": [
+      "First Normal Form (1 NF) only",
+      "Second Normal Form (2NF) but not Third Normal Form (3NF)",
+      "Third Normal Form (3NF) but not Boyce-Codd Normal Form (BCNF)",
+      "Boyce-Codd Normal Form (BCNF)"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 253,
+    "question": "When does the Deleted temporary trigger table become populated?",
+    "options": [
+      "With DELETE and INSERT triggers",
+      "With DELETE triggers only",
+      "With DELETE, UPDATE, and INSERT triggers",
+      "With DELETE and UPDATE triggers"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 254,
+    "question": "In SQL, to update",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "ALTER",
+      "ALTER TABLE"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 255,
+    "question": "With SQL, how do you select all records from",
+    "options": [
+      "SELECT * FROM Customers WHERE FirstName = 'a'",
+      "SELECT * FROM Customers WHERE FirstName LIKE 'aw",
+      "SELECT * FROM Customers WHERE FirstName LIKE 'Oka'",
+      "SELECT * FROM Customers WHERE FirstName ="
+    ],
+    "answer": 2
+  },
+  {
+    "id": 256,
+    "question": "In SQL, the statement SELECT * FROM R, S is equivalent to which of the following?",
+    "options": [
+      "SELECT * FROM R INNER JOIN S",
+      "SELECT * FROM R NATURAL JOIN S",
+      "SELECT * FROM R CROSS JOIN S",
+      "SELECT * FROM R UNION JOIN S"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 257,
+    "question": "Which of the following best describes an entity in an ERD (Entity-Relationship Diagram)?",
+    "options": [
+      "table with rows and columns",
+      "real-world object or concept with attributes",
+      "set of rows, columns, and constraints",
+      "table with rows, columns, and domain constraints"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 258,
+    "question": "Which of the following is NOT true about an aggregate function?",
+    "options": [
+      "All aggregate functions are nondeterministic.",
+      "It performs a calculation on a set of values and returns a single value.",
+      "Aggregate functions such as COUNT(*) ignore null values.",
+      "Aggregate functions are often used with the GROUP BY clause of the SELECT statement."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 259,
+    "question": "database administrator is a person or persons responsible for the structure or schema of the database.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 260,
+    "question": "In the context of set of changes that must all be made together\"?",
+    "options": [
+      "Consistency",
+      "Concurrency",
+      "Transaction",
+      "Atom"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 261,
+    "question": "In SQL normalization theory, which of the following statements is correct?",
+    "options": [
+      "All relations in 2NF are also in BCNF.",
+      "All relations in INF are also in BCNF.",
+      "All relations in 3NF are also in BCNF.",
+      "For any relation schema, there is a dependency-preserving decomposition into 3NF."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 262,
+    "question": "In the relational model, how are relationships represented between tables?",
+    "options": [
+      "By adding attributes to each table",
+      "By creating a new table for each relationship",
+      "By adding foreign keys to related tables",
+      "By creating a primary key in each table"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 263,
+    "question": "Within the context of ACID properties, which property ensures that even if the system crashes during",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 264,
+    "question": "Which of the following queries deletes employees who are not assigned to any department?",
+    "options": [
+      "DELETE FROM Employees WHERE DepartmentiD IS NULL;",
+      "DELETE FROM Employees WHERE DepartmentiD = I';",
+      "DELETE FROM Employees WHERE DepartmentiD = O;",
+      "DELETE FROM Employees WHERE DepartmentiD IS NOT NULL;"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 265,
+    "question": "may be executed",
+    "options": [
       "All of the others",
       "Within a SQL environment are two special kinds of processes: SQL clients and SQL servers.",
       "A SQL environment is a DBMS running at some installation."
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"All of the others\"."
+    "answer": 1
   },
   {
-    id: 102,
-    question: "Schema-altering commands are known as......commands.",
-    options: [
+    "id": 266,
+    "question": "Schema-altering commands are known as......commands.",
+    "options": [
       "Data Manipulation Language",
       "Data Controlling Language",
       "Data Definition Language",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "DDL (Data Definition Language) là ngôn ngữ định nghĩa dữ liệu, bao gồm các lệnh thay đổi cấu trúc bảng và lược đồ CSDL như CREATE, ALTER, DROP, TRUNCATE."
+    "answer": 2
   },
   {
-    id: 103,
-    question: "Referential integrity Constraints control relationships between _.",
-    options: [
+    "id": 267,
+    "question": "Referential integrity Constraints control relationships between _.",
+    "options": [
       "operations of an object",
       "tables in a database",
       "attributes in a table",
       "database instances"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"tables in a database\"."
+    "answer": 1
   },
   {
-    id: 104,
-    question: "Choose the right statement below to declare zero or one occurrence of an Element in DTD.",
-    options: [
+    "id": 268,
+    "question": "Choose the right statement below to declare zero or one occurrence of an Element in DTD.",
+    "options": [
       "<\"ELEMENT element-name (childname?)>",
       "<IELEMENT element-name (child-name+)>",
       "<'ELEMENT element-name (child-name*)>",
       "<IELEMENT element-name (child-name)>"
     ],
-    answer: 0,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
+    "answer": 0
   },
   {
-    id: 105,
-    question: "Given the relation Employee(SSN. FNAME. LNAME. SALARY). Select the right query below to find the employee(s) who has the lowest salary in the company",
-    options: [
-      "SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)",
-      "SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY >= ALL (SELECT SALARY FROM Employee)",
-      "SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY < MAX (SELECT SALARY FROM Employee)",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Để tìm nhân viên có mức lương thấp nhất, sử dụng truy vấn con kết hợp toán tử IN: WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)."
-  },
-  {
-    id: 106,
-    question: "Given a relation R(A.B.C.D). Which of the followings is trivial?",
-    options: [
+    "id": 269,
+    "question": "Given a relation R(A.B.C.D). Which of the followings is trivial?",
+    "options": [
       "A->BCD",
       "A->->BCD",
       "A->AB",
       "A->->AB"
     ],
-    answer: 1,
-    explanation: "Phụ thuộc hàm / đa trị tầm thường (Trivial): X → Y là tầm thường khi Y ⊆ X; A →→ BCD là tầm thường khi BCD chứa trong tập thuộc tính hoặc bao hàm toàn bộ quan hệ."
+    "answer": 1
   },
   {
-    id: 107,
-    question: "Which of the following is NOT a standard aggregation operator?",
-    options: [
+    "id": 270,
+    "question": "Which of the following is NOT a standard aggregation operator?",
+    "options": [
       "SUM",
       "AVG",
       "GROUP",
       "COUNT"
     ],
-    answer: 2,
-    explanation: "Các hàm tổng hợp chuẩn trong SQL bao gồm: SUM, AVG, COUNT, MIN, MAX. GROUP là mệnh đề gom nhóm (GROUP BY), không phải là hàm tổng hợp."
+    "answer": 2
   },
   {
-    id: 108,
-    question: "Select the well-formed XML",
-    options: [
-      "All of the others",
-      "<? xml version = \"1.0\" ?>",
-      "<? xml version - \"1 0' ?>",
-      "<? xml version = 1 0 7>"
-    ],
-    answer: 1,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
-  },
-  {
-    id: 109,
-    question: "Which of the followings is true?",
-    options: [
-      "The Entity Relationship (ER) model represents the structure of data graphically",
-      "The ER model is a low level database design IC]The ER model represents the operation on data",
-      "All of the others"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"The Entity Relationship (ER) model represents the structure of data graphically\"."
-  },
-  {
-    id: 110,
-    question: "In the three-tier architecture, the database tier's function is to",
-    options: [
+    "id": 271,
+    "question": "In the three-tier architecture, the database tier's function is to",
+    "options": [
       "All of the others.",
       "Execute the business logic of the organization operating the database.",
       "Manage the interactions with the user.",
       "Execute queries that are requested from the application tier."
     ],
-    answer: 3,
-    explanation: "Trong kiến trúc 3 tầng (3-tier), Database tier chịu trách nhiệm thực thi các câu truy vấn và quản lý lưu trữ dữ liệu theo yêu cầu từ Application tier."
+    "answer": 3
   },
   {
-    id: 111,
-    question: "Choose a right answer",
-    options: [
-      "When a privilege is granted, it cannot be revoked",
-      "Privileges cannot be granted on a view",
-      "An authorization ID may be granted privileges from others or may grve its privileges to others",
-      "All of the others"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"An authorization ID may be granted privileges from others or may grve its privileges to others\"."
-  },
-  {
-    id: 112,
-    question: "Which of the followings is part of data model?",
-    options: [
+    "id": 272,
+    "question": "Which of the followings is part of data model?",
+    "options": [
       "Operations on the data",
       "Constraints on the data",
       "All of the others |",
       "Structure of the data"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"All of the others |\"."
+    "answer": 2
   },
   {
-    id: 113,
-    question: "Exception handler in PSM is defined as follows: DECLARE <where to go next> HANDLER FOR condition list> <statement> The <where to go next> clause can be:",
-    options: [
+    "id": 273,
+    "question": "Exception handler in PSM is defined as follows: DECLARE <where to go next> HANDLER FOR condition list> <statement> The <where to go next> clause can be:",
+    "options": [
       "UNDO",
       "EXIT",
       "All of the others",
       "CONTINUE"
     ],
-    answer: 2,
-    explanation: "Trong SQL/PSM, Exception Handler có thể khai báo các hành động tiếp theo như UNDO, EXIT hoặc CONTINUE khi gặp biệt lệ."
+    "answer": 2
   },
   {
-    id: 114,
-    question: "In SQL language, the command/statement that let you add an attribute to a relation is_",
-    options: [
+    "id": 274,
+    "question": "In SQL language, the command/statement that let you add an attribute to a relation is_",
+    "options": [
       "Alter",
-      "None of the othersss",
+      "None of the others",
       "Insert",
       "Update"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Alter\"."
+    "answer": 0
   },
   {
-    id: 115,
-    question: "Choose the right statement",
-    options: [
+    "id": 275,
+    "question": "Choose the right statement",
+    "options": [
       "All of the others.",
       "The syntax to remove a trigger is. DROP TRIGGER<trigger_name>",
       "Use ALTER TRIGGER to change the definition of a trigger",
       "You can remove a trigger by dropping it or by dropping the trigger table."
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"All of the others.\"."
+    "answer": 0
   },
   {
-    id: 116,
-    question: "Consider the Dalalog rule H(xy) <- Sfx. y) AND x > 2 AND y < 6. Relation S(x y) has 3 tuples (2.3). (3.5). and (4.6). What is about H?",
-    options: [
+    "id": 276,
+    "question": "Consider the Dalalog rule H(xy) <- Sfx. y) AND x > 2 AND y < 6. Relation S(x y) has 3 tuples (2.3). (3.5). and (4.6). What is about H?",
+    "options": [
       "H has a tuple (2.3)",
       "H has 3 tuples (2.3) and (3.5) and (4.6)",
       "H has 2 tuples (2.3) and (3.5)",
       "*H has a tuple (3.5)"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"*H has a tuple (3.5)\"."
+    "answer": 3
   },
   {
-    id: 117,
-    question: "Select the valid query to declare the foreign key presC# of the relation Studiolname. address. presC#) that references the cert of the relation MovieExeclname. address. cert#. netWorth):",
-    options: [
-      "All of the others.",
-      "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT FOREIGN KEY):",
-      "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT UNIQUE KEY REFERENCES MovieExec):",
-      "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT REFERENCES Movie Exec (cert#));"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT REFERENCES Movie Exec (cert#));\"."
-  },
-  {
-    id: 118,
-    question: "Choose the right statement",
-    options: [
-      "XML Schema allows us to declare simple types, such as integer or float and even complex types",
-      "All of the others",
-      "XML schema provides us the ability to declare keys and foreign keys.",
-      "XML Schema is an alternative way to provide a schema for XML documents."
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"All of the others\"."
-  },
-  {
-    id: 119,
-    question: "The relational operator that yields all possible pairs of rows from two tables is known as a _",
-    options: [
+    "id": 277,
+    "question": "The relational operator that yields all possible pairs of rows from two tables is known as a _",
+    "options": [
       "Union",
       "Selection",
       "Product",
       "Join"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Product\"."
+    "answer": 2
   },
   {
-    id: 120,
-    question: "Consider a relation with schema R(A, B, CD) and FD's BC-> D, D-> A, A-> B. Which of the following is the key of R?",
-    options: [
+    "id": 278,
+    "question": "Consider a relation with schema R(A, B, CD) and FD's BC-> D, D-> A, A-> B. Which of the following is the key of R?",
+    "options": [
       "BD",
       "D",
       "AB",
       "BC"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"BC\"."
+    "answer": 3
   },
   {
-    id: 121,
-    question: "The ER Diagram uses three principle element types:",
-    options: [
-      "Entity sets. Constraints, and Relationships",
-      "Entity sets. Attributes and Constraints IC]Attributes. Constraints, and Relationships",
-      "Entity sets. Attributes, and Relationships"
-    ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 122,
-    question: "In PSM. the difference between 3 stored procedure and a function is that",
-    options: [
+    "id": 279,
+    "question": "In PSM. the difference between 3 stored procedure and a function is that",
+    "options": [
       "A function has the return statement.",
       "We can declare local variables in a function.",
       "All of the others",
       "Loops are not allowed in a function."
     ],
-    answer: 2,
-    explanation: "Trong SQL/PSM, Exception Handler có thể khai báo các hành động tiếp theo như UNDO, EXIT hoặc CONTINUE khi gặp biệt lệ."
+    "answer": 2
   },
   {
-    id: 123,
-    question: "Selecl Ihe right syntax for HAVING clause in SQL",
-    options: [
-      "SELECT <list of attributes> FROM <list of tables> WHERE <conditions on tuples> HAVING <conditions on groups> GROUP BY <list of attributes>",
-      "SELECT <list of attributes> FROM <list of tables> WHERE <conditions on tuples> GROUP BY <list of attributes> HAVING <conditions on groups>",
-      "SELECT < list of attributes> FROM < list of tables> HAVING <conditions on groups> WHERE <conditions on tuples> GROUP BY <list of attributes>",
-      "All of the others"
-    ],
-    answer: 1,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
-  },
-  {
-    id: 124,
-    question: "Given relations R(A.B) and S(B.C.D). The result of natural join of the relations R and S has",
-    options: [
+    "id": 280,
+    "question": "Given relations R(A.B) and S(B.C.D). The result of natural join of the relations R and S has",
+    "options": [
       "Only two attributes R B and SB",
-      "None of the othersss",
+      "None of the others",
       "Only attribute B",
       "Attributes A B. C. D"
     ],
-    answer: 3,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: 'Attributes A B. C. D'."
+    "answer": 3
   },
   {
-    id: 125,
-    question: "Select the right answer.",
-    options: [
-      "All of the others",
-      "Tags in XML are text surrounded by triangular brackets (for example, <_>).",
-      "An XML tag can be a single tag with no matching closing tag (for example. <foo />",
-      "Tags in XML comes in matching pairs, with an opening tag like <foo> and a matched closing tag like</foo>"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"All of the others\"."
-  },
-  {
-    id: 126,
-    question: "Given relation U(A, B, C) that has 2 tuples (1,2,3) and (4,5,6), and relation V(B(C, D) that has 2 tuples (2,3,10) and (2,3,11). Choose the right answer below;",
-    options: [
-      "None of the othersss.",
-      "The outer join of U and V is the relation R(A, B, C, D) that has 2 tuples (1.2, 3.10) and (1,2,3,11).",
-      "The outer join of U and V is the relation R(A. B. C. D) that has 3 tuples (1.2.3.10) .(1.2.3.11) and(4.5.6. NULL).",
-      "The outer join of U and V is the relation R(A. B. C. D) that has only 1 tuple (NULL. 4.5.6)"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"The outer join of U and V is the relation R(A. B. C. D) that has 3 tuples (1.2.3.10) .(1.2.3.11) and(4.5.6. NULL).\"."
-  },
-  {
-    id: 127,
-    question: "Data Definition language (DDL) is used to _",
-    options: [
+    "id": 281,
+    "question": "Data Definition language (DDL) is used to _",
+    "options": [
       "declare database schemas",
       "connect to database and query database",
       "query database and modify the database",
       "All of the others"
     ],
-    answer: 0,
-    explanation: "DDL (Data Definition Language) là ngôn ngữ định nghĩa dữ liệu, bao gồm các lệnh thay đổi cấu trúc bảng và lược đồ CSDL như CREATE, ALTER, DROP, TRUNCATE."
+    "answer": 0
   },
   {
-    id: 128,
-    question: "The result of (UNKNOWN OR TRUE) is",
-    options: [
+    "id": 282,
+    "question": "The result of (UNKNOWN OR TRUE) is",
+    "options": [
       "UNKNOWN",
       "FALSE",
       "TRUE",
       "NULL"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"TRUE\"."
+    "answer": 2
   },
   {
-    id: 129,
-    question: "In Java Database Connectivity (JDBC). before we can execute SQL statements), we need to _",
-    options: [
+    "id": 283,
+    "question": "In Java Database Connectivity (JDBC). before we can execute SQL statements), we need to _",
+    "options": [
       "Create a cursor.",
       "Create an environment",
       "Create a description.",
       "Establish a connection to the database and create statement(s)"
     ],
-    answer: 3,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Establish a connection to the database and create statement(s)'."
+    "answer": 3
   },
   {
-    id: 130,
-    question: "Choose the right answer",
-    options: [
+    "id": 284,
+    "question": "Choose the right answer",
+    "options": [
       "A User-Defined Type (UDT) in SQL can be the type of a table",
       "A UDT can be the type of an attribute belonging to some table",
       "The form of UDT definition is: CREATE TYPE T AS (<primitive type | attribute declarations>)",
       "All of the others"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
+    "answer": 3
   },
   {
-    id: 131,
-    question: "Choose a right answer",
-    options: [
-      "The object-relational model is the extension of the relation model with new features such as structured types, methods, identifiers for tuples, and references",
-      "Object-relation model allows a non-atomic type that can be a relation schema which is called nested relation",
-      "In object-relational model, the type of an attribute can be a reference to a tuple with a given schema or a set of references to tuples with a given schema",
-      "All of the others"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
-  },
-  {
-    id: 132,
-    question: "Which of following is never used as a data model'",
-    options: [
-      "Hierarchical data model",
-      "Relational data model",
-      "Tree-based data model",
-      "Graph-based data model |[E]None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Hierarchical data model\"."
-  },
-  {
-    id: 133,
-    question: "Select the right statement to declare MovieStar to be a relation whose tuples are of type StarType. Note; StarType is a user-defined type that has its definition as follows; CREATE TYPE StarType AS ( nameCHAR(30). address CHAR(IOO) };",
-    options: [
-      "CREATE TABLE MovieStar (name StarType). PICREATE TABLE MovieStar (name StarType PRIMARY KEY);",
+    "id": 285,
+    "question": "PICREATE TABLE MovieStar (name StarType PRIMARY KEY);",
+    "options": [
       "CREATE TABLE MovieStar OF StarType Q;",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"None of the otherss\"."
+    "answer": 2
   },
   {
-    id: 134,
-    question: "Suppose an updatable view ParamountMovies is associated with Movies relation. Choose a nght answer",
-    options: [
-      "Drop Movies relation also delete the view ParamountMovies",
-      "Drop ParamountMovies also delete Movies IC]An update on ParamountMovies is translated into Movies",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Drop Movies relation also delete the view ParamountMovies\"."
-  },
-  {
-    id: 135,
-    question: "Which of the following statements is true?",
-    options: [
+    "id": 286,
+    "question": "Which of the following statements is true?",
+    "options": [
       "I3NF implies BCNF",
       "Multi-valued Dependency (MVD) implies Fourth Normal form (4NF)",
       "4NF implies BCNF and BCNF implies 3NF",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"4NF implies BCNF and BCNF implies 3NF\"."
+    "answer": 2
   },
   {
-    id: 136,
-    question: "The binary relationship between classes in UML is called -",
-    options: [
+    "id": 287,
+    "question": "The binary relationship between classes in UML is called -",
+    "options": [
       "Relation",
       "Association",
       "Aggregation",
       "Composition"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Association\"."
+    "answer": 1
   },
   {
-    id: 137,
-    question: "Choose the right statement",
-    options: [
-      "Sub-queries return a single constant this constant can be compared with another value in a WHERE clause;",
+    "id": 288,
+    "question": "WHERE clause;",
+    "options": [
       "Sub-queries return relations, that can be used in WHERE clause",
       "Sub-queries can appear in FROM clauses, followed by a tuple variable",
       "All of the others"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
+    "answer": 3
   },
   {
-    id: 138,
-    question: "Which of the following statements is true?",
-    options: [
-      "in BCNF condition, the left side of every non trivial FD must be a super key.",
-      "All of the others",
-      "Any two-attribute relation is in BCNF",
-      "BCNF condition guarantees the anomalies do not exist"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"All of the others\"."
-  },
-  {
-    id: 139,
-    question: "Given the relation Movies(title, year, length, genre. studioName). Select the right query to create a View with the titles and studio names of all movies that were produced in 1980",
-    options: [
+    "id": 289,
+    "question": "Given the relation Movies(title, year, length, genre. studioName). Select the right query to create a View with the titles and studio names of all movies that were produced in 1980",
+    "options": [
       "CREATE VIEW OldMovies SELECT title. studioName FROM Movies WHERE year-1980",
       "CREATE VIEW OldMovies SELECT title, year FROM Movies WHERE year=1980",
       "CREATE VIEW OldMovies AS SELECT title. studioName FROM Movies WHERE year=1980",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"CREATE VIEW OldMovies AS SELECT title. studioName FROM Movies WHERE year=1980\"."
+    "answer": 2
   },
   {
-    id: 140,
-    question: "Given the relation Employee(SSN. FNAME. LNAME. SALARY. DepartmentNo). Select the right query below to count the number of employees in each department",
-    options: [
+    "id": 290,
+    "question": "Given the relation Employee(SSN. FNAME. LNAME. SALARY. DepartmentNo). Select the right query below to count the number of employees in each department",
+    "options": [
       "SELECT COUNTf) FROM Employee",
       "SELECT DepartmentNo. COUNT(*) FROM Employee GROUP BY DepartmentNo",
       "SELECT DepartmentNo. COUNT(*) FROM Employee",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"SELECT DepartmentNo. COUNT(*) FROM Employee GROUP BY DepartmentNo\"."
+    "answer": 1
   },
   {
-    id: 141,
-    question: "Consider a relation with schema R(A, B. C. D) and FD's A-> B. A-> C. C -> D. Which ofthe following is the {A}+ ?",
-    options: [
+    "id": 291,
+    "question": "Consider a relation with schema R(A, B. C. D) and FD's A-> B. A-> C. C -> D. Which ofthe following is the {A}+ ?",
+    "options": [
       "{A}",
       "{A B C D}",
       "{A. B. C}",
       "{A.B}"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"{A B C D}\"."
+    "answer": 1
   },
   {
-    id: 142,
-    question: "To create a constraint (for example, referential integrity constraint) on a relation, the owner ofthe schema must have",
-    options: [
+    "id": 292,
+    "question": "To create a constraint (for example, referential integrity constraint) on a relation, the owner ofthe schema must have",
+    "options": [
       "UNDER privilege",
       "REFERENCES privilege",
       "UPDATE privilege",
       "EXECUTE privilege"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"REFERENCES privilege\"."
+    "answer": 1
   },
   {
-    id: 143,
-    question: "Choose a wrong answer.",
-    options: [
+    "id": 293,
+    "question": "Choose a wrong answer.",
+    "options": [
       "Relational algebra can express recursion.",
       "Basic relational algebra can be expressed in Datalog rule(s).",
       "Single Datalog rule can be expressed in relational algebra.",
       "Datalog does not support bag operations"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Relational algebra can express recursion.\"."
+    "answer": 0
   },
   {
-    id: 144,
-    question: "In DTD. the main difference between PCDATA and CDATA is",
-    options: [
-      "PCDATA is text that will be parsed by a parser and tags inside the text will be treated as markup and entities will be expanded CDATA is text that will NOT be parsed by a parser and tags inside the text wil NOT be treated as markup and entities will not be expanded.",
-      "All of the others.",
-      "CDATA is used to assert something about the allowable content of elements where as PCDATA is used as a common type for attribute",
-      "There's no difference between PCDATA and CDATA"
-    ],
-    answer: 0,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
-  },
-  {
-    id: 145,
-    question: "_______authorizes access to database, coordinate, monitor its use, acquiring software, and hardware resources.",
-    options: [
+    "id": 294,
+    "question": "_______authorizes access to database, coordinate, monitor its use, acquiring software, and hardware resources.",
+    "options": [
       "All of the others",
       "Database administrator",
       "Database designer",
       "Database end-user"
     ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Database administrator'."
+    "answer": 1
   },
   {
-    id: 146,
-    question: "The key for a weak entity set E is_",
-    options: [
-      "Zero or more attributes of E and key attributes from supporting entity sets",
-      "The set of attributes of supporting relationships for E IC]The set of attributes of supporting entity sets",
-      "Zero or more attributes of E"
-    ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 147,
-    question: "Choose right answer(s).",
-    options: [
+    "id": 295,
+    "question": "Choose right answer(s).",
+    "options": [
       "NULL value is unknown, inapplicable, or withheld",
       "Comparisons with NULL values will return UNKNOWN",
       "Arithmetic operators on NULL values will return a NULL value",
-      "All of the others"
+      "All of orther"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
+    "answer": 3
   },
   {
-    id: 148,
-    question: "Choose the right statement",
-    options: [
-      "The action associated with the trigger executes no matter what the condition is hold or not",
-      "Triggering events do not support INSERT and DELETE.",
-      "All of the others.",
-      "When the trigger is awakened, it tests a condition. If the condition is satisfied, the action associated with the trigger is executed"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"When the trigger is awakened, it tests a condition. If the condition is satisfied, the action associated with the trigger is executed\"."
-  },
-  {
-    id: 149,
-    question: "Four characteristics of transactions are",
-    options: [
-      "None of the othersss",
+    "id": 296,
+    "question": "Four characteristics of transactions are",
+    "options": [
+      "None of the others",
       "Read uncommitted, Read committed, Repeatable read, Serializable",
       "Atomicity. Isolation. Concurrency. Durability",
       "Atomicity. Isolation. Consistency. Durability"
     ],
-    answer: 3,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 3
   },
   {
-    id: 150,
-    question: "Select the right answer",
-    options: [
-      "An index is a data structure used to speed access to tuples of a relation, given values of one or more attributes",
-      "The key for index can be any attribute or set of attributes, and need not be the key ofthe relation",
-      "We can think of the indexas a binary search tree of (key, locations) pairs in which a key a is associated with a set of locations of the tuples",
-      "All of the others"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
-  },
-  {
-    id: 151,
-    question: "Choose the right statement to grant the INSERT and SELECT privileges on table Movies to users torn' and jerry'",
-    options: [
+    "id": 297,
+    "question": "Choose the right statement to grant the INSERT and SELECT privileges on table Movies to users torn' and jerry'",
+    "options": [
       "GRANT SELECT. INSERT on Movies",
       "GRANT SELECT. INSERT on Movies TO torn, jerry CASCADE",
       "GRANT SELECT. INSERT on Movies TO torn, jerry WITH GRANT OPTION",
       "GRANT SELECT. INSERT on Movies TO ALL"
     ],
-    answer: 2,
-    explanation: "Trong quản trị CSDL, quyền (Privileges) được cấp phát thông qua lệnh GRANT và có thể được thu hồi bằng lệnh REVOKE."
+    "answer": 2
   },
   {
-    id: 152,
-    question: "When declaring foreign key constraint for relation A thai references relation B. the referenced attribute(s) of the relation B must be declare as_______",
-    options: [
+    "id": 298,
+    "question": "When declaring foreign key constraint for relation A thai references relation B. the referenced attribute(s) of the relation B must be declare as_______",
+    "options": [
       "UNIQUE or PRIMARY KEY",
       "FOREIGN KEY",
       "INDEX KEY",
       "All of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"UNIQUE or PRIMARY KEY\"."
+    "answer": 0
   },
   {
-    id: 153,
-    question: "Choose an incorrect statement",
-    options: [
-      "None of the othersss",
-      "Database is created and maintained by a DMBS IC]Database is a collection of information that exists over a long opened of time",
-      "Database is a collection of data that is managed by a DBMS"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"None of the otherss\"."
-  },
-  {
-    id: 154,
-    question: "Select the right statement",
-    options: [
-      "All of the others",
-      "Every constraint has a name. If we don't define constraint's name explicitly, then DBMS automatically generates a name for it",
+    "id": 299,
+    "question": "automatically generates a name for it",
+    "options": [
       "We can create constraint on a tuple as a whole.",
       "We can create constraint on a single attribute"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"All of the others\"."
+    "answer": 0
   },
   {
-    id: 155,
-    question: "A class in UML is similar to___",
-    options: [
+    "id": 300,
+    "question": "A class in UML is similar to___",
+    "options": [
       "A Relationship in E/R model",
       "An attribute in E/R model",
       "An entity set in E/R model",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"An entity set in E/R model\"."
+    "answer": 2
   },
   {
-    id: 156,
-    question: "Given relations Movies(title, year, length, genre. studioName. producer#). MovieExec(name. address. cert#). and Studio(name. address. presC#). Suppose we have the materialized view that finds the name - ofthe producer of a given movie as follows: CREATE MATERIALIZED VIEW MovieProd AS SELECT title, year, name FROM Movies. MovieExec WHERE producer# - cert# Which of the following modification will affect the MovieProd materialized view?",
-    options: [
+    "id": 301,
+    "question": "Given relations Movies(title, year, length, genre. studioName. producer#). MovieExec(name. address. cert#). and Studio(name. address. presC#). Suppose we have the materialized view that finds the name - ofthe producer of a given movie as follows: CREATE MATERIALIZED VIEW MovieProd AS SELECT title, year, name FROM Movies. MovieExec WHERE producer# - cert# Which of the following modification will affect the MovieProd materialized view?",
+    "options": [
       "Insert a new tuple into Studio",
       "Delete a tuple from Studio",
       "Insert a new tuple into Movies or delete a tuple from Movies",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Insert a new tuple into Movies or delete a tuple from Movies\"."
+    "answer": 2
   },
   {
-    id: 157,
-    question: "In relational data model, an attribute is a column",
-    options: [
+    "id": 302,
+    "question": "In relational data model, an attribute is a column",
+    "options": [
       "True",
       "False"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"True\"."
+    "answer": 0
   },
   {
-    id: 158,
-    question: "A data model is a notation for describing data or information. And the description generally consist of:",
-    options: [
+    "id": 303,
+    "question": "A data model is a notation for describing data or information. And the description generally consist of:",
+    "options": [
       "2 parts",
       "3 parts",
       "4 parts",
       "5 parts"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"3 parts\"."
+    "answer": 1
   },
   {
-    id: 159,
-    question: "DBMS stands for what?",
-    options: [
+    "id": 304,
+    "question": "DBMS stands for what?",
+    "options": [
       "Database Managing Systems",
       "Database Management System",
       "Database Manage System",
       "Database Managable System"
     ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Database Management System'."
+    "answer": 1
   },
   {
-    id: 160,
-    question: "Look at this line: MOVIES (Id, Name, Description) What the above represent?",
-    options: [
+    "id": 305,
+    "question": "Look at this line: MOVIES (Id, Name, Description) What the above represent?",
+    "options": [
       "A relation",
       "A schema",
       "A schema instance",
       "A relation instance"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"A schema\"."
+    "answer": 1
   },
   {
-    id: 161,
-    question: "Look at the following data for table R: A B C 1 1 2 1 1 2 1 1 3 Choose all correct answers",
-    options: [
+    "id": 306,
+    "question": "Look at the following data for table R: A B C 1 1 2 1 1 2 1 1 3 Choose all correct answers",
+    "options": [
       "R is not a relation",
       "R is a relation",
       "R has no key",
       ""
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"R is a relation\"."
+    "answer": [
+      1,
+      3
+    ]
   },
   {
-    id: 162,
-    question: "Choose all correct statements:",
-    options: [
+    "id": 307,
+    "question": "Choose all correct statements:",
+    "options": [
       "Relation instance is current set of rows for a relation schema",
       "Relation instance is current list of rows for a relation schema",
       "Column headers = attributes.",
       "Relational Data Model is a model that match the way we think about our data"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Relation instance is current set of rows for a relation schema\"."
+    "answer": [
+      0,
+      3
+    ]
   },
   {
-    id: 163,
-    question: "Choose 3 important data models that we will study in database course",
-    options: [
-      "Flat File System",
-      "Network Data Model",
-      "Hierachical Data Model",
-      "Relational Data Model",
-      "Object - Relational Data Model",
-      "Object Oriented Data Model"
-    ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Network Data Model'."
-  },
-  {
-    id: 164,
-    question: "In relational data model, a tuple is a record or a row",
-    options: [
+    "id": 308,
+    "question": "In relational data model, a tuple is a record or a row",
+    "options": [
       "True",
       "False"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"True\"."
+    "answer": 0
   },
   {
-    id: 165,
-    question: "When the Relational Data Model first proposed?",
-    options: [
+    "id": 309,
+    "question": "When the Relational Data Model first proposed?",
+    "options": [
       "1940",
       "1950",
       "1960",
       "1970"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"1970\"."
+    "answer": 3
   },
   {
-    id: 166,
-    question: "What is the oldest data model?",
-    options: [
+    "id": 310,
+    "question": "What is the oldest data model?",
+    "options": [
       "Network Data Model",
       "Flat File Data Model",
       "Relational Data Model",
       "Hierachical Data Model"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Network Data Model\"."
+    "answer": 0
   },
   {
-    id: 167,
-    question: "How many data models mentioned in our database course?",
-    options: [
+    "id": 311,
+    "question": "How many data models mentioned in our database course?",
+    "options": [
       "3",
       "4",
       "5",
       "6"
     ],
-    answer: 3,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: '6'."
+    "answer": 3
   },
   {
-    id: 168,
-    question: "XML files are semi-structured data",
-    options: [
+    "id": 312,
+    "question": "XML files are semi-structured data",
+    "options": [
       "True",
       "False"
     ],
-    answer: 0,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
+    "answer": 0
   },
   {
-    id: 169,
-    question: "A relation is a list of tuples",
-    options: [
+    "id": 313,
+    "question": "A relation is a list of tuples",
+    "options": [
       "True",
       "False"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"False\"."
+    "answer": 1
   },
   {
-    id: 170,
-    question: "A relation is a set of tuples",
-    options: [
+    "id": 314,
+    "question": "A relation is a set of tuples",
+    "options": [
       "True",
       "False"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"True\"."
+    "answer": 0
   },
   {
-    id: 171,
-    question: "What is the father of relational data model?",
-    options: [
+    "id": 315,
+    "question": "What is the father of relational data model?",
+    "options": [
       "Charles Bachman",
       "Adgar Codd"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Adgar Codd\"."
+    "answer": 1
   },
   {
-    id: 172,
-    question: "Give the relation R(XYZT) with the following FD's: XY -> Z ; XYT -> Z ; XYZ -> T ; XZ -> T Determine the primary key for R and then choose the correct statement",
-    options: [
+    "id": 316,
+    "question": "Give the relation R(XYZT) with the following FD's: XY -> Z ; XYT -> Z ; XYZ -> T ; XZ -> T Determine the primary key for R and then choose the correct statement",
+    "options": [
       "R is in BCNF",
       "R is not in BCNF"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"R is not in BCNF\"."
+    "answer": 1
   },
   {
-    id: 173,
-    question: "A weak entity:",
-    options: [
+    "id": 317,
+    "question": "A weak entity:",
+    "options": [
       "must have total participation in an identifying relationship",
       "does not have a key attribute(s)",
       "both (a) and (b)",
       "none of the above"
     ],
-    answer: 2,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 2
   },
   {
-    id: 174,
-    question: "Given the relation schema R(XYZT) and functional dependencies F = {X->Z, T->Y}. Which functional dependency causes a violation of second normal form (2NF) ?",
-    options: [
+    "id": 318,
+    "question": "Given the relation schema R(XYZT) and functional dependencies F = {X->Z, T->Y}. Which functional dependency causes a violation of second normal form (2NF) ?",
+    "options": [
       "X->Z",
       "T->Y",
       "both X->Z and T->Y",
       "none of the above"
     ],
-    answer: 2,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: 'both X->Z and T->Y'."
+    "answer": 2
   },
   {
-    id: 175,
-    question: "The highest normal form for relation schema R(XYZ) with functional dependencies: F = {XY-> Z; Y->X; Z->Y } is:",
-    options: [
+    "id": 319,
+    "question": "The highest normal form for relation schema R(XYZ) with functional dependencies: F = {XY-> Z; Y->X; Z->Y } is:",
+    "options": [
       "2NF",
       "BCNF",
       "1NF",
       "3NF"
     ],
-    answer: 3,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: '3NF'."
+    "answer": 3
   },
   {
-    id: 176,
-    question: "Give the relation R(EFGH) with the following FD's: E -> F ; F -> E ; E -> H ; H -> F Determine the keys for R and then choose the correct statement",
-    options: [
+    "id": 320,
+    "question": "Give the relation R(EFGH) with the following FD's: E -> F ; F -> E ; E -> H ; H -> F Determine the keys for R and then choose the correct statement",
+    "options": [
       "R is not in 3NF",
       "R is in 3NF"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"R is in 3NF\"."
+    "answer": 1
   },
   {
-    id: 177,
-    question: "Give the relation R(ABCDE) with the following FD's: D -> C, CE-> A, D ->A, and AE ->D indicating which of the following attribute set is a key?",
-    options: [
+    "id": 321,
+    "question": "Give the relation R(ABCDE) with the following FD's: D -> C, CE-> A, D ->A, and AE ->D indicating which of the following attribute set is a key?",
+    "options": [
       "ABCDE",
       "CDE",
       "ABE",
       "BD"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"ABE\"."
+    "answer": 2
   },
   {
-    id: 178,
-    question: "Which of the following relations is in Third normal form (3NF)?",
-    options: [
+    "id": 322,
+    "question": "Which of the following relations is in Third normal form (3NF)?",
+    "options": [
       "R(ABCD) with FD's: AB -> C ; ABD -> C ; ABC -> D ; AC -> D",
       "R(ABCD) with FD's: ACD -> B ; AC -> D ; D -> C ; AC -> B",
       "R(ABCD) with FD's: AB -> C ; BCD -> A ; D -> A ; B -> C"
     ],
-    answer: 1,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: 'R(ABCD) with FD's: ACD -> B ; AC -> D ; D -> C ; AC -> B'."
+    "answer": 1
   },
   {
-    id: 179,
-    question: "Let R(ABCDEFGH) satisfies the following functional dependencies: A -> B, CH -> A, B -> E, BD -> C, EG -> H, DE -> F. Which of the following FD's is also guaranteed to be satisfied by R?",
-    options: [
+    "id": 323,
+    "question": "Let R(ABCDEFGH) satisfies the following functional dependencies: A -> B, CH -> A, B -> E, BD -> C, EG -> H, DE -> F. Which of the following FD's is also guaranteed to be satisfied by R?",
+    "options": [
       "ADG -> CH",
       "ACG -> DH",
       "CGH -> BF",
       "BCD -> FH"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"ADG -> CH\"."
+    "answer": 0
   },
   {
-    id: 180,
-    question: "Which of the following statements are correct? (choose 2)",
-    options: [
+    "id": 324,
+    "question": "Which of the following statements are correct? (choose 2)",
+    "options": [
       "All relations with only two attributes are in BCNF",
       "For any relation schema, there is a dependency-preserving decomposition into 3NF",
       "All relations in 3NF are also in BCNF"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"All relations with only two attributes are in BCNF\"."
+    "answer": [
+      0,
+      1
+    ]
   },
   {
-    id: 181,
-    question: "Which of the following relations is in Boyce-Codd Normal Form (BCNF)?",
-    options: [
-      "R(ABCD) with FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C",
-      "R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A",
-      "R(ABCD) with FD's: C -> B ; BC -> A ; A -> C ; BD -> A"
-    ],
-    answer: 1,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: 'R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A'."
-  },
-  {
-    id: 182,
-    question: "How many design principles are there in our course when drawing an ERD?",
-    options: [
+    "id": 325,
+    "question": "How many design principles are there in our course when drawing an ERD?",
+    "options": [
       "7",
       "6",
       "4",
       "5"
     ],
-    answer: 3,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 3
   },
   {
-    id: 183,
-    question: "Which of the following are guidelines for designing the relational schema ?",
-    options: [
+    "id": 326,
+    "question": "Which of the following are guidelines for designing the relational schema ?",
+    "options": [
       "Reduce the redundant values in tuples",
       "Reduce the NULL values in tuples",
       "All of the above"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"All of the above\"."
+    "answer": 2
   },
   {
-    id: 184,
-    question: "Choose the correct statements: When draw an ERD (choose 2):",
-    options: [
+    "id": 327,
+    "question": "Choose the correct statements: When draw an ERD (choose 2):",
+    "options": [
       "We should picking the right kind of element",
       "When an entity has no non-primary key attribute, we should convert that entity to an attribute",
       "Always use weak entities",
       "Always make redundancies"
     ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": [
+      0,
+      1
+    ]
   },
   {
-    id: 185,
-    question: "Given relation scheme R = (XYZTV) and functional dependencies: {XY -> ZTV and X -> V}. So, we can say that:",
-    options: [
+    "id": 328,
+    "question": "Given relation scheme R = (XYZTV) and functional dependencies: {XY -> ZTV and X -> V}. So, we can say that:",
+    "options": [
       "X is a key for R",
       "YV is a key for R",
       "XY is a key for R",
       "none of the above"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"XY is a key for R\"."
+    "answer": 2
   },
   {
-    id: 186,
-    question: "Consider a relation R(A,B,C,D,E) with functional dependencies: AB->C, B->D, and C->E. What is/are the key(s) for R (maybe you must choose 1 or more):",
-    options: [
+    "id": 329,
+    "question": "Consider a relation R(A,B,C,D,E) with functional dependencies: AB->C, B->D, and C->E. What is/are the key(s) for R (maybe you must choose 1 or more):",
+    "options": [
       "AC",
       "AD",
       "AB",
       "CD",
       "DE"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"AB\"."
+    "answer": 2
   },
   {
-    id: 187,
-    question: "The ER model means that:",
-    options: [
+    "id": 330,
+    "question": "The ER model means that:",
+    "options": [
       "replace relational design",
       "be close to a users perception of the data",
       "enable low level descriptions of data",
       "enable detailed descriptions of data query processing"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"be close to a users perception of the data\"."
+    "answer": 1
   },
   {
-    id: 188,
-    question: "Consider the following statement: \"When drawing ERD, you should avoid saying something in many different ways' That above statement describes which principle?",
-    options: [
+    "id": 331,
+    "question": "Consider the following statement: \"When drawing ERD, you should avoid saying something in many different ways' That above statement describes which principle?",
+    "options": [
       "Simplicity Count Principle",
       "Limit the use of weak entity sets principle",
       "Avoid Redundancy Principle",
       "Faithfulness principle"
     ],
-    answer: 2,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 2
   },
   {
-    id: 189,
-    question: "Consider the following statement: \"Entity Sets and their attributes should reflect the reality\" That above statement describes which principle?",
-    options: [
+    "id": 332,
+    "question": "Consider the following statement: \"Entity Sets and their attributes should reflect the reality\" That above statement describes which principle?",
+    "options": [
       "Limit the use of weak entity sets principle",
       "Simplicity Count Principle",
       "Avoid Redundancy Principle",
       "Faithfulness principle"
     ],
-    answer: 3,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 3
   },
   {
-    id: 190,
-    question: "When draw an ERD (choose 3):",
-    options: [
-      "Choosing the right relation-ships",
-      "Avoid introducing more elements into the design than is absolutely necessary",
-      "Entity sets and their attributes should reflect reality",
-      "Redundancy is not important, so we can ignore it"
-    ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 191,
-    question: "Given the relation schema R(MNPQ) with FDs: {MN->P; MN->Q; PQ->M; PQ->N}. Which is the highest normal form for R?",
-    options: [
+    "id": 333,
+    "question": "Given the relation schema R(MNPQ) with FDs: {MN->P; MN->Q; PQ->M; PQ->N}. Which is the highest normal form for R?",
+    "options": [
       "2NF",
       "3NF",
       "BCNF",
       "NF"
     ],
-    answer: 1,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: '3NF'."
+    "answer": 1
   },
   {
-    id: 192,
-    question: "The functional dependency A -> B for relation schema R(A,B.C,D) implies that",
-    options: [
+    "id": 334,
+    "question": "The functional dependency A -> B for relation schema R(A,B.C,D) implies that",
+    "options": [
       "no two tuples in R can have the same value for attribute B",
       "No two tuples in R can have the same value for attribute A",
       "any two tuples in R that have the same value for B must have the same value for A",
       "Any two tuples in R that have the same value for A must have the same value for B"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"Any two tuples in R that have the same value for A must have the same value for B\"."
+    "answer": 3
   },
   {
-    id: 193,
-    question: "How many primitive relational algebra operators are there in our course?",
-    options: [
+    "id": 335,
+    "question": "How many primitive relational algebra operators are there in our course?",
+    "options": [
       "4",
       "5",
       "6",
       "7"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"6\"."
+    "answer": 2
   },
   {
-    id: 194,
-    question: "Suppose relation R(A.B) has the tuples: A B 1 2 3 4 5 6 7 8 and the relation S(B.C.D) has tuples: B C D 2 4 6 4 6 8 5 5 5 4 7 9 Compute the Left - oouterjoin of R and S. where the condition is: R.B = SB. Then identify all the tuples of R that are not appear in the computed result",
-    options: [
+    "id": 336,
+    "question": "Suppose relation R(A.B) has the tuples: A B 1 2 3 4 5 6 7 8 and the relation S(B.C.D) has tuples: B C D 2 4 6 4 6 8 5 5 5 4 7 9 Compute the Left - outenom of R and S. where the condition is: R.B = SB. Then identify all the tuples of R that are not appear in the computed result",
+    "options": [
       "(1.2)",
       "(3.4)",
       "(5.6)",
       "(7.8)",
       "None of the above"
     ],
-    answer: 4,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: 'None of the above'."
+    "answer": 4
   },
   {
-    id: 195,
-    question: "Consider the following statement \"When drawing ERD. you should avoid introducing more elements into your design than necessary\" That above statement describes which principle?",
-    options: [
+    "id": 337,
+    "question": "Consider the following statement \"When drawing ERD. you should avoid introducing more elements into your design than necessary\" That above statement describes which principle?",
+    "options": [
       "Limit the use of weak entity sets principle",
       "Faithfulness principle",
       "Avoid Redundancy Principle",
       "Simplicity Count Principle"
     ],
-    answer: 3,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 3
   },
   {
-    id: 196,
-    question: "Suppose relation R(A.B) has the tuples: A B 1 2 3 4 5 6 and the relation S(B.C.D) has tuples: B C D 2 4 6 4 6 8 4 7 9 Compute the natural join of R and S. Then, identify which of the following tuples is/are in the natural joinR|><| S. You may assume each output tuple has schema (A.B.C.D)",
-    options: [
-      "(3.4.6.8)",
-      "(12.4.6)",
-      "(1.4.6.8)",
-      "(1.2.6.8)"
-    ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '(3.4.6.8)'."
-  },
-  {
-    id: 197,
-    question: "Suppose relation R(A.B) has the tuples: B C D 2 4 6 4 6 8 4 7 9 A B 1 2 3 4 5 6 and the relation S(B.C.D) has tuples: Compute the join of R and S with the condition: R.A < S.C AND R.B < S D Then, identify from the list below all the tuples in the computed result (assume the schema of the result is (A. R.B. S.B. C. D)):",
-    options: [
-      "(1.2.2.6.8)",
-      "(5.62.4.6) (C](1.2.4.6.8)",
-      "(1.2.2.4.6)"
-    ],
-    answer: 2,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '(1.2.2.4.6)'."
-  },
-  {
-    id: 198,
-    question: "Suppose relation R(A.B) has the tuples: A B 1 2 3 4 5 6 7 8 and the relation S(B.C.D) has tuples: B C D 2 4 6 4 6 8 5 5 5 4 7 9 Compute the right - outerjoin of R and S. where the condition is: R.B = S.B. Then identify all the tuples of R that are not appear in the computed result",
-    options: [
+    "id": 338,
+    "question": "Suppose relation R(A.B) has the tuples: A B 1 2 3 4 5 6 7 8 and the relation S(B.C.D) has tuples: B C D 2 4 6 4 6 8 5 5 5 4 7 9 Compute the right - outerjoin of R and S. where the condition is: R.B = S.B. Then identify all the tuples of R that are not appear in the computed result",
+    "options": [
       "(5.6)",
       "(1.2)",
       "(7.8)",
       "(3.4)"
     ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '(5.6)'."
+    "answer": [
+      0,
+      2
+    ]
   },
   {
-    id: 199,
-    question: "Consider the following statement \"When drawing ERD. if an entity has no non-key attribute and it is the \"one\" in many-one relationship, then we should set r! to the attribute of other entities\" That above statement describes which principle?",
-    options: [
+    "id": 339,
+    "question": "Consider the following statement \"When drawing ERD. if an entity has no non-key attribute and it is the \"one\" in many-one relationship, then we should set r! to the attribute of other entities\" That above statement describes which principle?",
+    "options": [
       "Picking the right kind of element principle",
       "Faithfulness principle",
       "Limit the use of weak entity sets principle",
       "Simplicity Count Principle",
       "Avoid Redundancy Principle"
     ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 0
   },
   {
-    id: 200,
-    question: "The LEN function in SQL Server is:",
-    options: [
+    "id": 340,
+    "question": "The LEN function in SQL Server is:",
+    "options": [
       "Not a scalar function",
       "A scalar function"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"A scalar function\"."
+    "answer": 1
   },
   {
-    id: 201,
-    question: "What is the meaning of the LEN function in SQL Server?",
-    options: [
+    "id": 341,
+    "question": "What is the meaning of the LEN function in SQL Server?",
+    "options": [
       "The LEN function returns the total number of bytes used to store a string",
       "The LEN function returns the total number of characters of a string"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"The LEN function returns the total number of characters of a string\"."
+    "answer": 1
   },
   {
-    id: 202,
-    question: "How to remove all trailing blanks?",
-    options: [
+    "id": 342,
+    "question": "How to remove all trailing blanks?",
+    "options": [
       "We can use the RTRIM function",
       "We can use the LTRIM function"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"We can use the RTRIM function\"."
+    "answer": 0
   },
   {
-    id: 203,
-    question: "The following is the syntax for the DATEDIFF function: DATEDIFF ( datepart, startdate , enddate ) The datepart parameter specifies on which part (day, month, year) of the date to calculate the difference",
-    options: [
+    "id": 343,
+    "question": "The following is the syntax for the DATEDIFF function: DATEDIFF ( datepart, startdate , enddate ) The datepart parameter specifies on which part (day, month, year) of the date to calculate the difference",
+    "options": [
       "FALSE",
       "TRUE"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"TRUE\"."
+    "answer": 1
   },
   {
-    id: 204,
-    question: "How to remove all leading blanks?",
-    options: [
+    "id": 344,
+    "question": "How to remove all leading blanks?",
+    "options": [
       "We can use the RTRIM function",
       "We can use the LTRIM function"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"We can use the LTRIM function\"."
+    "answer": 1
   },
   {
-    id: 205,
-    question: "What is the meaning of the ISNULL function?",
-    options: [
+    "id": 345,
+    "question": "What is the meaning of the ISNULL function?",
+    "options": [
       "The ISNULL function replaces NULL with the ZERO value.",
       "The ISNULL function replaces NULL with the BLANK value",
       "The ISNULL function replaces NULL with the specified replacement value."
     ],
-    answer: 1,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 1
   },
   {
-    id: 206,
-    question: "Which of the following is in-correct?",
-    options: [
+    "id": 346,
+    "question": "Which of the following is in-correct?",
+    "options": [
       "SELECT datepart(dd, 'l-jan-09')",
       "SELECT datepart(d, 'l-jan-09')",
       "SELECT datepart('1-jan-09', day)",
       "SELECT datepart(day, 'l-jan-09')"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"SELECT datepart('1-jan-09', day)\"."
+    "answer": 2
   },
   {
-    id: 207,
-    question: "How to convert a number to a string? (choose all possible)",
-    options: [
+    "id": 347,
+    "question": "How to convert a number to a string? (choose all possible)",
+    "options": [
       "We can use the CONVERT function",
       "We can use the CAST function",
       "We can use the STR function"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"We can use the CONVERT function\"."
+    "answer": [
+      0,
+      1
+    ]
   },
   {
-    id: 208,
-    question: "What is the meaning of the DATEADD function?",
-    options: [
+    "id": 348,
+    "question": "What is the meaning of the DATEADD function?",
+    "options": [
       "The DATEADD function adds some years to a date you specify",
       "The DATEADD function adds some months to a date you specify",
       "The DATEADD function adds an interval to a date you specify",
       "The DATEADD function adds some days to a date you specify"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"The DATEADD function adds an interval to a date you specify\"."
+    "answer": 2
   },
   {
-    id: 209,
-    question: "The CASE function is used to Evaluates a list of conditions and returns one of multiple possible result expressions",
-    options: [
+    "id": 349,
+    "question": "The CASE function is used to Evaluates a list of conditions and returns one of multiple possible result expressions",
+    "options": [
       "FALSE",
       "TRUE"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"TRUE\"."
+    "answer": 1
   },
   {
-    id: 210,
-    question: "In SQL Server, an index is an on-disk structure associated with a table or view that speeds up retrieval of rows from the table or view",
-    options: [
+    "id": 350,
+    "question": "In SQL Server, an index is an on-disk structure associated with a table or view that speeds up retrieval of rows from the table or view",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 211,
-    question: "Clustered index is not a good choice for the columns that undergo frequent changes",
-    options: [
+    "id": 351,
+    "question": "Clustered index is not a good choice for the columns that undergo frequent changes",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 212,
-    question: "A table or view must have a clustered indexe and some non-clustered indexes",
-    options: [
+    "id": 352,
+    "question": "A table or view must have a clustered indexe and some non-clustered indexes",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 1,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 1
   },
   {
-    id: 213,
-    question: "SQL Server typically selects the most efficient method when executing queries. However, if no indexes are available. SQL Server must use a full table scan",
-    options: [
+    "id": 353,
+    "question": "SQL Server typically selects the most efficient method when executing queries. However, if no indexes are available. SQL Server must use a full table scan",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 214,
-    question: "How many clustered index we can create in a table?",
-    options: [
+    "id": 354,
+    "question": "How many clustered index we can create in a table?",
+    "options": [
       "1",
       "2",
       "3",
       "4",
       ""
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 215,
-    question: "Indexes can be helpful for a variety of queries that contain SELECT, UPDATE, or DELETE statements",
-    options: [
+    "id": 355,
+    "question": "Indexes can be helpful for a variety of queries that contain SELECT, UPDATE, or DELETE statements",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 216,
-    question: "In SQL Server, indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns",
-    options: [
+    "id": 356,
+    "question": "In SQL Server, indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 217,
-    question: "In reality, an incorrect index choice can cause less than optimal performance",
-    options: [
+    "id": 357,
+    "question": "In reality, an incorrect index choice can cause less than optimal performance",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 218,
-    question: "You should define the clustered index key with as few columns as possible",
-    options: [
+    "id": 358,
+    "question": "You should define the clustered index key with as few columns as possible",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 219,
-    question: "Choose the incorrect statement",
-    options: [
+    "id": 359,
+    "question": "Choose the incorrect statement",
+    "options": [
       "Clustered indexes sort and store the data rows in the table based on their key values",
       "Non-Clustered indexes sort and store the data rows in the table based on their key values",
       "None of the above"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Non-Clustered indexes sort and store the data rows in the table based on their key values\"."
+    "answer": 1
   },
   {
-    id: 220,
-    question: "An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables SQL Server to find the row or rows associated with the key values quickly and efficiently",
-    options: [
+    "id": 360,
+    "question": "An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables SQL Server to find the row or rows associated with the key values quickly and efficiently",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 221,
-    question: "When performing a table scan, the query optimizer reads all the rows in the table, and extracts the rows that meet the criteria of the query. A table scan generates any disk I/O operations and can be resource -intensive",
-    options: [
+    "id": 361,
+    "question": "When performing a table scan, the query optimizer reads all the rows in the table, and extracts the rows that meet the criteria of the query. A table scan generates any disk I/O operations and can be resource -intensive",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"FALSE\"."
+    "answer": 1
   },
   {
-    id: 222,
-    question: "Choose the correct statement",
-    options: [
+    "id": 362,
+    "question": "Choose the correct statement",
+    "options": [
       "Clustered indexes son and store the data rows in the table based on their key values",
       "Non-Clustered indexes sort and store the data rows in the table based on their key values",
       "Both of the above"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Clustered indexes son and store the data rows in the table based on their key values\"."
+    "answer": 0
   },
   {
-    id: 223,
-    question: "Well-designed indexes can reduce disk I/O operations and consume fewer system resources, therefore it improves query performance",
-    options: [
+    "id": 363,
+    "question": "Well-designed indexes can reduce disk I/O operations and consume fewer system resources, therefore it improves query performance",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 0
   },
   {
-    id: 224,
-    question: "Choose all the correct statements about indexes",
-    options: [
-      "The selection of the right indexes for a database and its workload is a complex balancing act between query speed and update cost",
-      "Designing efficient indexes is paramount to achieving good database and application performance",
-      "Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks."
-    ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
-  },
-  {
-    id: 225,
-    question: "We should use which function to get the number of rows affected by the last statement",
-    options: [
+    "id": 364,
+    "question": "We should use which function to get the number of rows affected by the last statement",
+    "options": [
       "@@IDENTITY",
       "@@ROWCOUNT",
       "@@ERROR",
       "@@NEWID"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"@@IDENTITY\"."
+    "answer": 0
   },
   {
-    id: 226,
-    question: "How to write a good performance SQL query?",
-    options: [
+    "id": 365,
+    "question": "How to write a good performance SQL query?",
+    "options": [
       "Always use \"SELECT *\"",
       "Always try to avoid using \"SELECT *\""
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Always try to avoid using \"SELECT *\"\"."
+    "answer": 1
   },
   {
-    id: 227,
-    question: "Choose the correct answer",
-    options: [
+    "id": 366,
+    "question": "Choose the correct answer",
+    "options": [
       "Normalize the database to 3NF",
       "Avoid database designs that move data from table to table in a transactional manner",
       "None of the above",
       "All of the above"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Normalize the database to 3NF\"."
+    "answer": 0
   },
   {
-    id: 228,
-    question: "Choose all the thing that we should do with SQL Server",
-    options: [
+    "id": 367,
+    "question": "Choose all the thing that we should do with SQL Server",
+    "options": [
       "Use the tools",
       "Use cursors as much as possible",
       "Use \"SELECT for every SELECT statement",
       "Create an index on the \"SEX\" column"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Use the tools\"."
+    "answer": [
+      0,
+      2
+    ]
   },
   {
-    id: 229,
-    question: "We should use which function to get the last-inserted identity value.",
-    options: [
+    "id": 368,
+    "question": "We should use which function to get the last-inserted identity value.",
+    "options": [
       "@@IDENTITY",
       "@@ROWCOUNT",
       "@@ERROR",
       "@@NEWID"
     ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 0
   },
   {
-    id: 230,
-    question: "A Database is called having good performance if",
-    options: [
+    "id": 369,
+    "question": "A Database is called having good performance if",
+    "options": [
       "The Database runs fast",
       "The response time is very small",
       "None of the above"
     ],
-    answer: 2,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
+    "answer": 2
   },
   {
-    id: 231,
-    question: "To improve the DB performance:",
-    options: [
+    "id": 370,
+    "question": "To improve the DB performance:",
+    "options": [
       "We should you the set-based queries and avoids procedural (row-by-row) queries",
       "We should you the row-based queries and avoids set-based queries"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"We should you the set-based queries and avoids procedural (row-by-row) queries\"."
+    "answer": 0
   },
   {
-    id: 232,
-    question: "Regardless of what any other transaction is doing, a transaction must be able to continue with the exact same data£ sets it started with. The above describes which property of a transaction?",
-    options: [
+    "id": 371,
+    "question": "Regardless of what any other transaction is doing, a transaction must be able to continue with the exact same data£ sets it started with. The above describes which property of a transaction?",
+    "options": [
       "Isolation",
       "Consistency",
       "Atomic",
       "Durability"
     ],
-    answer: 0,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 0
   },
   {
-    id: 233,
-    question: "Every row and value must agree with all constraints once the transaction is complete. The above describes which property of a transaction?",
-    options: [
+    "id": 372,
+    "question": "Every row and value must agree with all constraints once the transaction is complete. The above describes which property of a transaction?",
+    "options": [
       "Durability",
       "Consistency",
       "Atomic",
       "Isolation"
     ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 1
   },
   {
-    id: 234,
-    question: "The DB product must be constructed so that even if the data drive melts, the DB can be restored up to the last transaction that was committed a split second before the hard drive died The above describes which property of a transaction?",
-    options: [
+    "id": 373,
+    "question": "The DB product must be constructed so that even if the data drive melts, the DB can be restored up to the last transaction that was committed a split second before the hard drive died The above describes which property of a transaction?",
+    "options": [
       "Isolation",
       "Consistency",
       "Durability",
       "Atomic"
     ],
-    answer: 2,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 2
   },
   {
-    id: 235,
-    question: "Which is the most dangerous fault that can potentially affect the integrity of a transaction?",
-    options: [
+    "id": 374,
+    "question": "Which is the most dangerous fault that can potentially affect the integrity of a transaction?",
+    "options": [
       "Non-repeatable reades",
       "Dirty Read",
       "Phantom rows"
     ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 1
   },
   {
-    id: 236,
-    question: "How many properties we must use to measured the quality of a transaction?",
-    options: [
+    "id": 375,
+    "question": "How many properties we must use to measured the quality of a transaction?",
+    "options": [
       "5",
       "6",
       "3",
       "4"
     ],
-    answer: 3,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 3
   },
   {
-    id: 237,
-    question: "Once a transaction is committed, it stays committed The above describes which property of a transaction?",
-    options: [
+    "id": 376,
+    "question": "Once a transaction is committed, it stays committed The above describes which property of a transaction?",
+    "options": [
       "Atomic",
       "Isolation",
       "Consistency",
       "Durability"
     ],
-    answer: 3,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 3
   },
   {
-    id: 238,
-    question: "Please choose 3 properties of a lock in DBMS",
-    options: [
-      "Mode - the size of the lock",
-      "Mode -the isolation mode of the lock",
-      "Duration - the isolation mode of the lock",
-      "Granularity - the type of the lock",
-      "Mode - the type of the lock",
-      "Granularity-the size of the lock"
-    ],
-    answer: 2,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Duration - the isolation mode of the lock'."
-  },
-  {
-    id: 239,
-    question: "Which is the least dangerous fault that can potentially affect the integrity of a transaction?",
-    options: [
+    "id": 377,
+    "question": "Which is the least dangerous fault that can potentially affect the integrity of a transaction?",
+    "options": [
       "Phantom rows",
       "Dirty Read",
       "Non-repeatable reads"
     ],
-    answer: 0,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 0
   },
   {
-    id: 240,
-    question: "Each transaction must be isolated or separated from the effects of other transaction The above describes which property of a transaction?",
-    options: [
+    "id": 378,
+    "question": "Each transaction must be isolated or separated from the effects of other transaction The above describes which property of a transaction?",
+    "options": [
       "Durability",
       "Isolation",
       "Atomic",
       "Consistency"
     ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 1
   },
   {
-    id: 241,
-    question: "At the end of the transaction, either all statements of the transaction is successful or all statements of the transaction fail. The above describes which property of a transaction?",
-    options: [
+    "id": 379,
+    "question": "At the end of the transaction, either all statements of the transaction is successful or all statements of the transaction fail. The above describes which property of a transaction?",
+    "options": [
       "Isolation",
       "Atomic",
       "Consistency",
       "Durability"
     ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 1
   },
   {
-    id: 242,
-    question: "When sorting. Null values are treated as the lowest possible values",
-    options: [
+    "id": 380,
+    "question": "When sorting. Null values are treated as the lowest possible values",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 0
   },
   {
-    id: 243,
-    question: "Except for COUNT, aggregate functions ignore null values",
-    options: [
+    "id": 381,
+    "question": "Except for COUNT, aggregate functions ignore null values",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Các hàm tổng hợp chuẩn trong SQL bao gồm: SUM, AVG, COUNT, MIN, MAX. GROUP là mệnh đề gom nhóm (GROUP BY), không phải là hàm tổng hợp."
+    "answer": 0
   },
   {
-    id: 244,
-    question: "How to returns a part of a character, binary, text or image? (For example: how to get the 'bcd' in 'abcdef' string)",
-    options: [
+    "id": 382,
+    "question": "How to returns a part of a character, binary, text or image? (For example: how to get the 'bcd' in 'abcdef' string)",
+    "options": [
       "Use the RIGHT function",
       "Use the LEFT function",
       "Use the LEN function",
       "Use the SUBSTRING function"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"Use the SUBSTRING function\"."
+    "answer": 3
   },
   {
-    id: 245,
-    question: "The ORDER BY clause can not include items not appearing in the select list",
-    options: [
+    "id": 383,
+    "question": "The ORDER BY clause can not include items not appearing in the select list",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"TRUE\"."
+    "answer": 0
   },
   {
-    id: 246,
-    question: "RANK() and ROW_NUMBER() are 2 ranking functions",
-    options: [
+    "id": 384,
+    "question": "RANK() and ROW_NUMBER() are 2 ranking functions",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"TRUE\"."
+    "answer": 0
   },
   {
-    id: 247,
-    question: "We can use the Aggregation in WHERE clause",
-    options: [
+    "id": 385,
+    "question": "We can use the Aggregation in WHERE clause",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 1,
-    explanation: "Các hàm tổng hợp chuẩn trong SQL bao gồm: SUM, AVG, COUNT, MIN, MAX. GROUP là mệnh đề gom nhóm (GROUP BY), không phải là hàm tổng hợp."
+    "answer": 1
   },
   {
-    id: 248,
-    question: "How to get the information about the number of attempted connections, either successful or unsuccessful since SQL Server was last started",
-    options: [
+    "id": 386,
+    "question": "How to get the information about the number of attempted connections, either successful or unsuccessful since SQL Server was last started",
+    "options": [
       "Use the @@ERROR",
       "Use the @@IDENTITY",
       "Use the @@VERSION",
       "Use the @@CONNECTIONS"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"Use the @@CONNECTIONS\"."
+    "answer": 3
   },
   {
-    id: 249,
-    question: "A trigger is a special kind of stored procedure that automatically executes when an event occurs in the database server",
-    options: [
+    "id": 387,
+    "question": "A trigger is a special kind of stored procedure that automatically executes when an event occurs in the database server",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'TRUE'."
+    "answer": 0
   },
   {
-    id: 250,
-    question: "The RANK() function returns the rank of each row within the partition of a result set",
-    options: [
+    "id": 388,
+    "question": "The RANK() function returns the rank of each row within the partition of a result set",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"TRUE\"."
+    "answer": 0
   },
   {
-    id: 251,
-    question: "|How to get the information about the version, processor architecture, build date, and operating system for the current installation of SQL Server",
-    options: [
+    "id": 389,
+    "question": "|How to get the information about the version, processor architecture, build date, and operating system for the current installation of SQL Server",
+    "options": [
       "Usethe@@ERROR",
       "Usethe @@IDENTITY",
       "Usethe @@VERSION",
       "Usethe @@CONNECTIONS"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Usethe @@VERSION\"."
+    "answer": 2
   },
   {
-    id: 252,
-    question: "When create stored procedures, the \"WITH ENCRYPTION\" option indicates that SQL Serverwill convert the original text of the CREATE PROCEDURE statement to an obfuscated format",
-    options: [
+    "id": 390,
+    "question": "When create stored procedures, the \"WITH ENCRYPTION\" option indicates that SQL Serverwill convert the original text of the CREATE PROCEDURE statement to an obfuscated format",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"TRUE\"."
+    "answer": 0
   },
   {
-    id: 253,
-    question: "The maximum nested level of a Transact-SQL stored procedure is 64MB",
-    options: [
+    "id": 391,
+    "question": "The maximum nested level of a Transact-SQL stored procedure is 64MB",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"FALSE\"."
+    "answer": 1
   },
   {
-    id: 254,
-    question: "In SQL Server, we can use the ORDER BY clauses in sub-queries",
-    options: [
+    "id": 392,
+    "question": "In SQL Server, we can use the ORDER BY clauses in sub-queries",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"FALSE\"."
+    "answer": 1
   },
   {
-    id: 255,
-    question: "The maximum size of a Transact-SQL stored procedure is 256MB",
-    options: [
+    "id": 393,
+    "question": "The maximum size of a Transact-SQL stored procedure is 256MB",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"TRUE\"."
+    "answer": 0
   },
   {
-    id: 256,
-    question: "Choose the correct statement",
-    options: [
-      "Aggregate functions perform a calculation on a set of values and return a single value",
-      "Except for COUNT, aggregate functions ignore null values",
-      "Aggregate functions are frequently used with the GROUP BY clause of the SELECT statement",
-      "All of the above"
+    "id": 394,
+    "question": "The key for a weak entity set E is_",
+    "options": [
+      "*Zero or more attributes of and key attributes from supporting entity sets",
+      "The set of attributes of supporting relationships for E",
+      "The set of attributes of supporting entity sets",
+      "Zero or more attributes of E"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the above\"."
+    "answer": 0
   },
   {
-    id: 257,
-    question: "Choose a wrong answer.",
-    options: [
-      "Relational algebra can express recursion.",
-      "Basic relational algebra can be expressed in Datalog rule(s). IC]Single Datalog rule can be expressed in relational algebra.",
-      "Datalog does not support bag operations."
+    "id": 395,
+    "question": "Select the right statement to declare MovieStar to be a relation whose tuples are of type StarType. Note; StarType is a user-defined type that has its definition as follows; CREATE TYPE StarType AS ( nameCHAR(30). address CHAR(IOO) };",
+    "options": [
+      "CREATE TABLE MovieStar (name StarType).",
+      "CREATE TABLE MovieStar (name StarType PRIMARY KEY);",
+      "CREATE TABLE MovieStar OF StarType Q;",
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Relational algebra can express recursion.\"."
+    "answer": 2
   },
   {
-    id: 258,
-    question: "Select the right answer",
-    options: [
+    "id": 396,
+    "question": "Select the right answer",
+    "options": [
       "Virtual views do not exist physically",
       "Virtual views are defined by an expression like a query",
       "Virtual views can be queried and can even be modified",
-      "All of the others"
+      "All of other"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
+    "answer": 3
   },
   {
-    id: 259,
-    question: "Suppose we have a relation with schema R(A. B. C. D. E. F. G. H) Ifwe issue a query of the form SELECT... FROM R WHERE... GROUP BYB.E. C. D HAVING ??? Identify, in the list below, the term that CAN NOT appear in the HAVING condition (represented by ??? in the above query).",
-    options: [
+    "id": 397,
+    "question": "Suppose we have a relation with schema R(A. B. C. D. E. F. G. H) Ifwe issue a query of the form SELECT... FROM R WHERE... GROUP BYB.E. C. D HAVING ??? Identify, in the list below, the term that CAN NOT appear in the HAVING condition (represented by ??? in the above query).",
+    "options": [
       "COUNT(A)",
       "H",
       "SUM(H)",
       "B+E"
     ],
-    answer: 1,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
+    "answer": 1
   },
   {
-    id: 260,
-    question: "The ER model means that",
-    options: [
-      "enable detailed descriptions of data query processing",
-      "replace relational design",
-      "enable low level descriptions of data be close to",
-      "be close to a perception of the data"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"be close to a perception of the data\"."
-  },
-  {
-    id: 261,
-    question: "A(an) asserts that a value appearing in one relation must also appear in the primary-key component(s) of another relation",
-    options: [
+    "id": 398,
+    "question": "Answer A(an) asserts that a value appearing in one relation must also appear in the primary-key component(s) of another relation",
+    "options": [
       "Primary key constraint",
       "Foreign key constraint",
       "Unique key constraint",
       "Candidate key constraint"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Primary key constraint\"."
+    "answer": 0
   },
   {
-    id: 262,
-    question: "FALSE AND NULL) return:",
-    options: [
+    "id": 399,
+    "question": "FALSE AND NULL) return:",
+    "options": [
       "NULL",
       "TRUE",
       "FALSE",
-      "None of the othersss"
+      "None ofthe others"
     ],
-    answer: 2,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 2
   },
   {
-    id: 263,
-    question: "What is a key attribute in a relation? *",
-    options: [
+    "id": 400,
+    "question": "What is a key attribute in a relation? *",
+    "options": [
       "A key attribute is an attribute that belongs to one of the keys of the relation",
       "A key attribute is an attribute that belongs to one of the super keys of the relation"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"A key attribute is an attribute that belongs to one of the keys of the relation\"."
+    "answer": 0
   },
   {
-    id: 264,
-    question: "The most concert",
-    options: [
+    "id": 401,
+    "question": "The most concert",
+    "options": [
       "The selection of the right indexes for a database and its workload is a complex balancing act between query speed and update cost",
       "Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks.",
       "Designing efficient indexes is paramount to achieve good database and application performance",
       "All of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Designing efficient indexes is paramount to achieve good database and application performance\"."
+    "answer": 2
   },
   {
-    id: 265,
-    question: "(FALSE OR NULL) return:",
-    options: [
+    "id": 402,
+    "question": "(FALSE OR NULL) return:",
+    "options": [
       "TRUE",
-      "None of the othersss",
+      "None ofthe others",
       "FALSE",
       "NULL"
     ],
-    answer: 3,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 3
   },
   {
-    id: 266,
-    question: "Column A of a relation has the following list of values in the six rows of the table: * NULL. NULL. 10.10. 20. 20 After grouping by (A+10). the output has:",
-    options: [
+    "id": 403,
+    "question": "After grouping by (A+10). the output has:",
+    "options": [
       "2 groups",
       "1 groups",
       "4 groups",
       "3 groups"
     ],
-    answer: 3,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 3
   },
   {
-    id: 267,
-    question: "The structure of an XML document is similar to the ones used in (choose two):",
-    options: [
+    "id": 404,
+    "question": "The structure of an XML document is similar to the ones used in (choose two):",
+    "options": [
       "Graph-based data model",
       "Relational data model",
       "Flat file data model",
       "Hierarchical data model"
     ],
-    answer: 1,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
+    "answer": [
+      1,
+      2
+    ]
   },
   {
-    id: 268,
-    question: "When we multiply 0 with NULL, the result is:",
-    options: [
+    "id": 405,
+    "question": "When we multiply 0 with NULL, the result is:",
+    "options": [
       "TRUE",
       "FALSE",
       "0",
       "NULL"
     ],
-    answer: 3,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 3
   },
   {
-    id: 269,
-    question: "A SQL statement cannot be executed without the appropriate to that statement",
-    options: [
+    "id": 406,
+    "question": "A SQL statement cannot be executed without the appropriate to that statement",
+    "options": [
       "Privileges",
       "Domains",
       "Sessions",
       "Character Sets"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Privileges\"."
+    "answer": 0
   },
   {
-    id: 270,
-    question: "The table Arc(x.y) currently has the following tuples (note that there are duplicates): (1.2). (1.2). (2.3). (3.4). (3.4). (4.1). (4.1). (4.1). (4.2). Compute the result of the query: SELECT a1.x. a2.y. COUNT(*) FROM Arc a1. Arc a2 WHERE a1.y = a2.x GROUP BY a1.x. a2.y; Which of the following tuples is in the result?",
-    options: [
-      "(2.4.6)",
-      "(3.1.2)",
-      "(3.1.6)",
-      "(1.3.4)",
-      "(3.2.6)"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"(3.1.2)\"."
-  },
-  {
-    id: 271,
-    question: "What is the difference between a \"where\" clause and a \"having\" clause?",
-    options: [
+    "id": 407,
+    "question": "What is the difference between a \"where\" clause and a \"having\" clause?",
+    "options": [
       "HAVING applies to rows. WHERE applies to summarized (or aggregate) rows",
       "Having is just another part of WHERE clause, so there is no difference between WHERE and HAVING clauses",
       "WHERE applies to rows. HAVING applies to summarized (or aggregate) rows"
     ],
-    answer: 2,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
+    "answer": 2
   },
   {
-    id: 272,
-    question: "Consider the distributive law. that holds for set relations: * (R U S) - T = (R-T) U (S-T) A The above distributive law still hold for bag relations?",
-    options: [
+    "id": 408,
+    "question": "Consider the distributive law. that holds for set relations: * (R U S) - T = (R-T) U (S-T) A The above distributive law still hold for bag relations?",
+    "options": [
       "False",
       "True"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"True\"."
+    "answer": 1
   },
   {
-    id: 273,
-    question: "How many properties we must use to measure the quality of a transaction? \\",
-    options: [
+    "id": 409,
+    "question": "Which of the following relations is in Boyce-Codd Normal Form (BCNF)?",
+    "options": [
+      "R(A,B,C,D) FD's: A -> D ; C -> A ; D -> B ; AC -> B",
+      "R(A,B,C,D) FD's: A -> C ; B -> A ; A -> D ; AD -> C",
+      "R(A,B,C,D) FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A",
+      "R(A.B:C,D) FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 410,
+    "question": "How many properties we must use to measure the quality of a transaction? \\",
+    "options": [
       "6",
       "4",
       "3",
       "5"
     ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 1
   },
   {
-    id: 274,
-    question: "Suppose relation R(a.b.c) has the following tuples: A B C 1 1 3 1 2 3 2 1 4 2 3 5 2 4 1 3 2 4 3 3 6 Which tuple is contained in the result of the following query: SELECT a. COUNT(DISTINCT B) FROM R GROUP BY a HAVING SUM(B) >3;",
-    options: [
+    "id": 411,
+    "question": "Which tuple is contained in the result of the following query: SELECT a. COUNT(DISTINCT B) FROM R GROUP BY a HAVING SUM(B) >3;",
+    "options": [
       "(2.10)",
       "(2.3)",
       "(3.7)",
       "(3.12)"
     ],
-    answer: 1,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
+    "answer": 1
   },
   {
-    id: 275,
-    question: "Suppose we have 2 relations R(A.B.C.D) and S(B.C.D.E) and B is the foreign key column in R and B is the primary key in S. [v] A This means that: when enter data into the column B in R. only values that belong to r|B(S) are permitted",
-    options: [
+    "id": 412,
+    "question": "Suppose we have 2 relations R(A.B.C.D) and S(B.C.D.E) and B is the foreign key column in R and B is the primary key in S. [v] A This means that: when enter data into the column B in R. only values that belong to r|B(S) are permitted",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"TRUE\"."
+    "answer": 0
   },
   {
-    id: 276,
-    question: "Suppose we have a relation R(MNPQ) with FD's: NQ -> P ; MN -> Q ; MP -> N ; NQ -> M What does the highest normal form that R belong?",
-    options: [
+    "id": 413,
+    "question": "Suppose we have a relation R(MNPQ) with FD's: NQ -> P ; MN -> Q ; MP -> N ; NQ -> M What does the highest normal form that R belong?",
+    "options": [
       "2NF",
       "BCNF",
       "3NF",
       "1NF"
     ],
-    answer: 1,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: 'BCNF'."
+    "answer": 1
   },
   {
-    id: 277,
-    question: "(TRUE AND NULL) returns:",
-    options: [
-      "None of the othersss",
+    "id": 414,
+    "question": "(TRUE AND NULL) returns:",
+    "options": [
+      "None ofthe others",
       "TRUE",
       "NULL",
       "FALSE"
     ],
-    answer: 2,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 2
   },
   {
-    id: 278,
-    question: "The relation R(A.B) may have duplicate tuples. Choose the query that create non-duplicated results, regardless of what tuples R contains?",
-    options: [
+    "id": 415,
+    "question": "Answer The relation R(A.B) may have duplicate tuples. Choose the query that create non-duplicated results, regardless of what tuples R contains?",
+    "options": [
       "SELECT A. B FROM R",
       "SELECT A FROM R WHERE A NOT IN (SELECT B FROM R)",
       "SELECT TOP 3 A. B FROM R",
       "SELECT A. B FROM R GROUP BY A. B"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"SELECT A. B FROM R GROUP BY A. B\"."
+    "answer": 3
   },
   {
-    id: 279,
-    question: "(TRUE OR NULL) return:",
-    options: [
+    "id": 416,
+    "question": "(TRUE OR NULL) return:",
+    "options": [
       "TRUE",
-      "None of the othersss",
+      "None ofthe others",
       "FALSE",
       "NULL"
     ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 0
   },
   {
-    id: 280,
-    question: "Except for , aggregate functions ignore null values",
-    options: [
+    "id": 417,
+    "question": "Except for , aggregate functions ignore null values",
+    "options": [
       "MAX",
       "COUNT",
       "AVG",
       "MIN",
       "SUM"
     ],
-    answer: 0,
-    explanation: "Các hàm tổng hợp chuẩn trong SQL bao gồm: SUM, AVG, COUNT, MIN, MAX. GROUP là mệnh đề gom nhóm (GROUP BY), không phải là hàm tổng hợp."
+    "answer": 0
   },
   {
-    id: 281,
-    question: "Today, in a modern DBMS, the queries are pars|ed and optimized by",
-    options: [
+    "id": 418,
+    "question": "Today, in a modern DBMS, the queries are pars|ed and optimized by",
+    "options": [
       "query compiler",
       "all of the others",
       "execution engine",
       "buffer manager"
     ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'all of the others'."
+    "answer": 1
   },
   {
-    id: 282,
-    question: "What is an index?",
-    options: [
-      "An index is a data structure that makes it efficient to find tuples B",
-      "None of the othersss",
-      "An index is a special way to join 2 or more tables",
-      "An index is the same as alias"
-    ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
-  },
-  {
-    id: 283,
-    question: "A database is a data structure that improves the speed of data retrieval operations on a database table at the cost of slower writes and increased storage space",
-    options: [
+    "id": 419,
+    "question": "A database is a data structure that improves the speed of data retrieval operations on a database table at the cost of slower writes and increased storage space",
+    "options": [
       "Store Procedure",
       "Index",
       "View",
       "Trigger"
     ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Index'."
+    "answer": 1
   },
   {
-    id: 284,
-    question: "When sorting in SQL Server, Null values are treated as the lowest possible values.",
-    options: [
+    "id": 420,
+    "question": "When sorting in SQL Server, Null values are treated as the lowest possible values.",
+    "options": [
       "TRUE",
       "FALSE"
     ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 0
   },
   {
-    id: 285,
-    question: "Suppose we have a relation R(MNPQ) with FD's: NP -> M ; MQ -> P ; PQ -> N ; NQ -> P",
-    options: [
+    "id": 421,
+    "question": "Suppose we have a relation R(MNPQ) with FD's: NP -> M ; MQ -> P ; PQ -> N ; NQ -> P",
+    "options": [
       "R is in BCNF",
       "R is not in BCNF"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"R is not in BCNF\"."
+    "answer": 1
   },
   {
-    id: 286,
-    question: "A(an) asserts that a value appearing in one relation must also appear in the primary-key component(s) of another relationl",
-    options: [
+    "id": 422,
+    "question": "A(an) asserts that a value appearing in one relation must also appear in the primary-key component(s) of another relationl",
+    "options": [
       "Primary key constraint",
       "Foreign key constraint",
       "Unique key constraint",
       "Candidate key constraint"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Unique key constraint\"."
+    "answer": 2
   },
   {
-    id: 287,
-    question: "Choose a wrong answer.",
-    options: [
+    "id": 423,
+    "question": "Answer Choose a wrong answer.",
+    "options": [
       "Single Datalog rule can be expressed in relational algebra.",
       "Basic relational algebra can be expressed in Datalog rule(s).",
       "Relational algebra can express recursion.",
       "Datalog does not support bag operations."
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"Datalog does not support bag operations.\"."
+    "answer": 3
   },
   {
-    id: 288,
-    question: "What SQL keyword can be used to return data from two non-related tables as a combined set of rows?",
-    options: [
+    "id": 424,
+    "question": "What SQL keyword can be used to return data from two non-related tables as a combined set of rows?",
+    "options": [
       "DISTINCT ALL",
       "DISTINCT",
       "UNION ALL",
       "COMBINED"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"UNION ALL\"."
+    "answer": 2
   },
   {
-    id: 289,
-    question: "A database transaction, by definition, must be ACID (atomic, consistent isolated and durable). What does 'Consistent\" mean?",
-    options: [
-      "'Consistent' means that: Transactions provide an \"all-or-nothing\" proposition, stating that each work-unit performed in a database must either complete in its entirety or have no effect whatsoever",
-      "'Consistent' means that: Transactions must not violate any integrity constraints during its execution"
-    ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
-  },
-  {
-    id: 290,
-    question: "In database design processes, data requirements are expressed through",
-    options: [
-      "Schema Design",
-      "ERD",
-      "UML",
-      "Table Design",
-      "(c) and (d)",
-      "(b) and (c)",
-      "(a) and (b)"
-    ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'ERD'."
-  },
-  {
-    id: 291,
-    question: "Consider the law. that holds for set relations: (R natural join S) natural join T = R natural join (S natural join T). Does the above law still hold for bag relations?",
-    options: [
+    "id": 425,
+    "question": "Consider the law. that holds for set relations: (R natural join S) natural join T = R natural join (S natural join T). Does the above law still hold for bag relations?",
+    "options": [
       "True",
       "False"
     ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: 'True'."
+    "answer": 0
   },
   {
-    id: 292,
-    question: "Compute the union of the ABC 1 2 3 4 2 3 4 5 6 2 5 3 1 2 6 and relation S(A.B.C): A B C 2 5 3 2 5 4 4 5 6 1 2 3 Which of the following tuples DOES NOT appear in the result?",
-    options: [
+    "id": 426,
+    "question": "Which of the following tuples DOES NOT appear in the result?",
+    "options": [
       "(1.2.3)",
       "(4.5.6)",
       "(1.5.4)",
       "(4.2.3)"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"(1.5.4)\"."
+    "answer": 2
   },
   {
-    id: 293,
-    question: "The ER model can:",
-    options: [
+    "id": 427,
+    "question": "The ER model can:",
+    "options": [
       "enable low level descriptions of data",
       "replace relational design",
       "enable detailed descriptions of data query processing",
       "be close to a users perception of the data"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"be close to a users perception of the data\"."
+    "answer": 3
   },
   {
-    id: 294,
-    question: "The DBMS (Database Management System) is expected to:",
-    options: [
+    "id": 428,
+    "question": "The DBMS (Database Management System) is expected to:",
+    "options": [
       "Allow users to query the data",
       "Support the storage of very large amounts of data",
       "Allow users to create new databases and specify their schemas",
       "All of the others"
     ],
-    answer: 3,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'All of the others'."
+    "answer": 3
   },
   {
-    id: 295,
-    question: "What is an Entity Set?",
-    options: [
+    "id": 429,
+    "question": "What is an Entity Set?",
+    "options": [
       "It is a collection of entities of a particular entity type grouped together into an entity set",
       "It is a \"thing\" in the real world with an independent existence.",
-      "None of the othersss",
+      "None ofthe others",
       "It is a collection (set) of entities that have same attributes"
     ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 0
   },
   {
-    id: 296,
-    question: "What is the degree of a Relation?",
-    options: [
-      "None of the othersss",
+    "id": 430,
+    "question": "What is the degree of a Relation?",
+    "options": [
+      "None of the others",
       "It Is the number of attributes of its relation schema",
       "It is the number of tuples of its relation schema"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"It Is the number of attributes of its relation schema\"."
+    "answer": 1
   },
   {
-    id: 297,
-    question: "SELECT name FROM customers WHERE name LIKE '%Gate';. This query would yield an name for every customer whose name ends with \"Gate\". Suppose that the name column has been Indexed. Which of the following statements is correct?",
-    options: [
-      "None of the othersss",
+    "id": 431,
+    "question": "SELECT name FROM customers WHERE name LIKE '%Gate';. This query would yield an name for every customer whose name ends with \"Gate\". Suppose that the name column has been Indexed. Which of the following statements is correct?",
+    "options": [
+      "None of the others",
       "The database does not perform a full table scan when executing the above SELECT statement",
       "The database must perform a full table scan when executing the above SELECT statement"
     ],
-    answer: 2,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 2
   },
   {
-    id: 298,
-    question: "What type of key is used to BE REFERENCED by another table? (choose all possible)",
-    options: [
+    "id": 432,
+    "question": "What type of key is used to BE REFERENCED by another table? (choose all possible)",
+    "options": [
       "Unique Key",
       "Foreign Key",
-      "None of the othersss",
+      "None of the others",
       "Primary Key"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Unique Key\"."
+    "answer": [
+      0,
+      1
+    ]
   },
   {
-    id: 299,
-    question: "If you don't specify ASC or DESC after a SQL ORDER BY clause, the following Is used by default:",
-    options: [
+    "id": 433,
+    "question": "If you don't specify ASC or DESC after a SQL ORDER BY clause, the following Is used by default:",
+    "options": [
       "All of the others",
       "DESC",
       "ASC",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"ASC\"."
+    "answer": 2
   },
   {
-    id: 300,
-    question: "A XML involves a Document Type Definition that specifies the allowable tags and gives a grammar for how they may be nested",
-    options: [
+    "id": 434,
+    "question": "A XML involves a Document Type Definition that specifies the allowable tags and gives a grammar for how they may be nested",
+    "options": [
       "Well-formed",
       "All of the others",
       "Valid",
-      "None of the otherss"
+      "None of the other"
     ],
-    answer: 0,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
+    "answer": 0
   },
   {
-    id: 301,
-    question: "Which of the following statements is the most correct?",
-    options: [
+    "id": 435,
+    "question": "Which of the following statements is the most correct?",
+    "options": [
       "The selection of the right indexes for a database and its workload is a complex balancing act between query speed and update cost",
       "All of the others",
       "Designing efficient indexes is paramount to achieve good database and application performance",
       "Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks."
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"All of the others\"."
+    "answer": 1
   },
   {
-    id: 302,
-    question: "Suppose we have 2 relations: R=(A,B,C,D) S = (B,C,D,E) When we can set B to be the foreign key of R?",
-    options: [
+    "id": 436,
+    "question": "Suppose we have 2 relations: R=(A,B,C,D) S = (B,C,D,E) When we can set B to be the foreign key of R?",
+    "options": [
       "When B is the primary key of S",
       "When B is the unique key of S",
       "All of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"All of the others\"."
+    "answer": 2
   },
   {
-    id: 303,
-    question: "SQL provides a statement to allow one user to give a privilege to another",
-    options: [
+    "id": 437,
+    "question": "SQL provides a statement to allow one user to give a privilege to another",
+    "options": [
       "GRANT",
       "REVOKE",
       "GIVE",
       "TAKE"
     ],
-    answer: 0,
-    explanation: "Trong quản trị CSDL, quyền (Privileges) được cấp phát thông qua lệnh GRANT và có thể được thu hồi bằng lệnh REVOKE."
+    "answer": 0
   },
   {
-    id: 304,
-    question: "For what values of x, y, and z, including NULL, does the boolean expression x <= 3 OR NOT(y >= 1 AND z = 5) have the truth value FALSE? Identify one of those values from the list below",
-    options: [
+    "id": 438,
+    "question": "For what values of x, y, and z, including NULL, does the boolean expression x <= 3 OR NOT(y >= 1 AND z = 5) have the truth value FALSE? Identify one of those values from the list below",
+    "options": [
       "x= NULL, y = 3, z = 5.",
       "x = 4, y = 3, z = 5.",
       "x = 3, y = 1, z = 5.",
       "x= NULL, y = 2, z = 5."
     ],
-    answer: 2,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 2
   },
   {
-    id: 305,
-    question: "What is an index?",
-    options: [
-      "An index is the same as alias",
-      "None of the othersss",
-      "An index is a data structure that makes it efficient to find tuples",
-      "An index is a special way to join 2 or more tables"
-    ],
-    answer: 2,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
-  },
-  {
-    id: 306,
-    question: "The type denotes a fixed-length string of up to N-characters",
-    options: [
+    "id": 439,
+    "question": "The type denotes a fixed-length string of up to N-characters",
+    "options": [
       "VARCHAR(n)",
       "CHAR(n)",
       "NVARCHAR(n)",
       "All of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"NVARCHAR(n)\"."
+    "answer": 2
   },
   {
-    id: 307,
-    question: "Suppose relation R(A,B,C) has the tuples: A B C 1 2 3 1 2 3 4 5 6 2 5 3 1 2 6 and relation S(A,B,C) has the tuples: A B C 2 5 3 2 5 4 4 5 6 1 2 3 Compute the bag union R and S, and then indicate which of the following is true.",
-    options: [
+    "id": 440,
+    "question": "Compute the bag union R and S, and then indicate which of the following is true.",
+    "options": [
       "(1.2.3) appears twice in the result.",
       "(1.2.3) appears once in the result.",
       "(4.5.6) appears once in the result.",
       "(4.5.6) appears twice in the result."
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"(4.5.6) appears twice in the result.\"."
+    "answer": 3
   },
   {
-    id: 308,
-    question: "Choose 3 correct statements.",
-    options: [
-      "Unique keys and primary keys can be used to uniquely identify a row in a table",
-      "A relation can have only 1 primary key but can have many unique key",
-      "Unique keys and primary keys can be referenced by foreign keys",
-      "A relation can have only 1 unique key but can have many primary key"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Unique keys and primary keys can be used to uniquely identify a row in a table\"."
-  },
-  {
-    id: 309,
-    question: "Given a relation R(A,B,C,D) like this: A B C D 1 2 3 6 1 2 3 7 2 4 5 7 Please choose the in-correct functional dependencies:",
-    options: [
-      "None of the othersss",
+    "id": 441,
+    "question": "Please choose the in-correct functional dependencies:",
+    "options": [
+      "None of the others",
       "B -> C",
       "B-> A",
       "B -> D"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"B -> D\"."
+    "answer": 3
   },
   {
-    id: 310,
-    question: "Choose a wrong answer.",
-    options: [
-      "Datalog does not support bag operations.",
-      "Basic relational algebra can be expressed in Datalog rule(s).",
-      "Single Datalog rule can be expressed in relational algebra.",
-      "Relational algebra can express recursion."
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"Relational algebra can express recursion.\"."
-  },
-  {
-    id: 311,
-    question: "A ____ is a logically coherent collection of data with some inherent meaning, representing some aspect of real world and being designed, built and populated with data for a specific purpose",
-    options: [
+    "id": 442,
+    "question": "A ____ is a logically coherent collection of data with some inherent meaning, representing some aspect of real world and being designed, built and populated with data for a specific purpose",
+    "options": [
       "Database",
       "Database Instance",
       "Schema",
       "Schema Instance"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Database\"."
+    "answer": 0
   },
   {
-    id: 312,
-    question: "Choose the most correct statement.",
-    options: [
+    "id": 443,
+    "question": "Choose the most correct statement.",
+    "options": [
       "Database is created and maintained by a DMBS",
       "All of the others",
       "Database is a collection of data that is managed by a DBMS",
       "Database is a collection of information that exists over a long period of time"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"All of the others\"."
+    "answer": 1
   },
   {
-    id: 313,
-    question: "A ____ is a relation name, together with the attributes of that relation.",
-    options: [
+    "id": 444,
+    "question": "Which of following is never used as a data model?",
+    "options": [
+      "Hierarchical data model",
+      "None of the others",
+      "Graph-based data model",
+      "Tree-based data model",
+      "Relational data model"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 445,
+    "question": "A ____ is a relation name, together with the attributes of that relation.",
+    "options": [
       "schema",
       "database",
       "database instance",
       "schema instance"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"schema\"."
+    "answer": 0
   },
   {
-    id: 314,
-    question: "A ___ is a notation for describing the structure of the data in a database, along with the constraints on that data",
-    options: [
+    "id": 446,
+    "question": "A ___ is a notation for describing the structure of the data in a database, along with the constraints on that data",
+    "options": [
       "data model",
       "database management system",
       "data operation",
       "data manipulation"
     ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'data model'."
+    "answer": 0
   },
   {
-    id: 315,
-    question: "A _____ is a language for defining data structures",
-    options: [
+    "id": 447,
+    "question": "A _____ is a language for defining data structures",
+    "options": [
       "DDL",
       "DML",
       "DCL",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"DDL\"."
+    "answer": 0
   },
   {
-    id: 316,
-    question: "Which statement is used to remove a relation named R?",
-    options: [
+    "id": 448,
+    "question": "Which statement is used to remove a relation named R?",
+    "options": [
       "DROP TABLE R;",
       "REMOVE TABLE R;",
       "DELETE TABLE R;",
       "TRUNCATE TABLE R;"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"DROP TABLE R;\"."
+    "answer": 0
   },
   {
-    id: 317,
-    question: "What is another term for a row in a relational table?",
-    options: [
+    "id": 449,
+    "question": "What is another term for a row in a relational table?",
+    "options": [
       "Attribute",
       "Tuple",
       "Field",
       "Relation"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Tuple\"."
+    "answer": 1
   },
   {
-    id: 318,
-    question: "Let R(ABCD) be a relation with functional dependencies {A -> B, C -> B, B -> D} What is the key for R (choose one)",
-    options: [
-      "AB",
-      "AC",
-      "AD",
-      "BD"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"AC\"."
-  },
-  {
-    id: 319,
-    question: "Suppose R is a relation with attributes A1, A2, A3, A4. The only key of R is {A1, A2}. So, how many super-keys do R have?",
-    options: [
-      "4",
-      "8",
-      "12",
-      "16"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"4\"."
-  },
-  {
-    id: 320,
-    question: "Consider the following functional dependencies a,b -> c,d e,g,h -> f,j a,c -> b,d p,q -> r,s e,f,g -> h,i s -> t f,g -> j q -> u g,h -> i Which of the following best describes the relation R(e,f,g,h,i,j)?",
-    options: [
-      "R is in First Normal Form",
-      "R is in Second Normal Form",
-      "R is in Third Normal Form",
-      "R is in Boyce Codd Normal Form"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"R is in First Normal Form\"."
-  },
-  {
-    id: 321,
-    question: "The relation R(ABCD) has following FDs: { A -> B ; B -> A ; A -> D ; D -> B }",
-    options: [
-      "R is in 3NF",
-      "R is not in 3NF",
-      "R is not in 2NF",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"R is in 3NF\"."
-  },
-  {
-    id: 322,
-    question: "Given a R(A,B,C,D) with the following FDs: AB->D BC->A AD->B CD->B AD->C Choose a correct statement about R:",
-    options: [
-      "The FD set of R is not canonical and R is in BCNF",
-      "The FD set of R is canonical and R is not in BCNF",
-      "The FD set of R is not canonical and R is not in BCNF"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"The FD set of R is not canonical and R is in BCNF\"."
-  },
-  {
-    id: 323,
-    question: "What is the difference between the 2NF and the 3NF?",
-    options: [
+    "id": 450,
+    "question": "What is the difference between the 2NF and the 3NF?",
+    "options": [
       "2NF deals with partial functional dependency, while 3NF deals with transitive functional dependency",
       "2NF deals with transitive functional dependency, while 3NF deals with partial functional dependency"
     ],
-    answer: 0,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: '2NF deals with partial functional dependency, while 3NF deals with transitive functional dependency'."
+    "answer": 0
   },
   {
-    id: 324,
-    question: "What is \"de-normalization\"?",
-    options: [
+    "id": 451,
+    "question": "What is \"de-normalization\"?",
+    "options": [
       "De-normalization means allowing redundancy in a table",
       "De-normalization means allowing duplicate columns appeared in a table",
       "De-normalization means allowing a table to have more than 3 columns",
       "De-normalization means allowing a table to have more than 1024 columns"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"De-normalization means allowing redundancy in a table\"."
+    "answer": 0
   },
   {
-    id: 325,
-    question: "What is the benefit of \"de-normalization\"?",
-    options: [
+    "id": 452,
+    "question": "What is the benefit of \"de-normalization\"?",
+    "options": [
       "\"de-normalization\" has no benefit",
       "The main benefit of de-normalization is improved performance with simplified data retrieval (this is done by reduction in the number of joins needed for data processing)",
       "The main benefit of de-normalization is eliminating redundant information from a table and organizing the data so that future changes to the table are easier"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"The main benefit of de-normalization is improved performance with simplified data retrieval (this is done by reduction in the number of joins needed for data processing)\"."
+    "answer": 1
   },
   {
-    id: 326,
-    question: "A class in UML is similar to...........",
-    options: [
-      "An entity set in E/R model",
-      "An attribute in E/R model",
-      "A Relationship in E/R model",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"An entity set in E/R model\"."
-  },
-  {
-    id: 327,
-    question: "A(n) _____ provides a means to analyze business requirements so as to standardize organizational vocabulary, enforce business rules, and ensure adequate data quality",
-    options: [
+    "id": 453,
+    "question": "A(n) _____ provides a means to analyze business requirements so as to standardize organizational vocabulary, enforce business rules, and ensure adequate data quality",
+    "options": [
       "Entity Relationship Diagram",
       "Relation Schema Design",
       "All of the others",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Entity Relationship Diagram\"."
+    "answer": 0
   },
   {
-    id: 328,
-    question: "An association class in UML is similar to ______ in the ER model",
-    options: [
+    "id": 454,
+    "question": "An association class in UML is similar to ______ in the ER model",
+    "options": [
       "attributes on a relationship",
       "Attributes",
       "Entities",
       "entity sets"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"attributes on a relationship\"."
+    "answer": 0
   },
   {
-    id: 329,
-    question: "In UML, what is the difference between an aggregation and a composition?",
-    options: [
+    "id": 455,
+    "question": "In UML, what is the difference between an aggregation and a composition?",
+    "options": [
       "In composition, when the owning object is destroyed, so are the contained objects. In aggregation, this is not necessarily true.",
       "In aggregation, when the owning object is destroyed, so are the contained objects. In composition, this is not necessarily true.",
       "All of the others",
       "There is no difference between an aggregation and a composition"
     ],
-    answer: 0,
-    explanation: "Các hàm tổng hợp chuẩn trong SQL bao gồm: SUM, AVG, COUNT, MIN, MAX. GROUP là mệnh đề gom nhóm (GROUP BY), không phải là hàm tổng hợp."
+    "answer": 0
   },
   {
-    id: 330,
-    question: "Consider the law, that holds for set relations: T intersect(R union S) = (T intersect R) union (T intersect S) The above law still hold for bag relations?",
-    options: [
-      "True",
-      "False"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"False\"."
-  },
-  {
-    id: 331,
-    question: "Choose the correct statement:",
-    options: [
-      "Aggregate functions perform a calculation on a set of values and return a single value",
-      "Aggregate functions perform a calculation on a single value and return a single value",
-      "Aggregate functions perform a calculation on a set of values and return a relation",
-      "Aggregate functions perform a calculation on a set of values and return a row"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Aggregate functions perform a calculation on a set of values and return a single value\"."
-  },
-  {
-    id: 332,
-    question: "Suppose the relation S(B,C,D) has tuples: B C D ------------------------------------ a 4 6 c 6 8 c 5 5 e 9 9 F 10 10 c 7 9 Compute the result of the following query: SELECT SUM(D) FROM S WHERE D < 8 AND D > 5 Choose the row that appears in the computed result.",
-    options: [
-      "6",
-      "7",
-      "8",
-      "9"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"6\"."
-  },
-  {
-    id: 333,
-    question: "Suppose the relation S(B,C,D) has tuples: B C D ----------------------------------- a 4 6 c 6 8 c 5 5 e 9 9 f 10 10 c 7 9 Compute the result of the following query: SELECT D, SUM(C) FROM S GROUP BY D Choose rows that are appear in the computed result",
-    options: [
-      "(9,12)",
-      "(9,14)",
-      "(9,16)",
-      "(9,18)"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"(9,16)\"."
-  },
-  {
-    id: 334,
-    question: "Column A of a relation has the following list of values in the six rows of the table: NULL, NULL, 10, 10, 20, 30 In SQL Server, which of the following is the correct value of AVG(DISTINCT A)?",
-    options: [
-      "15",
-      "NULL",
-      "20",
-      "10"
-    ],
-    answer: 2,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 335,
-    question: "How we can understand about this statement: \"All aggregate functions are deterministic\"?",
-    options: [
-      "This means aggregate functions return the same value any time they are called by using a specific set of input values",
-      "This means aggregate functions return the different values each time they are called by using a specific set of input values",
-      "This means aggregate functions return the same value any time they are called by using any set of input values",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Các hàm tổng hợp chuẩn trong SQL bao gồm: SUM, AVG, COUNT, MIN, MAX. GROUP là mệnh đề gom nhóm (GROUP BY), không phải là hàm tổng hợp."
-  },
-  {
-    id: 336,
-    question: "When we apply set operators (UNION, INTERSECT, EXCEPT) to two relations R and S, which conditions on R and S must be satisfied?",
-    options: [
+    "id": 456,
+    "question": "When we apply set operators (UNION, INTERSECT, EXCEPT) to two relations R and S, which conditions on R and S must be satisfied?",
+    "options": [
       "R and S must have schemas with identical sets of attributes and the types (domains) for each attributes must be the same in R and S",
       "Before we compute the set-theoretic union, intersection, or difference of sets of tuples, the columns of R and S must be ordered so that the order of attributes is the same for both relations",
       "All of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"All of the others\"."
+    "answer": 2
   },
   {
-    id: 337,
-    question: "How many JOIN conditions are necessary to combine five tables based on common attributes?",
-    options: [
+    "id": 457,
+    "question": "How many JOIN conditions are necessary to combine five tables based on common attributes?",
+    "options": [
       "1",
       "2",
       "3",
       "4"
     ],
-    answer: 3,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '4'."
+    "answer": 3
   },
   {
-    id: 338,
-    question: "Suppose relation R(A,B) has the tuples: A B ------------------- 10 x 30 y 50 z 70 t and the relation S(B,C,D) has tuples: B C D ------------------------------------ x 40 60 z 60 80 z 50 50 z 70 90 Compute the right outer join of R and S, where the condition is: R.B = S.B. Then identify 2 tuples of R that do not appear in the computed result.",
-    options: [
-      "(10,x)",
-      "(30,y)",
-      "(50,z)",
-      "(70,t)"
-    ],
-    answer: 1,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '(30,y)'."
-  },
-  {
-    id: 339,
-    question: "For what values of x, y, and z, including NULL, does the Boolean expression x <= 4 OR NOT(y >= 2 AND z = 10) have the truth value FALSE? Identify one of those values from the list below",
-    options: [
-      "x = 5, y = 3, z = 10",
-      "x = 3, y = 1, z = 10.",
-      "x = NULL, y = 2, z = 10.",
-      "x = NULL, y = 3, z = 10."
-    ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 340,
-    question: "What operator tests column for the absence of data?",
-    options: [
+    "id": 458,
+    "question": "What operator tests column for the absence of data?",
+    "options": [
       "IS BLANK operator",
       "IS ZERO operator",
       "IS NULL operator",
       "ISNULL operator"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"IS NULL operator\"."
+    "answer": 2
   },
   {
-    id: 341,
-    question: "What does NULL mean?",
-    options: [
+    "id": 459,
+    "question": "What does NULL mean?",
+    "options": [
       "The value NULL means UNKNOWN",
       "The value NULL means '' (empty string)",
       "The value NULL means ' ' (space character)",
       "The value NULL means ZERO"
     ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
+    "answer": 0
   },
   {
-    id: 342,
-    question: "What is the value of the query: SELECT 'Nancy' + NULL + 'Smith' when evaluated on Microsoft SQL Server?",
-    options: [
-      "'Nancy Smith'",
-      "'Nancy'",
-      "'NancySmith'",
-      "NULL"
-    ],
-    answer: 3,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 343,
-    question: "Which SQL keyword is used to sort the result-set?",
-    options: [
+    "id": 460,
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
       "ORDER BY",
       "SORT BY",
       "ORDER",
       "SORT"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"ORDER BY\"."
+    "answer": 0
   },
   {
-    id: 344,
-    question: "Three properties of a lock in DBMS are:",
-    options: [
-      "Granularity: the size of the lock",
-      "Granularity: the type of the lock",
-      "Mode: the type of the lock",
-      "Duration: the time in seconds that the DBMS waits for a lock to be released",
-      "(a) and (c) and (d) are true",
-      "(a) and (b) and (d) are true",
-      "(b) and (c) and (d) are true",
-      "(a) and (b) and (c) are true"
-    ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Granularity: the size of the lock'."
-  },
-  {
-    id: 345,
-    question: "A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does \"Durable\" mean?",
-    options: [
+    "id": 461,
+    "question": "A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does \"Durable\" mean?",
+    "options": [
       "\"Durable\" means that: Transactions provide an \"all-or-nothing\" proposition, stating that each work-unit performed in a database must either complete in its entirety or have no effect whatsoever",
       "\"Durable\" means that: Transactions must not violate any integrity constraints during its execution",
       "\"Durable\" means that: Transactions that have committed will survive permanently",
       "All of the others"
     ],
-    answer: 2,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 2
   },
   {
-    id: 346,
-    question: "What is the difference between the WHERE and HAVING SQL clauses?",
-    options: [
+    "id": 462,
+    "question": "What is the difference between the WHERE and HAVING SQL clauses?",
+    "options": [
       "The WHERE and the HAVING clauses are identical",
       "The HAVING SQL clause condition(s) is applied to all rows in the result set before the WHERE clause is applied (if present). The WHERE clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group",
       "The WHERE SQL clause condition(s) is applied to all rows in the result set before the HAVING clause is applied (if present). The HAVING clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
+    "answer": 2
   },
   {
-    id: 347,
-    question: "Choose the correct statement.",
-    options: [
-      "You can remove a trigger by dropping it or by dropping the trigger table.",
-      "The syntax to remove a trigger is: DROP TRIGGER <trigger_name>",
-      "Use ALTER TRIGGER to change the definition of a trigger",
-      "All of the others."
+    "id": 463,
+    "question": "A(an) _____ asserts that a value appearing in one relation must also appear in the primary-key component(s) of another relation",
+    "options": [
+      "Unique key constraint",
+      "Primary key constraint",
+      "Foreign key constraint",
+      "Candidate key constraint"
     ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others.\"."
+    "answer": 2
   },
   {
-    id: 348,
-    question: "Suppose R and S are 2 relations. R is the parent of S. And the relationship between R and S is set to \"ON DELETE CASCADE\". This means that:",
-    options: [
-      "We can delete a row from R if that row has children in S (and in this case, the database server will raise up an error)",
-      "We can delete a row from R although that row has children in S (and in this case, all the children will be deleted too)"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"We can delete a row from R although that row has children in S (and in this case, all the children will be deleted too)\"."
-  },
-  {
-    id: 349,
-    question: "To create a DEFAULT constraint on the \"City\" column of the table PERSON which is already created, use the following SQL:",
-    options: [
-      "ALTER TABLE Person ALTER COLUMN City SET DEFAULT 'SANDNES'",
-      "ALTER TABLE Person EDIT COLUMN City SET DEFAULT 'SANDNES'",
-      "ALTER TABLE Person UPDATE COLUMN City SET DEFAULT 'SANDNES'",
-      "ALTER TABLE Person MODIFY COLUMN City SET DEFAULT 'SANDNES'"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"ALTER TABLE Person ALTER COLUMN City SET DEFAULT 'SANDNES'\"."
-  },
-  {
-    id: 350,
-    question: "Three basic types of database integrity constraints are:",
-    options: [
-      "Entity integrity",
-      "Domain integrity",
-      "Referential integrity",
-      "Primary key integrity",
-      "(a) and (b) and (c) are true",
-      "(a) and (b) and (d) are true",
-      "(a) and (c) and (d) are true",
-      "(b) and (c) and (d) are true"
-    ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Entity integrity'."
-  },
-  {
-    id: 351,
-    question: "What is difference between PRIMARY KEY and UNIQUE KEY ?",
-    options: [
+    "id": 464,
+    "question": "What is difference between PRIMARY KEY and UNIQUE KEY ?",
+    "options": [
       "A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY",
       "A table can have more than one PRIMARY KEY constraint but only one UNIQUE KEY",
       "UNIQUE KEY and PRIMARY KEY are the same",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY\"."
+    "answer": 0
   },
   {
-    id: 352,
-    question: "A/An _____ is a data structure that makes it efficient to find those tuples that have a fixed value for an attribute",
-    options: [
+    "id": 465,
+    "question": "A/An _____ is a data structure that makes it efficient to find those tuples that have a fixed value for an attribute",
+    "options": [
       "Index",
       "Trigger",
       "stored-procedure",
       "View"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Index\"."
+    "answer": 0
   },
   {
-    id: 353,
-    question: "Select the most correct answer",
-    options: [
-      "An index is a data structure used to speed access to tuples of a relation, given values of one or more attributes",
-      "The key for index can be any attribute or set of attributes, and need not be the key of the relation",
-      "We can think of the index as a binary search tree of (key, locations) pairs in which a key a is associated with a set of locations of the tuples",
-      "All of the others."
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others.\"."
-  },
-  {
-    id: 354,
-    question: "___ allow the database application to find data fast, without reading the whole table",
-    options: [
+    "id": 466,
+    "question": "___ allow the database application to find data fast, without reading the whole table",
+    "options": [
       "Indexes",
       "Views",
       "Triggers",
       "Store-procedures"
     ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Indexes'."
+    "answer": 0
   },
   {
-    id: 355,
-    question: "What are the drawbacks of indexes?",
-    options: [
-      "Indexes require more disk space",
-      "Indexes make UPDATE, INSERT, DELETE statement slower",
-      "Indexes have no any drawback",
-      "Indexes make SELECT statement slower",
-      "(a) and (b) are true",
-      "(a) and (c) are true",
-      "(b) and (c) are true",
-      "(b) and (d) are true"
-    ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
-  },
-  {
-    id: 356,
-    question: "Well-designed ____ can reduce disk I/O operations and consume fewer system resources therefore improving query performance",
-    options: [
+    "id": 467,
+    "question": "Well-designed ____ can reduce disk I/O operations and consume fewer system resources therefore improving query performance",
+    "options": [
       "Triggers",
       "Indexes",
       "Views",
       "Stored Procedures"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Indexes\"."
+    "answer": 1
   },
   {
-    id: 357,
-    question: "The benefits of stored procedures are:",
-    options: [
-      "They improve the security by letting the admin to LIMIT the access rights of users",
-      "They can save a lot of storage space",
-      "They can be reused many times",
-      "They can store a part of the database in order to retrieve the data more quickly",
-      "(a) and (c) are true",
-      "(a) and (b) are true",
-      "(a) and (d) are true",
-      "(b) and (d) are true"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"They improve the security by letting the admin to LIMIT the access rights of users\"."
-  },
-  {
-    id: 358,
-    question: "Select the right statement to declare MovieStar to be a relation whose tuples are of type StarType. Note: StarType is a user-defined type that has its definition as follows: CREATE TYPE StarType AS ( name CHAR(30), address CHAR(100) );",
-    options: [
-      "CREATE TABLE MovieStar (name StarType );",
-      "CREATE TABLE MovieStar (name StarType PRIMARY KEY );",
-      "CREATE TABLE MovieStar OF StarType ();",
-      "None of the othersss"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"CREATE TABLE MovieStar OF StarType ();\"."
-  },
-  {
-    id: 359,
-    question: "A ____ table is a table that is embedded within another table",
-    options: [
+    "id": 468,
+    "question": "A ____ table is a table that is embedded within another table",
+    "options": [
       "Nested",
       "Primitive",
       "Parent",
       "Child"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Nested\"."
+    "answer": 0
   },
   {
-    id: 360,
-    question: "A database of _____ data model is a collection of nodes, each node is either a leaf or interior",
-    options: [
+    "id": 469,
+    "question": "A database of _____ data model is a collection of nodes, each node is either a leaf or interior",
+    "options": [
       "semi-structured",
       "relational",
       "network",
       "object-relational"
     ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'semi-structured'."
+    "answer": 0
   },
   {
-    id: 361,
-    question: "Select the well-formed XML.",
-    options: [
-      "<? xml version = \"1.0\" ?>",
-      "<? xml version = \"1.0\" ?>",
-      "<? xml version = \"1.0\" ?>",
-      "All of the others."
-    ],
-    answer: 0,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
-  },
-  {
-    id: 362,
-    question: "A _____ specifies which characters are \"less than\" which other characters",
-    options: [
+    "id": 470,
+    "question": "A _____ specifies which characters are \"less than\" which other characters",
+    "options": [
       "Domains",
       "Character set",
       "Collation",
       "Stored procedure"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Collation\"."
+    "answer": 2
   },
   {
-    id: 363,
-    question: "A ____ is a powerful tool for creating and managing large amounts of data efficiently and allowing it to persist over long periods of time, safely",
-    options: [
+    "id": 471,
+    "question": "A ____ is a powerful tool for creating and managing large amounts of data efficiently and allowing it to persist over long periods of time, safely",
+    "options": [
       "DBMS",
       "Database",
       "Excel",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"DBMS\"."
+    "answer": 0
   },
   {
-    id: 364,
-    question: "What is the hierarchical data model?",
-    options: [
+    "id": 472,
+    "question": "What is the hierarchical data model?",
+    "options": [
       "A hierarchical data model is a data model in which the data is organized into a tree-like structure",
       "A hierarchical data model is a data model in which the data is organized into a table-like structure",
       "A hierarchical data model is a data model in which the data is organized into a graph-like structure",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"A hierarchical data model is a data model in which the data is organized into a tree-like structure\"."
+    "answer": 0
   },
   {
-    id: 365,
-    question: "In _____ Data Model, the data and relations between them are organized in tables",
-    options: [
+    "id": 473,
+    "question": "In _____ Data Model, the data and relations between them are organized in tables",
+    "options": [
       "Relational",
       "Network",
       "Flat-file",
       "Object-oriented",
       "Tree-based"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Relational\"."
+    "answer": 0
   },
   {
-    id: 366,
-    question: "Why the intersection operator is not called a primitive relational algebra operator?",
-    options: [
+    "id": 474,
+    "question": "Why the intersection operator is not called a primitive relational algebra operator?",
+    "options": [
       "Because the intersection operator can be expressed through the union operator and the difference operator",
       "Because the intersection operator can be expressed through the selection operator and the projection operator",
       "Because the intersection operator can be expressed through the product operator and the projection operator",
       "Because the intersection operator can be expressed through the selection operator and the product operator"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Because the intersection operator can be expressed through the union operator and the difference operator\"."
+    "answer": 0
   },
   {
-    id: 367,
-    question: "In SQL , the command/statement that let you add an attribute to a relation schema is .......",
-    options: [
+    "id": 475,
+    "question": "In SQL , the command/statement that let you add an attribute to a relation schema is .......",
+    "options": [
       "Insert",
       "Update",
       "Alter",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Alter\"."
+    "answer": 2
   },
   {
-    id: 368,
-    question: "To update a relation's schema, which one of the following statements can be used?",
-    options: [
+    "id": 476,
+    "question": "To update a relation's schema, which one of the following statements can be used?",
+    "options": [
       "ALTER TABLE",
       "SELECT",
       "INSERT",
       "UPDATE"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"ALTER TABLE\"."
+    "answer": 0
   },
   {
-    id: 369,
-    question: "Which one of the following is NOT a DML command?",
-    options: [
+    "id": 477,
+    "question": "Which one of the following is NOT a DML command?",
+    "options": [
       "DELETE",
       "ALTER TABLE",
       "INSERT",
       "UPDATE"
     ],
-    answer: 1,
-    explanation: "DML (Data Manipulation Language) là ngôn ngữ thao tác dữ liệu, gồm các lệnh thao tác trên các hàng dữ liệu như SELECT, INSERT, UPDATE, DELETE."
+    "answer": 1
   },
   {
-    id: 370,
-    question: "What is a functional dependency?",
-    options: [
+    "id": 478,
+    "question": "What is a functional dependency?",
+    "options": [
       "A functional dependency (A->B) occurs when the attribute A uniquely determines B",
       "A functional dependency (A->B) occurs when the attribute B uniquely determines A"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"A functional dependency (A->B) occurs when the attribute A uniquely determines B\"."
+    "answer": 0
   },
   {
-    id: 371,
-    question: "3NFconcept is related to (choose 1 answer only):",
-    options: [
+    "id": 479,
+    "question": "3NFconcept is related to (choose 1 answer only):",
+    "options": [
       "Atomic definition",
       "Full dependency definition",
       "Transitive dependency definition",
       "Super Key definition",
       "All of the others"
     ],
-    answer: 4,
-    explanation: "Chuẩn hóa dữ liệu (Normalization) giúp loại bỏ dư thừa và bất thường dữ liệu. Đáp án đúng là: 'All of the others'."
+    "answer": 4
   },
   {
-    id: 372,
-    question: "The relation R(ABCD) has following FDs: {ACD -> B ; AC -> D ; D -> C ; AC -> B} Choose the correct statement about R:",
-    options: [
-      "R is in 3NF",
-      "R is in 2NF only, not higher",
-      "R is in 1NF only, not higher",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"R is in 3NF\"."
-  },
-  {
-    id: 373,
-    question: "Let R(A,B,C,D) with the following FDs: {AB->C, AC->B, AD->C} Choose a correct statement about R:",
-    options: [
-      "R is in BCNF",
-      "R is in 3NF",
-      "R is in 2NF",
-      "None of the othersss"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"R is in 2NF\"."
-  },
-  {
-    id: 374,
-    question: "Which of the following statements is correct?",
-    options: [
+    "id": 480,
+    "question": "Which of the following statements is correct?",
+    "options": [
       "All relations in 3NF are also in BCNF",
       "For any relation schema, there is a dependency-preserving decomposition into 3NF",
       "All relations in 2NF are also in BCNF"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"For any relation schema, there is a dependency-preserving decomposition into 3NF\"."
+    "answer": 1
   },
   {
-    id: 375,
-    question: "Which of the following statements is true?",
-    options: [
-      "BCNF condition guarantees the non existence of the anomalies.",
-      "In BCNF condition, the left side of every non trivial FD must be a super key.",
-      "Any two-attribute relation is in BCNF.",
-      "All of the others."
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others.\"."
-  },
-  {
-    id: 376,
-    question: "How to eliminate anomalies when we design a database?",
-    options: [
+    "id": 481,
+    "question": "How to eliminate anomalies when we design a database?",
+    "options": [
       "We should decompose relation to eliminate anomalies",
       "We should join relations to eliminate anomalies",
       "We should union relations to eliminate anomalies",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'We should decompose relation to eliminate anomalies'."
+    "answer": 0
   },
   {
-    id: 377,
-    question: "What is the goal of decomposition when designing a database?",
-    options: [
+    "id": 482,
+    "question": "What is the goal of decomposition when designing a database?",
+    "options": [
       "The goal of decomposition is to replace a relation by several relations that do not exhibit anomalies",
       "The goal of decomposition is to increase the speed of the database",
       "The goal of decomposition is to increase the security of the database",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'The goal of decomposition is to replace a relation by several relations that do not exhibit anomalies'."
+    "answer": 0
   },
   {
-    id: 378,
-    question: "Look at the following statements:",
-    options: [
-      "We should pick the right kind of elements",
-      "When an entity has no non-primary key attribute, we should convert that entity to an attribute",
-      "Use weak entities when-ever possible",
-      "Always make redundancies",
-      "(a) and (b) are correct",
-      "(a) and (c) are correct",
-      "(a) and (d) are correct",
-      "(b) and (c) are correct"
+    "id": 483,
+    "question": "The ER Diagram uses three principle element types:",
+    "options": [
+      "Entity sets, Attributes and Constraints",
+      "Entity sets, Attributes, and Relationships",
+      "Attributes, Constraints, and Relationships",
+      "Entity sets, Constraints, and Relationships"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"We should pick the right kind of elements\"."
+    "answer": 1
   },
   {
-    id: 379,
-    question: "Consider the Datalog rule H(x,y) <- S(x, y) AND x > 2 AND y < 6. Relation S(x, y) has 3 tuples (2, 3), (3, 5), and (4, 6). What is about H?",
-    options: [
+    "id": 484,
+    "question": "Consider the Datalog rule H(x,y) <- S(x, y) AND x > 2 AND y < 6. Relation S(x, y) has 3 tuples (2, 3), (3, 5), and (4, 6). What is about H?",
+    "options": [
       "H has a tuple (3, 5)",
       "H has a tuple (2, 3)",
       "H has 2 tuples (2, 3) and (3, 5)",
       "H has 3 tuples (2, 3) and (3, 5) and (4, 6)"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"H has a tuple (3, 5)\"."
+    "answer": 0
   },
   {
-    id: 380,
-    question: "Suppose that tuple t appears, respectively, x, y, and z times in the relations X, Y, and Z. Let t appear w times in the relation: X union (Y intersect Z). Which of the following inequalities is true ?",
-    options: [
-      "w <= x+y",
-      "w <= y+z",
-      "w >= z",
-      "w <= max(x,y)"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"w <= x+y\"."
-  },
-  {
-    id: 381,
-    question: "Suppose the relation S(B,C,D) has tuples: B C D ------------------------------------ a 4 6 c 6 8 c 5 5 e 9 9 F 10 10 c 7 9 Which one of the followings will appear in the result of the following query: SELECT B, SUM(C) FROM S GROUP BY B",
-    options: [
-      "(c,11)",
-      "(c,13)",
-      "(c,12)",
-      "(c,18)"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"(c,18)\"."
-  },
-  {
-    id: 382,
-    question: "Suppose the relation S(B,C,D) has tuples: B C D ------------------------------------ a 4 6 c 6 8 c 5 5 e 9 9 f 10 10 c 7 9 What row that appears in the result of the following query: SELECT SUM(C), SUM(D) FROM S WHERE D < 9 AND D > 5",
-    options: [
-      "(10,11)",
-      "(10,12)",
-      "(10,13)",
-      "(10,14)"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"(10,14)\"."
-  },
-  {
-    id: 383,
-    question: "Here are two relations, R(A,B), S(C,D). Their current values are: R A B ------------------- 1 4 2 5 8 6 4 7 S C D ------------------- 0 1 1 0 2 1 5 8 Compute the result of the query: SELECT A, B, C, D FROM R RIGHT OUTER JOIN S ON R.A = S.C Identify, in the list below, 2 rows that appears in the result.",
-    options: [
-      "(null, null, 0, 1)",
-      "(null, null, 5, 8)",
-      "(8, 6, null, null)",
-      "(4, 7, null, null)"
-    ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '(null, null, 0, 1)'."
-  },
-  {
-    id: 384,
-    question: "Here are three relations, R(A,B), S(C,D). Their current values are: R A B ------------------- 1 4 2 5 3 6 4 7 S C D ------------------- 0 1 1 0 2 1 Compute the result of the query: SELECT A, B, C, D FROM R LEFT OUTER JOIN S ON R.A = S.C Identify, in the list below, the row that appears in the result.",
-    options: [
-      "(4, 7, null, null)",
-      "(4, 7, 0, 1)",
-      "(4, 7, 1, 0)",
-      "(4, 7, 2, 1)"
-    ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: '(4, 7, null, null)'."
-  },
-  {
-    id: 385,
-    question: "A tuple which fails to participate in a join is called:",
-    options: [
+    "id": 485,
+    "question": "A tuple which fails to participate in a join is called:",
+    "options": [
       "dangling tuple",
       "child tuple",
       "parent tuple",
       "neighbor tuple"
     ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: 'dangling tuple'."
+    "answer": 0
   },
   {
-    id: 386,
-    question: "(TRUE OR NULL) return:",
-    options: [
-      "TRUE",
-      "FALSE",
-      "NULL",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 387,
-    question: "Choose one correct statement:",
-    options: [
+    "id": 486,
+    "question": "Choose one correct statement:",
+    "options": [
       "Two null values are equal",
       "Comparisons between two null values, or between a NULL and any other value, return unknown",
       "Comparisons between two null values, or between a NULL and any other value, return FALSE"
     ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"Comparisons between two null values, or between a NULL and any other value, return unknown\"."
+    "answer": 1
   },
   {
-    id: 388,
-    question: "For what values of x, y, and z, including NULL, does the Boolean expression x <= 100 AND NOT(y >= 15 OR z = 35) have the truth value UNKNOWN? Identify one of those values from the list below.",
-    options: [
-      "x = NULL, y = 0, z = 4.",
-      "x = -2, y = -2, z = -2.",
-      "x = 3, y = 0, z = 7.",
-      "x = 2, y = -1, z = 6."
-    ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 389,
-    question: "A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does \"Isolated\" mean?",
-    options: [
+    "id": 487,
+    "question": "A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does \"Isolated\" mean?",
+    "options": [
       "\"Isolated\" means that: Transactions provide an \"all-or-nothing\" proposition, stating that each work-unit performed in a database must either complete in its entirety or have no effect whatsoever",
       "\"Isolated\" means that: Transactions must not violate any integrity constraints during its execution",
       "\"Isolated\" means that: Transactions that have committed will survive permanently",
       "\"Isolated\" means that: how/when the changes made by one operation in one transaction become visible to other concurrent operations in other transactions"
     ],
-    answer: 3,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 3
   },
   {
-    id: 390,
-    question: "What one is a wildcard used for pattern matching?",
-    options: [
+    "id": 488,
+    "question": "What one is a wildcard used for pattern matching?",
+    "options": [
       "\"%\" (for multi-character substitution)",
       "\"?\" (for single character substitution)",
       "\"?\" (for multi-character substitution)"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"\"%\" (for multi-character substitution)\"."
+    "answer": 0
   },
   {
-    id: 391,
-    question: "Suppose we have a relation instance R(A,B,C) as following: R A B C ---------------------------------- 1 2 3 4 5 6 7 8 9 Which is the result of the query: SELECT SUM(B) FROM R WHERE C > 10",
-    options: [
-      "0",
-      "NULL",
-      "3",
-      "10"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"NULL\"."
-  },
-  {
-    id: 392,
-    question: "Choose the most correct statement about PRIMARY KEY:",
-    options: [
+    "id": 489,
+    "question": "Choose the most correct statement about PRIMARY KEY:",
+    "options": [
       "The PRIMARY KEY constraint uniquely identifies each record in a database table",
       "Primary keys must contain unique values",
       "A primary key column cannot contain NULL values",
       "Each table should have a primary key, and each table can have only ONE primary key",
       "All of the others"
     ],
-    answer: 4,
-    explanation: "Đáp án chính xác là phương án E: \"All of the others\"."
+    "answer": 4
   },
   {
-    id: 393,
-    question: "Foreign key constraints are created by using \"_____\" keyword to refer to the primary key of another table",
-    options: [
+    "id": 490,
+    "question": "Foreign key constraints are created by using \"_____\" keyword to refer to the primary key of another table",
+    "options": [
       "REFERENCES",
       "POINT TO",
       "REFER",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"REFERENCES\"."
+    "answer": 0
   },
   {
-    id: 394,
-    question: "The most useful index on a relation is an index on its key. This is because:",
-    options: [
+    "id": 491,
+    "question": "The most useful index on a relation is an index on its key. This is because:",
+    "options": [
       "The index on non key attribute(s) runs slower",
       "The search operation based on the primary key is commonly used.",
       "The index on non key attribute(s) makes update operations to the relation more complex and time-consuming",
       "All of the others"
     ],
-    answer: 1,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
+    "answer": 1
   },
   {
-    id: 395,
-    question: "The SQL operations that are performed while a connection is active form a ____",
-    options: [
+    "id": 492,
+    "question": "The SQL operations that are performed while a connection is active form a ____",
+    "options": [
       "Session",
       "Catalog",
       "Module",
-      "None of the othersss"
+      "None of the others"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Session\"."
+    "answer": 0
   },
   {
-    id: 396,
-    question: "In PSM, the difference between a stored procedure and a function is that:",
-    options: [
+    "id": 493,
+    "question": "In PSM, the difference between a stored procedure and a function is that:",
+    "options": [
       "A function has the return statement.",
       "We can declare local variables in a function.",
       "Loops are not allowed in a function.",
       "All of the others."
     ],
-    answer: 0,
-    explanation: "Trong SQL/PSM, Exception Handler có thể khai báo các hành động tiếp theo như UNDO, EXIT hoặc CONTINUE khi gặp biệt lệ."
+    "answer": 0
   },
   {
-    id: 397,
-    question: "The aim for the Object-relational database is to bridge the gap between conceptual data modelling techniques such as Entity-relationship diagram (ERD) and object-relational mapping (ORM), which often use classes and inheritance, and relational databases, which do not directly support them",
-    options: [
+    "id": 494,
+    "question": "The aim for the Object-relational database is to bridge the gap between conceptual data modelling techniques such as Entity-relationship diagram (ERD) and object-relational mapping (ORM), which often use classes and inheritance, and relational databases, which do not directly support them",
+    "options": [
       "True",
       "False"
     ],
-    answer: 0,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
+    "answer": 0
   },
   {
-    id: 398,
-    question: "Choose the correct statement:",
-    options: [
-      "A User-Defined Type (UDT) in SQL can be the type of a table",
-      "A UDT can be the type of an attribute belonging to some table",
-      "The form of UDT definition is: CREATE TYPE T AS (<primitive type | attribute declarations>)",
-      "All of the others"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"All of the others\"."
-  },
-  {
-    id: 399,
-    question: "______ is a set of markup declarations that define a document type for SGML-family markup languages (SGML, XML, HTML)",
-    options: [
+    "id": 495,
+    "question": "______ is a set of markup declarations that define a document type for SGML-family markup languages (SGML, XML, HTML)",
+    "options": [
       "Document Type Definition",
       "Document Definition Language",
       "Document Manipulation Language",
       "Document Control Language"
     ],
-    answer: 0,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
+    "answer": 0
   },
   {
-    id: 400,
-    question: "A ____ document defines the XML document structure with a list of legal elements and attributes",
-    options: [
+    "id": 496,
+    "question": "A ____ document defines the XML document structure with a list of legal elements and attributes",
+    "options": [
       "XML",
       "DTD",
       "XSLT",
       "SGML"
     ],
-    answer: 1,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
+    "answer": 1
   },
   {
-    id: 401,
-    question: "A ____ is the framework under which data may exist and SQL operations on data may be executed",
-    options: [
+    "id": 497,
+    "question": "A ____ is the framework under which data may exist and SQL operations on data may be executed",
+    "options": [
       "SQL Environment",
       "SQL Statement",
       "SQL Parser",
       "SQL Optimizer"
     ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"SQL Environment\"."
-  },
-  {
-    id: 402,
-    question: "What is a graph database?",
-    options: [
-      "A graph database is a database that uses tree structures with nodes to represent and store information",
-      "A graph database is a database that uses table structures to represent and store information",
-      "A graph database is a database that uses graph structures with nodes, edges and properties to represent and store information",
-      "None of the othersss"
-    ],
-    answer: 2,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'A graph database is a database that uses graph structures with nodes, edges and properties to represent and store information'."
-  },
-  {
-    id: 403,
-    question: "What is a database?",
-    options: [
-      "A database is a collection of information that is organized so that it can easily be accessed, managed, and updated",
-      "A database is a collection of data files",
-      "A database is a collection of records",
-      "A database is a collection of tuples"
-    ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'A database is a collection of information that is organized so that it can easily be accessed, managed, and updated'."
-  },
-  {
-    id: 404,
-    question: "A ______ is a collection of programs that enables user to create and maintain databases. In other words, it is general-purpose software that provides the users with the processes of defining, constructing and manipulating the databases for various applications",
-    options: [
-      "MSSQL",
-      "DBMS",
-      "DBS",
-      "DB2"
-    ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'DBMS'."
-  },
-  {
-    id: 405,
-    question: "Today, the two important data models are:",
-    options: [
-      "The semi-structured data model (including XML and related standards) and the network data model",
-      "The relational data model (including object-relational extensions) and the semi-structured data model (including XML and related standards)",
-      "The network data model and the flat file data model",
-      "The flat file data model and the semi-structured data model (including XML and related standards)"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"The relational data model (including object-relational extensions) and the semi-structured data model (including XML and related standards)\"."
-  },
-  {
-    id: 406,
-    question: "A person who is responsible for the structure or schema of the database is called:",
-    options: [
-      "an end user",
-      "a database administrator",
-      "a database analyst",
-      "all of the others"
-    ],
-    answer: 1,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'a database administrator'."
-  },
-  {
-    id: 407,
-    question: "A database administrator (DBA) is a person that is also known by the title:",
-    options: [
-      "Database Analyst",
-      "Database Tuner",
-      "Database Coordinator or Database Programmer",
-      "Database Modeller"
-    ],
-    answer: 2,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'Database Coordinator or Database Programmer'."
-  },
-  {
-    id: 408,
-    question: "Which is the subset of SQL commands used to manipulate Database structures, including tables?",
-    options: [
-      "DDL (Data Definition Language)",
-      "DML (Data Manipulation Language)",
-      "DCL (Data Control Language)",
-      "All of the others"
-    ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'DDL (Data Definition Language)'."
-  },
-  {
-    id: 409,
-    question: "\"R(A,B,C,D)\" is an example of:",
-    options: [
-      "A schema",
-      "A relation",
-      "A relation instance",
-      "A schema instance"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"A schema\"."
-  },
-  {
-    id: 410,
-    question: "Which statement is used to remove a column named D from the relation R?",
-    options: [
-      "ALTER TABLE R DROP COLUMN D;",
-      "ALTER TABLE R DROP COLUMN D [DataType];",
-      "ALTER TABLE R DELETE COLUMN D;",
-      "ALTER TABLE R DELETE COLUMN D [DataType];"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"ALTER TABLE R DROP COLUMN D;\"."
-  },
-  {
-    id: 411,
-    question: "What is a primary key?",
-    options: [
-      "A primary key is the field(s) in a table that uniquely defines that table in a database",
-      "A primary key is the field(s) in a table that is used to establishes a relationship between two tables",
-      "A primary key is the field(s) in a table that uniquely defines the row in the table",
-      "A primary key is the field(s) in a table that is used to establishes a relationship between two databases"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"A primary key is the field(s) in a table that uniquely defines the row in the table\"."
-  },
-  {
-    id: 412,
-    question: "Which statement is used to add a column named D into the relation R?",
-    options: [
-      "ALTER TABLE R ADD D [DataType];",
-      "ALTER TABLE R ADD ATTRIBUTE D [DataType];",
-      "ALTER TABLE R ADD PROPERTY D [DataType];"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"ALTER TABLE R ADD D [DataType];\"."
-  },
-  {
-    id: 413,
-    question: "The relational operator that adds all possible pairs of rows from two tables is known as the .... operator.",
-    options: [
-      "union",
-      "product",
-      "join",
-      "selection"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"product\"."
-  },
-  {
-    id: 414,
-    question: "Given the relation schema R(A,B,C) and functional dependencies F = {AB-> C, B->A, C->B}. Which attribute(s) is/are prime?",
-    options: [
-      "only A",
-      "only B",
-      "A and B",
-      "B and C"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"B and C\"."
-  },
-  {
-    id: 415,
-    question: "Given the relation R(ABCDE) with the following FD's: D -> C, CE ->A, D ->A, and AE ->D Which of the following attribute set is a key?",
-    options: [
-      "ABCDE",
-      "CDE",
-      "ABE",
-      "BD"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"ABE\"."
-  },
-  {
-    id: 416,
-    question: "A set of attributes forms a ____ for a relation if we do not allow 2-tuples in a relation instance to have the same values in all that attributes",
-    options: [
-      "Key",
-      "Foreign Key",
-      "Index Key",
-      "Trigger Key"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Key\"."
-  },
-  {
-    id: 417,
-    question: "Suppose we have a relation R(ABCD) with FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C",
-    options: [
-      "R is in BCNF",
-      "R is not in BCNF",
-      "All of the others",
-      "None of the othersss"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"R is not in BCNF\"."
-  },
-  {
-    id: 418,
-    question: "The relation R(ABCD) has following FDs: { AB -> C ; ABD -> C ; ABC -> D ; AC -> D} Choose a correct statement about R?",
-    options: [
-      "R is in 3NF",
-      "R is not in 3NF",
-      "R is in BCNF"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"R is not in 3NF\"."
-  },
-  {
-    id: 419,
-    question: "Normalization is a process of analyzing the given relation schema based on their Functional Dependencies (FDs) and primary keys to achieve the following:",
-    options: [
-      "Minimizing redundancy",
-      "Minimizing insertion anomalies",
-      "All of the others",
-      "Minimizing deletion and update anomalies"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"All of the others\"."
-  },
-  {
-    id: 420,
-    question: "What is \"normalization\"?",
-    options: [
-      "Normalizing data means eliminating redundant information from a table and organizing the data so that future changes to the table are easier",
-      "Normalizing data means minimizing columns from a table and organizing the data so that future changes to the table will be made more quickly",
-      "Normalizing data means removing columns from a table and organizing the data so that future changes to the table will be made more quickly",
-      "Normalizing data means adding more columns to a table and organizing the data so that future changes to the table will be made more quickly"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Normalizing data means eliminating redundant information from a table and organizing the data so that future changes to the table are easier\"."
-  },
-  {
-    id: 421,
-    question: "Regardless of whatever any other transaction is doing, a transaction must be able to continue with the exact same data set it started with. The above describes which property of a transaction?",
-    options: [
-      "Atomic",
-      "Isolation",
-      "Consistency",
-      "Durability"
-    ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
-  },
-  {
-    id: 422,
-    question: "Pay attention into the following query: SELECT * FROM R WHERE A LIKE '%a%'; So, in the above case, the wildcard % represents what?",
-    options: [
-      "% (percent sign) represents zero, one, or more character",
-      "% (percent sign) represents exactly 1 character"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"% (percent sign) represents zero, one, or more character\"."
-  },
-  {
-    id: 423,
-    question: "With SQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" starts with an \"a\"?",
-    options: [
-      "SELECT * FROM Persons WHERE FirstName='a'",
-      "SELECT * FROM Persons WHERE FirstName LIKE '%a'",
-      "SELECT * FROM Persons WHERE FirstName='%a%'",
-      "SELECT * FROM Persons WHERE FirstName LIKE 'a%'"
-    ],
-    answer: 3,
-    explanation: "Đáp án chính xác là phương án D: \"SELECT * FROM Persons WHERE FirstName LIKE 'a%'\"."
-  },
-  {
-    id: 424,
-    question: "What does the keyword ESCAPE mean?",
-    options: [
-      "The keyword ESCAPE is used to match any string that contains the characters \"%\" or \"_\"",
-      "There is no keyword named ESCAPE",
-      "The keyword ESCAPE is used to match any string that contains the characters \"?\" or \"*\"",
-      "The keyword ESCAPE is used to match any string that contains the characters \"@\" or \"$\""
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"The keyword ESCAPE is used to match any string that contains the characters \"%\" or \"_\"\"."
-  },
-  {
-    id: 425,
-    question: "The SQL BETWEEN operator:",
-    options: [
-      "Specifies a range to test.",
-      "Specifies which tables we are selecting from.",
-      "Specifies that a column is a primary key.",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Specifies a range to test.\"."
-  },
-  {
-    id: 426,
-    question: "Database integrity ensures that:",
-    options: [
-      "data entered into the database is accurate, valid, and consistent",
-      "data entered into the database is accurate, and consistent",
-      "data entered into the database is valid, and consistent",
-      "data entered into the database is accurate, and valid"
-    ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'data entered into the database is accurate, valid, and consistent'."
-  },
-  {
-    id: 427,
-    question: "What is a view?",
-    options: [
-      "A view is a database diagram",
-      "A view is a special stored procedure executed when certain event occurs",
-      "A view is a virtual table which results of executing a pre-compiled query. A view is not a part of the physical database schema, while the regular tables are.",
-      "None of the othersss"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"A view is a virtual table which results of executing a pre-compiled query. A view is not a part of the physical database schema, while the regular tables are.\"."
-  },
-  {
-    id: 428,
-    question: "What structure can you implement for the database to speed up table reads?",
-    options: [
-      "indexes",
-      "triggers",
-      "store-procedures",
-      "synonyms"
-    ],
-    answer: 0,
-    explanation: "Hệ quản trị CSDL (DBMS) cung cấp công cụ lưu trữ, truy vấn và quản lý dữ liệu an toàn, hiệu quả. Đáp án đúng là: 'indexes'."
-  },
-  {
-    id: 429,
-    question: "Often, a DBMS allows us to build a single index on ____ attribute(s) (choose the most correct answer)",
-    options: [
-      "only one",
-      "two",
-      "three",
-      "multiple"
-    ],
-    answer: 0,
-    explanation: "Chỉ mục (Index) là cấu trúc dữ liệu (thường là B-Tree) giúp tăng tốc độ tìm kiếm và truy xuất dữ liệu trên bảng hoặc view."
-  },
-  {
-    id: 430,
-    question: "Suppose an updatable view ParamountMovies is associated with Movies relation. Choose a correct answer.",
-    options: [
-      "Drop Movies relation also delete the view ParamountMovies",
-      "Drop ParamountMovies also delete Movies",
-      "An update on ParamountMovies is translated into Movies",
-      "None of the othersss"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"An update on ParamountMovies is translated into Movies\"."
-  },
-  {
-    id: 431,
-    question: "Why we should use stored procedures?",
-    options: [
-      "They allow faster execution",
-      "They can reduce network traffic",
-      "They allow modular programming",
-      "They can be used as a security mechanism",
-      "All of the others"
-    ],
-    answer: 4,
-    explanation: "Đáp án chính xác là phương án E: \"All of the others\"."
-  },
-  {
-    id: 432,
-    question: "In UML, a _____ between classes is called an association",
-    options: [
-      "binary relationship",
-      "multi-way relationship",
-      "none of the others"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"binary relationship\"."
-  },
-  {
-    id: 433,
-    question: "When an entity is called \"weak\"?",
-    options: [
-      "When it is used to represent weak objects, such as patients, elders",
-      "When all of its attributes can not identify itself",
-      "When It always needs support from other entity",
-      "When It is not really necessary in the ERD",
-      "(a) and (b) are correct",
-      "(b) and (c) are correct",
-      "(c) and (d) are correct",
-      "(d) and (a) are correct"
-    ],
-    answer: 1,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 434,
-    question: "Consider the following statement: \"When drawing ERD, if an entity has no non-key attribute and it is the 'one' in many-one relationship, then we should set it to the attribute of other entities\" That above statement describes which principle?",
-    options: [
-      "Avoid Redundancy Principle",
-      "Picking the right kind of element principle",
-      "Limit the use of weak entity sets principle",
-      "Faithfulness principle"
-    ],
-    answer: 1,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 435,
-    question: "When drawing an ERD:",
-    options: [
-      "Entity sets and their attributes should reflect reality",
-      "Redundancy is not important, so we can ignore it",
-      "Avoid introducing more elements into the design than is absolutely necessary",
-      "Choosing the right relationships",
-      "(a) and (b) and (c) are correct",
-      "(a) and (c) and (d) are correct",
-      "(a) and (b) and (d) are correct",
-      "(b) and (c) and (d) are correct"
-    ],
-    answer: 1,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 436,
-    question: "A weak entity",
-    options: [
-      "does not depend on other entities",
-      "does not have enough key attribute(s)",
-      "is an entity that has not any key-attribute",
-      "None of the othersss"
-    ],
-    answer: 1,
-    explanation: "Mô hình ER (Entity-Relationship) gồm 3 thành phần chính: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships)."
-  },
-  {
-    id: 437,
-    question: "Here are three relations, R(A,B), S(C,D), and T(E,F). Their current values are: R A B ------------------- 0 1 1 0 1 1 S C D ------------------- 0 1 1 0 1 1 T E F ------------------- 0 1 1 0 1 1 Compute the result of the query: SELECT A, F, SUM(C), SUM(D) FROM R, S, T WHERE B = C AND D = E GROUP BY A, F HAVING COUNT(*) > 1 Identify, in the list below, the row that appears in the result.",
-    options: [
-      "(1,1,2,1)",
-      "(1,1,2,2)",
-      "(1,1,1,1)",
-      "None of the othersss"
-    ],
-    answer: 1,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
-  },
-  {
-    id: 438,
-    question: "Choose the correct statement",
-    options: [
-      "Except for COUNT, aggregate functions ignore null values",
-      "Except for SUM, aggregate functions ignore null values",
-      "Except for AVG, aggregate functions ignore null values",
-      "Except for MIN, aggregate functions ignore null values",
-      "Except for MAX, aggregate functions ignore null values"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"Except for COUNT, aggregate functions ignore null values\"."
-  },
-  {
-    id: 439,
-    question: "What is the difference between Where and Having Clause?",
-    options: [
-      "WHERE is for Rows and HAVING is for Groups",
-      "WHERE is for Groups and HAVING is for Rows",
-      "WHERE and HAVING are the same",
-      "We can use aggregation functions in WHERE clause"
-    ],
-    answer: 0,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
-  },
-  {
-    id: 440,
-    question: "What does the following SQL statement do: SELECT Customer, COUNT(Order) FROM Sales GROUP BY Customer HAVING COUNT(Order) > 5",
-    options: [
-      "Selects the total number of orders from the Sales table, if this number is greater than 5",
-      "Selects all Customers from the Sales table",
-      "Selects all customers from table Sales that have made more than 5 orders.",
-      "None of the otherss three"
-    ],
-    answer: 2,
-    explanation: "Thứ tự các mệnh đề chuẩn trong SQL: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY. Mệnh đề HAVING đặt sau GROUP BY để lọc các nhóm."
-  },
-  {
-    id: 441,
-    question: "What is a \"join\"?",
-    options: [
-      "'join' used to connect two or more tables logically with or without common field(s) a",
-      "'join' used to connect two or more tables logically with common field(s)",
-      "'join' used to connect two or more tables logically without common field(s)",
-      "'join' used to connect two or more tables logically with aliases"
-    ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: ''join' used to connect two or more tables logically with or without common field(s) a'."
-  },
-  {
-    id: 442,
-    question: "When join R and S, we want to display all the records in R we must use:",
-    options: [
-      "LEFT OUTER JOIN a",
-      "RIGHT OUTER JOIN",
-      "INNER JOIN",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: 'LEFT OUTER JOIN a'."
-  },
-  {
-    id: 443,
-    question: "Relation R(x,y) currently consists of only one tuple (NULL, NULL). Which of the following queries will produce a nonempty output? That is, at least one tuple will be produced, although the tuple(s) may have NULL's.",
-    options: [
-      "SELECT * FROM R WHERE x IS NULL",
-      "SELECT * FROM R WHERE x = NULL",
-      "SELECT * FROM R WHERE x = y",
-      "SELECT * FROM R WHERE x <> 10"
-    ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 444,
-    question: "(TRUE AND NULL) returns: ???",
-    options: [
-      "NULL",
-      "TRUE",
-      "FALSE",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Trong SQL, giá trị NULL biểu diễn trạng thái chưa xác định (UNKNOWN). Mọi phép toán số học hoặc so sánh với NULL đều trả về UNKNOWN hoặc NULL."
-  },
-  {
-    id: 445,
-    question: "In order to modify or delete an existing constraint, it is necessary that:",
-    options: [
-      "the constraint has a name",
-      "the constraint has an ID",
-      "the constraint has some attributes"
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"the constraint has a name\"."
-  },
-  {
-    id: 446,
-    question: "Look at the following tables and then choose the correct statment: ARTISTS Airtist_id Airtist_Name ----------------------------------- 1 Bono 2 Cher ALBUM artist_id Album_name ------------------------------------ 3 Eat the rich",
-    options: [
-      "The above picture is an example of a database that has not enforced referential integrity",
-      "The above picture is an example of a database that has not enforced entity integrity",
-      "The above picture is an example of a database that has not enforced domain integrity",
-      "All of the others"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"The above picture is an example of a database that has not enforced entity integrity\"."
-  },
-  {
-    id: 447,
-    question: "The IN SQL keyword",
-    options: [
-      "Is used with the DISTINCT SQL keyword only",
-      "Is used with the INSERT SQL keyword only",
-      "Determines if a value any of the values in a list or a sub-query",
-      "Defines the tables we are selecting or deleting data from"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"Determines if a value any of the values in a list or a sub-query\"."
-  },
-  {
-    id: 448,
-    question: "Select the well-formed XML",
-    options: [
-      "All of the others",
-      "",
-      "",
-      ""
-    ],
-    answer: 1,
-    explanation: "Trong XML / DTD: DTD định nghĩa cấu trúc tài liệu XML; dấu ? biểu diễn 0 hoặc 1 lần xuất hiện, + là 1 hoặc nhiều lần, * là 0 hoặc nhiều lần."
-  },
-  {
-    id: 449,
-    question: "To apply a selection to bag:",
-    options: [
-      "We apply the selection condition to each tuple independently.",
-      "None of the othersss.",
-      "We apply the selection condition to each attribute independently.",
-      "All of the other."
-    ],
-    answer: 0,
-    explanation: "Đáp án chính xác là phương án A: \"We apply the selection condition to each tuple independently.\"."
-  },
-  {
-    id: 450,
-    question: "Give the relation Employee(SSN,FNAME,LNAME,SALARY).Select the right query below to find the employee(s) who has the lowest salary in the company",
-    options: [
-      "SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY IN ( SELECT MIN(SALARY) FROM Employee)",
-      "SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY >=ALL( SELECT MIN(SALARY) FROM Employee)",
-      "SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY < MAX ( SELECT MIN(SALARY) FROM Employee)",
-      "None of the othersss"
-    ],
-    answer: 0,
-    explanation: "Để tìm nhân viên có mức lương thấp nhất, sử dụng truy vấn con kết hợp toán tử IN: WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)."
-  },
-  {
-    id: 451,
-    question: "Suppose relations R(A<B) and S(B,C,D) are as follows: R= A B 1 2 3 4 5 6 S= B C D 4 5 1 6 7 2 8 9 3 Compute the full outer join on B, where R is the left operand and S is the right operand. Find the correct statement in the list below.",
-    options: [
-      "The full outer has 6 tuples.",
-      "The full outer has 3 tuples.",
-      "The full outer has 4 tuples.",
-      "The full outer has 5 tuples."
-    ],
-    answer: 2,
-    explanation: "Phép nối (Join): Kết quả được tính toán dựa trên điều kiện ghép nối giữa các thuộc tính. Đáp án chính xác là: 'The full outer has 4 tuples.'."
-  },
-  {
-    id: 452,
-    question: "Consider the distributive law, that holds for set relation: (R U S)- T =(R-T)U(S-T) The above distributive still hold for bag relations?",
-    options: [
-      "TRUE",
-      "FALSE"
-    ],
-    answer: 1,
-    explanation: "Đáp án chính xác là phương án B: \"FALSE\"."
-  },
-  {
-    id: 453,
-    question: "What SQL keyword can be use to return data from two non-related tables as a combined set of rows?",
-    options: [
-      "DISTINCT ALL",
-      "DISTINCT",
-      "UNION ALL",
-      "COMBINED"
-    ],
-    answer: 2,
-    explanation: "Đáp án chính xác là phương án C: \"UNION ALL\"."
-  },
-  {
-    id: 454,
-    question: "Every row and value must agree with all constraints right after the transaction is complete. The above describes which property of a transaction?",
-    options: [
-      "Isolation",
-      "Consistency",
-      "Atomic.",
-      "Durability"
-    ],
-    answer: 1,
-    explanation: "Giao dịch (Transaction) phải thỏa mãn 4 tính chất ACID: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập) và Durability (Bền vững)."
+    "answer": 0
   }
 ];

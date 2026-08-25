@@ -2,7 +2,7 @@ export interface Question {
   id: number;
   question: string;
   options: string[];
-  answer: number; // 0 for A, 1 for B, 2 for C, 3 for D
+  answer: number | number[]; // number for single choice (0=A, 1=B, etc.) or number[] for multiple choices (e.g. [0, 2] for A&C)
   explanation?: string;
   codeSnippet?: string;
   image?: string;

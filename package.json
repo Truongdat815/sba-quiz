@@ -11,5 +11,9 @@
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/sql.js": "^1.4.11",
+    "sql.js": "^1.14.2"
   }
 }
