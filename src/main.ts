@@ -1136,7 +1136,41 @@ class AppRouter {
 
     if (qTag) qTag.textContent = `CÂU HỎI ${q.id} / ${this.activePEExam.questions.length}`;
     if (qTitle) qTitle.textContent = q.title;
-    if (qDesc) qDesc.textContent = q.description;
+
+    const examIdx = this.getExamIndex();
+    const isQ1 = q.id === 1;
+
+    if (qDesc) {
+      if (isQ1) {
+        qDesc.innerHTML = `
+          <div class="q1-detailed-prompt">
+            <p class="q1-main-text"><strong>Yêu cầu:</strong> Create a database, then write SQL statements that create, inside that database, all tables derived from the ERD shown in the following picture with appropriate attributes, primary keys, and foreign keys.</p>
+            
+            <div class="q1-notes-box" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; padding: 1rem; margin: 1rem 0; font-size: 0.88rem; line-height: 1.6; color: #cbd5e1;">
+              <strong style="color: #38bdf8;">📌 Quy tắc thiết kế bảng (Rules):</strong>
+              <ul style="margin: 0.5rem 0 0 1.25rem; list-style-type: disc;">
+                <li>Keep the names of tables, relationships, attributes, and data types <strong>exactly as given in the ERD</strong>.</li>
+                <li><strong>Underlined attributes</strong> are the primary key of each entity.</li>
+                <li>Attributes that reference the primary key of another table must have the <strong>same names</strong> as the attributes of the primary key they reference.</li>
+                <li>If a table represents a relationship, that table must have the <strong>same name as the relationship</strong> (e.g. <code>Loans</code>).</li>
+                <li>Multi-valued attributes must be named by concatenating table and attribute name (e.g. <code>MembersPhone</code>).</li>
+              </ul>
+            </div>
+
+            <!-- Inline Chen ERD Image for Question 1 -->
+            <div class="q1-inline-erd" style="background: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; padding: 1.25rem; text-align: center; margin: 1rem 0;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="color: #0f172a; font-weight: 800; font-size: 0.95rem;">🖼️ Sơ Đồ Chen ERD Mẫu (Question 1)</span>
+                <a href="/erd/exam${examIdx}_q1_diagram.png" target="_blank" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.3rem 0.7rem; color: #0284c7; border-color: #0284c7; background: transparent;">🔍 Xem Ảnh Gốc</a>
+              </div>
+              <img src="/erd/exam${examIdx}_q1_diagram.png" alt="Chen ERD Question 1" style="max-width: 100%; max-height: 420px; object-fit: contain;" />
+            </div>
+          </div>
+        `;
+      } else {
+        qDesc.textContent = q.description;
+      }
+    }
 
     // Render Expected Sample Output Data Table
     const expectedContainer = document.getElementById('pe-expected-container');
