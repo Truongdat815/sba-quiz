@@ -34,85 +34,67 @@
       </header>
 
       <main class="home-container">
-        <!-- Hero Section -->
-        <section class="hero-section">
-          <div class="hero-content">
-            <span class="hero-tag">🎯 ÔN THI TOÀN DIỆN</span>
-            <h2 class="hero-title">Chọn Chế Độ Luyện Thi FPTU</h2>
-            <p class="hero-desc">Hệ thống hỗ trợ cả 2 hình thức thi: Luyện trắc nghiệm lý thuyết & Giả lập môi trường thi Thực Hành SQL (PE Simulator) với chấm điểm tự động.</p>
+        <!-- Compact Dashboard Top Bar -->
+        <div class="dashboard-topbar">
+          <div class="dashboard-title-area">
+            <div id="home-breadcrumb-bar" class="home-breadcrumb-bar hidden">
+              <button id="btn-home-back" class="btn-home-back">
+                Quay lại
+              </button>
+              <div id="home-breadcrumb" class="home-breadcrumb">
+                <!-- Breadcrumbs populated dynamically -->
+              </div>
+            </div>
+            <h2 id="home-section-title" class="dashboard-title">Danh Sách Môn Học & Đề Thi</h2>
+            <p id="home-section-subtitle" class="dashboard-subtitle">Luyện đề trắc nghiệm lý thuyết và thi thực hành SQL Server có chấm điểm tự động.</p>
           </div>
-          
-          <!-- Global Overview Stats -->
-          <div class="overview-stats-grid">
-            <div class="overview-stat-card">
-              <div class="stat-icon">📚</div>
-              <div class="stat-info">
-                <span class="stat-num" id="global-total-questions">600+</span>
-                <span class="stat-name">Tổng số câu trắc nghiệm</span>
-              </div>
+
+          <!-- Compact Stats Chips -->
+          <div class="dashboard-stats-chips">
+            <div class="stat-chip">
+              <span class="stat-chip-label">Trắc nghiệm</span>
+              <span class="stat-chip-val" id="global-total-questions">1331</span>
             </div>
-            <div class="overview-stat-card">
-              <div class="stat-icon">💻</div>
-              <div class="stat-info">
-                <span class="stat-num">7 Đề PE</span>
-                <span class="stat-name">Thực hành SQL Simulator</span>
-              </div>
+            <div class="stat-chip">
+              <span class="stat-chip-label">Đề PE SQL</span>
+              <span class="stat-chip-val">7 Đề</span>
             </div>
-            <div class="overview-stat-card">
-              <div class="stat-icon">🏆</div>
-              <div class="stat-info">
-                <span class="stat-num" id="global-correct-rate">0%</span>
-                <span class="stat-name">Tỷ lệ chính xác</span>
-              </div>
+            <div class="stat-chip">
+              <span class="stat-chip-label">Chính xác</span>
+              <span class="stat-chip-val" id="global-correct-rate">0%</span>
             </div>
           </div>
-        </section>
+        </div>
+
+        <!-- Unified Navigation & Filter Toolbar -->
+        <div class="unified-filter-toolbar">
+          <div id="home-subject-nav" class="filter-tabs-group">
+            <button class="nav-folder-btn active" data-folder="all">
+              Tất Cả Môn Học
+            </button>
+            <button class="nav-folder-btn" data-folder="sba301">
+              SBA301 (ReactJS)
+            </button>
+            <button class="nav-folder-btn" data-folder="dbi202">
+              DBI202 (Cơ Sở Dữ Liệu)
+            </button>
+          </div>
+
+          <div id="dbi-subfolder-nav" class="filter-tabs-group sub-filter hidden">
+            <button class="subfolder-tab active" data-subfolder="all">
+              Tất Cả Đề
+            </button>
+            <button class="subfolder-tab" data-subfolder="fe">
+              Đề FE (Trắc Nghiệm)
+            </button>
+            <button class="subfolder-tab" data-subfolder="pe">
+              Đề PE (Thực Hành SQL)
+            </button>
+          </div>
+        </div>
 
         <!-- Subject List Grid -->
         <section class="subjects-section">
-          <!-- Breadcrumb & Back Navigation Bar -->
-          <div id="home-breadcrumb-bar" class="home-breadcrumb-bar hidden">
-            <button id="btn-home-back" class="btn-home-back">
-              ⬅️ Quay lại danh sách môn
-            </button>
-            <div id="home-breadcrumb" class="home-breadcrumb">
-              <!-- Breadcrumbs populated dynamically -->
-            </div>
-          </div>
-
-          <!-- Top-Level Subject Navigation Tabs -->
-          <div class="home-nav-container">
-            <div id="home-subject-nav" class="home-subject-nav">
-              <button class="nav-folder-btn active" data-folder="all">
-                Tất Cả Môn Học
-              </button>
-              <button class="nav-folder-btn" data-folder="sba301">
-                SBA301 • ReactJS
-              </button>
-              <button class="nav-folder-btn" data-folder="dbi202">
-                DBI202 • Cơ Sở Dữ Liệu
-              </button>
-            </div>
-
-            <!-- DBI202 Sub-Folder Filter Pills (FE vs PE) -->
-            <div id="dbi-subfolder-nav" class="dbi-subfolder-nav hidden">
-              <button class="subfolder-tab active" data-subfolder="all">
-                Tất Cả Đề DBI202
-              </button>
-              <button class="subfolder-tab" data-subfolder="fe">
-                Đề FE (Trắc Nghiệm)
-              </button>
-              <button class="subfolder-tab" data-subfolder="pe">
-                Đề PE (Thực Hành SQL)
-              </button>
-            </div>
-          </div>
-
-          <div class="section-title-wrap">
-            <h3 id="home-section-title" class="section-title">Danh Sách Môn Học & Đề Thi PE</h3>
-            <span id="home-section-subtitle" class="section-subtitle">Chọn đề trắc nghiệm hoặc đề thi thực hành PE SQL</span>
-          </div>
-
           <div id="subjects-grid" class="subjects-grid">
             <!-- Dynamically populated via main.ts -->
           </div>
