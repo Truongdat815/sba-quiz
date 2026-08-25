@@ -329,18 +329,18 @@ class AppRouter {
       breadcrumbBar?.classList.remove('hidden');
       if (breadcrumb) {
         if (this.currentHomeFolder === 'sba301') {
-          breadcrumb.innerHTML = `<span>🏠 Trang Chủ</span> <span class="bc-sep">/</span> <span class="bc-curr">⚛️ SBA301 (ReactJS)</span>`;
+          breadcrumb.innerHTML = `<span>Trang Chủ</span> <span class="bc-sep">/</span> <span class="bc-curr">SBA301 (ReactJS)</span>`;
         } else if (this.currentHomeFolder === 'dbi202') {
           if (this.currentDBISubfolder === 'all') {
-            breadcrumb.innerHTML = `<span>🏠 Trang Chủ</span> <span class="bc-sep">/</span> <span class="bc-curr">🗄️ DBI202 (Cơ Sở Dữ Liệu)</span>`;
+            breadcrumb.innerHTML = `<span>Trang Chủ</span> <span class="bc-sep">/</span> <span class="bc-curr">DBI202 (Cơ Sở Dữ Liệu)</span>`;
           } else if (this.currentDBISubfolder === 'fe') {
-            breadcrumb.innerHTML = `<span style="cursor:pointer;" id="bc-dbi-root">🏠 Trang Chủ / 🗄️ DBI202</span> <span class="bc-sep">/</span> <span class="bc-curr">📝 Thư Mục Đề FE (Trắc Nghiệm)</span>`;
+            breadcrumb.innerHTML = `<span style="cursor:pointer;" id="bc-dbi-root">Trang Chủ / DBI202</span> <span class="bc-sep">/</span> <span class="bc-curr">Đề FE (Trắc Nghiệm)</span>`;
             document.getElementById('bc-dbi-root')?.addEventListener('click', () => {
               this.currentDBISubfolder = 'all';
               this.renderHomeView();
             });
           } else if (this.currentDBISubfolder === 'pe') {
-            breadcrumb.innerHTML = `<span style="cursor:pointer;" id="bc-dbi-root">🏠 Trang Chủ / 🗄️ DBI202</span> <span class="bc-sep">/</span> <span class="bc-curr">⚡ Thư Mục Đề PE (Thực Hành SQL)</span>`;
+            breadcrumb.innerHTML = `<span style="cursor:pointer;" id="bc-dbi-root">Trang Chủ / DBI202</span> <span class="bc-sep">/</span> <span class="bc-curr">Đề PE (Thực Hành SQL)</span>`;
             document.getElementById('bc-dbi-root')?.addEventListener('click', () => {
               this.currentDBISubfolder = 'all';
               this.renderHomeView();
@@ -394,32 +394,35 @@ class AppRouter {
 
       // Card 2: DBI202 Subject Hub Card
       const dbiCard = document.createElement('div');
-      dbiCard.className = 'subject-card dbi-master-card';
+      dbiCard.className = 'subject-card modern-card dbi-master-card';
       dbiCard.innerHTML = `
-        <div>
-          <div class="subject-card-header">
-            <span class="subject-badge-pill" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.4);">🗄️ DBI202</span>
-            <span class="subject-qcount-badge">13 Đề FE + 1 Đề PE</span>
+        <div class="card-top-content">
+          <div class="card-header-bar">
+            <span class="card-code-tag">DBI202</span>
+            <span class="card-qcount-tag">13 ĐỀ FE • 7 ĐỀ PE</span>
           </div>
-          <div class="subject-card-body">
-            <h4 class="subject-title">DBI202 - Hệ Quản Trị Cơ Sở Dữ Liệu</h4>
-            <div class="subject-subtitle-text">Database Systems • SQL Server & Relational Design</div>
-            <p class="subject-desc">Hệ thống đầy đủ tài liệu ôn thi môn DBI202 bao gồm 13 bộ đề trắc nghiệm Final Exam (FE) và phòng thi giả lập thực hành SQL (PE).</p>
-            <div class="subject-tags">
-              <span class="subject-tag">#FE_Trắc_Nghiệm</span>
-              <span class="subject-tag">#PE_SQL_Server</span>
-              <span class="subject-tag">#FPTU_Exam</span>
+
+          <div class="card-body-content">
+            <h4 class="card-title">DBI202 - Hệ Quản Trị Cơ Sở Dữ Liệu</h4>
+            <div class="card-subtitle">Database Systems • SQL Server & Relational Design</div>
+            <p class="card-desc">Hệ thống đầy đủ tài liệu ôn thi môn DBI202 gồm 13 bộ đề trắc nghiệm Final Exam (FE) và 7 bộ đề thi thực hành SQL Server (PE).</p>
+            <div class="card-chips">
+              <span class="card-chip">13 Đề Trắc Nghiệm</span>
+              <span class="card-chip">7 Đề Thực Hành SQL</span>
+              <span class="card-chip">Chấm Điểm Tự Động</span>
             </div>
           </div>
         </div>
 
-        <div class="dbi-hub-actions">
-          <button class="btn btn-primary btn-open-dbi-fe" style="width: 100%; margin-bottom: 0.5rem;">
-            <span>📝 Mở Thư Mục Đề FE (Trắc Nghiệm)</span>
-          </button>
-          <button class="btn btn-outline-light btn-open-dbi-pe" style="width: 100%;">
-            <span>⚡ Mở Thư Mục Đề PE (Thực Hành SQL)</span>
-          </button>
+        <div class="card-bottom-content">
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-primary btn-open-dbi-fe" style="flex: 1;">
+              <span>Vào Thư Mục Đề FE ➔</span>
+            </button>
+            <button class="btn btn-outline-light btn-open-dbi-pe" style="flex: 1;">
+              <span>Vào Thư Mục Đề PE ➔</span>
+            </button>
+          </div>
         </div>
       `;
 
@@ -460,27 +463,29 @@ class AppRouter {
 
         // Folder 1: FE Folder Hero Card
         const feFolderCard = document.createElement('div');
-        feFolderCard.className = 'subject-card folder-hero-card';
+        feFolderCard.className = 'subject-card modern-card folder-hero-card';
         feFolderCard.innerHTML = `
-          <div>
-            <div class="subject-card-header">
-              <span class="subject-badge-pill" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8;">📁 THƯ MỤC ĐỀ FE</span>
-              <span class="subject-qcount-badge">13 Bộ Đề • 497 Câu</span>
+          <div class="card-top-content">
+            <div class="card-header-bar">
+              <span class="card-code-tag">THƯ MỤC ĐỀ FE</span>
+              <span class="card-qcount-tag">13 BỘ ĐỀ • 497 CÂU</span>
             </div>
-            <div class="subject-card-body">
-              <h4 class="subject-title">📝 Đề Thi FE (Final Exam - Trắc Nghiệm)</h4>
-              <div class="subject-subtitle-text">12 Đề Trắc Nghiệm SP26, FA25 & Đề Tổng Hợp</div>
-              <p class="subject-desc">Toàn bộ câu hỏi trắc nghiệm ôn thi Final Exam DBI202 được gom theo từng mã đề thi thực tế (Đề 1 đến Đề 12) và bộ đề tổng hợp 497 câu không trùng lặp.</p>
-              <div class="subject-tags">
-                <span class="subject-tag">#12_Mã_Đề_FE</span>
-                <span class="subject-tag">#Đề_Tổng_Hợp_497_Câu</span>
-                <span class="subject-tag">#Chấm_Điểm_Tự_Động</span>
+
+            <div class="card-body-content">
+              <h4 class="card-title">Đề Thi FE (Final Exam - Trắc Nghiệm)</h4>
+              <div class="card-subtitle">12 Đề Trắc Nghiệm SP26, FA25 & Đề Tổng Hợp</div>
+              <p class="card-desc">Toàn bộ câu hỏi trắc nghiệm ôn thi Final Exam DBI202 được gom theo từng mã đề thi thực tế (Đề 1 đến Đề 12) và bộ đề tổng hợp 497 câu không trùng lặp.</p>
+              <div class="card-chips">
+                <span class="card-chip">12 Mã Đề Thi FE</span>
+                <span class="card-chip">Đề Tổng Hợp 497 Câu</span>
+                <span class="card-chip">Chấm Tự Động</span>
               </div>
             </div>
           </div>
-          <div>
+
+          <div class="card-bottom-content">
             <button class="btn btn-primary btn-enter-fe" style="width: 100%;">
-              <span>📂 Xem Danh Sách Đề FE (13 Bộ Đề)</span>
+              <span>Xem Danh Sách Đề FE ➔</span>
             </button>
           </div>
         `;
@@ -492,27 +497,29 @@ class AppRouter {
 
         // Folder 2: PE Folder Hero Card
         const peFolderCard = document.createElement('div');
-        peFolderCard.className = 'subject-card folder-hero-card';
+        peFolderCard.className = 'subject-card modern-card folder-hero-card';
         peFolderCard.innerHTML = `
-          <div>
-            <div class="subject-card-header">
-              <span class="subject-badge-pill" style="background: rgba(168, 85, 247, 0.2); color: #c084fc;">📁 THƯ MỤC ĐỀ PE</span>
-              <span class="subject-qcount-badge pe-badge">💻 Thực Hành SQL</span>
+          <div class="card-top-content">
+            <div class="card-header-bar">
+              <span class="card-code-tag pe-tag">THƯ MỤC ĐỀ PE</span>
+              <span class="card-qcount-tag pe-qtag">7 BỘ ĐỀ THỰC HÀNH</span>
             </div>
-            <div class="subject-card-body">
-              <h4 class="subject-title">⚡ Đề Thi PE (Practical Exam - Thực Hành SQL)</h4>
-              <div class="subject-subtitle-text">Môi Trường Giả Lập Thi PE SQL 100% Client-side</div>
-              <p class="subject-desc">Luyện thi thực hành SQL chuẩn FPT với trình soạn thảo T-SQL Editor, bảng dữ liệu mẫu CSDL Hotel Booking 8 bảng, sơ đồ ERD trực quan và bộ chấm điểm tự động.</p>
-              <div class="subject-tags">
-                <span class="subject-tag">#PE_SQL_Server</span>
-                <span class="subject-tag">#Sơ_Đồ_ERD</span>
-                <span class="subject-tag">#Chấm_Output_Data</span>
+
+            <div class="card-body-content">
+              <h4 class="card-title">Đề Thi PE (Practical Exam - Thực Hành SQL)</h4>
+              <div class="card-subtitle pe-sub">Môi Trường Giả Lập Thi PE SQL 100% Client-side</div>
+              <p class="card-desc">Luyện thi thực hành SQL chuẩn FPT với 7 bộ đề thi chính thức, trình soạn thảo SQL, sơ đồ quan hệ ERD trực quan và bộ đối chiếu kết quả tự động.</p>
+              <div class="card-chips">
+                <span class="card-chip">7 Bộ Đề PE SQL</span>
+                <span class="card-chip">Sơ Đồ ERD Trực Quan</span>
+                <span class="card-chip">Chấm Output Tự Động</span>
               </div>
             </div>
           </div>
-          <div>
+
+          <div class="card-bottom-content">
             <button class="btn btn-primary btn-enter-pe" style="width: 100%;">
-              <span>💻 Mở Thư Mục Đề PE (Thực Hành SQL)</span>
+              <span>Xem Danh Sách Đề PE ➔</span>
             </button>
           </div>
         `;
@@ -568,36 +575,27 @@ class AppRouter {
       ? Math.round((answeredCount / sub.totalQuestions) * 100) 
       : 0;
 
-    const tags = sub.id === 'sba301'
-      ? ['#React', '#JSX', '#Hooks', '#Router', '#API']
-      : sub.id.includes('exam')
-      ? ['#DBI202', '#FPTU_Exam', '#MultiChoice', '#SQL', '#Normalization']
-      : ['#Database', '#SQL', '#Normalization', '#ERD', '#Triggers', '#ACID'];
-
     const card = document.createElement('div');
-    card.className = `subject-card subject-${sub.id}`;
+    card.className = `subject-card modern-card subject-${sub.id}`;
     card.innerHTML = `
-      <div>
-        <div class="subject-card-header">
-          <span class="subject-badge-pill">${sub.icon} ${sub.code}</span>
-          <span class="subject-qcount-badge">${sub.totalQuestions} Câu</span>
+      <div class="card-top-content">
+        <div class="card-header-bar">
+          <span class="card-code-tag">${sub.code}</span>
+          <span class="card-qcount-tag">${sub.totalQuestions} CÂU HỎI</span>
         </div>
 
-        <div class="subject-card-body">
-          <h4 class="subject-title">${sub.title}</h4>
-          <div class="subject-subtitle-text">${sub.subtitle}</div>
-          <p class="subject-desc">${sub.description}</p>
-          <div class="subject-tags">
-            ${tags.map(t => `<span class="subject-tag">${t}</span>`).join('')}
-          </div>
+        <div class="card-body-content">
+          <h4 class="card-title">${sub.title}</h4>
+          <div class="card-subtitle">${sub.subtitle}</div>
+          <p class="card-desc">${sub.description}</p>
         </div>
       </div>
 
-      <div>
+      <div class="card-bottom-content">
         <div class="subject-progress-box">
           <div class="progress-header">
-            <span>Tiến độ hoàn thành:</span>
-            <span class="progress-pct">${answeredCount} / ${sub.totalQuestions} (${pct}%)</span>
+            <span>Tiến độ hoàn thành</span>
+            <span class="progress-pct">${answeredCount}/${sub.totalQuestions} (${pct}%)</span>
           </div>
           <div class="progress-track">
             <div class="progress-bar-fill" style="width: ${pct}%"></div>
@@ -610,7 +608,7 @@ class AppRouter {
         </div>
 
         <button class="btn btn-primary btn-start-subject" data-subject-id="${sub.id}">
-          <span>${answeredCount > 0 ? '▶️ Tiếp Tục Luyện Thi' : '🚀 Bắt Đầu Luyện Thi'}</span>
+          <span>${answeredCount > 0 ? 'Tiếp Tục Luyện Thi ➔' : 'Bắt Đầu Luyện Thi ➔'}</span>
         </button>
       </div>
     `;
@@ -624,31 +622,29 @@ class AppRouter {
 
   private createPECardElement(peExam: PEExam): HTMLElement {
     const card = document.createElement('div');
-    card.className = `subject-card pe-card-home`;
+    card.className = `subject-card modern-card pe-card-home`;
     card.innerHTML = `
-      <div>
-        <div class="subject-card-header">
-          <span class="subject-badge-pill pe-pill">${peExam.icon} ${peExam.code}</span>
-          <span class="subject-qcount-badge pe-badge">💻 10 Câu PE SQL</span>
+      <div class="card-top-content">
+        <div class="card-header-bar">
+          <span class="card-code-tag pe-tag">${peExam.code}</span>
+          <span class="card-qcount-tag pe-qtag">10 CÂU THỰC HÀNH</span>
         </div>
 
-        <div class="subject-card-body">
-          <h4 class="subject-title">${peExam.title}</h4>
-          <div class="subject-subtitle-text">${peExam.subtitle}</div>
-          <p class="subject-desc">${peExam.description}</p>
-          <div class="subject-tags">
-            <span class="subject-tag">#PE_SQL</span>
-            <span class="subject-tag">#SQL_IDE</span>
-            <span class="subject-tag">#JOIN</span>
-            <span class="subject-tag">#Procedure</span>
-            <span class="subject-tag">#Trigger</span>
+        <div class="card-body-content">
+          <h4 class="card-title">${peExam.title}</h4>
+          <div class="card-subtitle pe-sub">${peExam.subtitle}</div>
+          <p class="card-desc">${peExam.description}</p>
+          <div class="card-chips">
+            <span class="card-chip">SQL Server Engine</span>
+            <span class="card-chip">Sơ đồ ERD</span>
+            <span class="card-chip">Chấm điểm tự động</span>
           </div>
         </div>
       </div>
 
-      <div>
+      <div class="card-bottom-content">
         <button class="btn btn-primary btn-start-pe" data-pe-id="${peExam.id}">
-          <span>💻 Mở IDE Giả Lập Thi PE SQL</span>
+          <span>Vào Phòng Thi Thực Hành ➔</span>
         </button>
       </div>
     `;
