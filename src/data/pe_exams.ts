@@ -1429,7 +1429,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 3: Bookings by Chinese or Japanese guests in 2024",
         description: "Write an SQL query to display BookingID, GuestName, Nationality, BookingDate, DetailID, and RoomNumber for all bookings with a BookingDate in 2024 by Chinese or Japanese guests.",
         initialCode: "-- Question 3: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT b.BookingID, g.FirstName || ' ' || g.LastName AS GuestName, g.Nationality, b.BookingDate, bd.DetailID, r.RoomNumber FROM Booking b JOIN Guest g ON b.GuestID = g.GuestID JOIN BookingDetail bd ON b.BookingID = bd.BookingID JOIN Room r ON bd.RoomID = r.RoomID WHERE g.Nationality IN ('Chinese', 'Japanese') AND strftime('%Y', b.BookingDate) = '2024' ORDER BY b.BookingID, bd.DetailID;"
+        solutionSQL: "SELECT b.BookingID, g.FirstName + ' ' + g.LastName AS GuestName, g.Nationality, b.BookingDate, bd.DetailID, r.RoomNumber FROM Booking b JOIN Guest g ON b.GuestID = g.GuestID JOIN BookingDetail bd ON b.BookingID = bd.BookingID JOIN Room r ON bd.RoomID = r.RoomID WHERE g.Nationality IN ('Chinese', 'Japanese') AND YEAR(b.BookingDate) = 2024 ORDER BY b.BookingID, bd.DetailID;"
       },
       {
         id: 4,
@@ -1443,7 +1443,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 5: Room type performance report in January 2024",
         description: "Write a SQL query to generate a report showing RoomTypeID, TypeName, TotalBookings, TotalRevenue, and AveragePricePerNight for January 2024. Sort by TotalRevenue DESC, TypeName ASC.",
         initialCode: "-- Question 5: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT rt.RoomTypeID, rt.TypeName, COUNT(DISTINCT b.BookingID) AS TotalBookings, ROUND(COALESCE(SUM(bd.SubTotal), 0.00), 2) AS TotalRevenue, ROUND(CASE WHEN SUM(bd.NumNights) > 0 THEN CAST(SUM(bd.SubTotal) AS FLOAT) / SUM(bd.NumNights) ELSE 0.00 END, 2) AS AveragePricePerNight FROM RoomType rt LEFT JOIN Room r ON rt.RoomTypeID = r.RoomTypeID LEFT JOIN BookingDetail bd ON r.RoomID = bd.RoomID LEFT JOIN Booking b ON bd.BookingID = b.BookingID AND strftime('%Y-%m', b.CheckInDate) = '2024-01' GROUP BY rt.RoomTypeID, rt.TypeName ORDER BY TotalRevenue DESC, rt.TypeName ASC;"
+        solutionSQL: "SELECT rt.RoomTypeID, rt.TypeName, COUNT(DISTINCT b.BookingID) AS TotalBookings, ROUND(COALESCE(SUM(bd.SubTotal), 0.00), 2) AS TotalRevenue, ROUND(CASE WHEN SUM(bd.NumNights) > 0 THEN CAST(SUM(bd.SubTotal) AS FLOAT) / SUM(bd.NumNights) ELSE 0.00 END, 2) AS AveragePricePerNight FROM RoomType rt LEFT JOIN Room r ON rt.RoomTypeID = r.RoomTypeID LEFT JOIN BookingDetail bd ON r.RoomID = bd.RoomID LEFT JOIN Booking b ON bd.BookingID = b.BookingID AND YEAR(b.CheckInDate) = 2024 AND MONTH(b.CheckInDate) = 1 GROUP BY rt.RoomTypeID, rt.TypeName ORDER BY TotalRevenue DESC, rt.TypeName ASC;"
       },
       {
         id: 6,
@@ -1457,7 +1457,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 7: Guest with highest total revenue for each nationality in 2024",
         description: "Write an SQL query to find the guest(s) with the highest total revenue for each nationality in 2024. Sort by Nationality ASC, GuestID ASC.",
         initialCode: "-- Question 7: Write your SQL query here\nSELECT ",
-        solutionSQL: "WITH GuestRevenue AS (SELECT g.Nationality, g.GuestID, g.FirstName || ' ' || g.LastName AS GuestName, COALESCE((SELECT SUM(bd.SubTotal) FROM Booking b JOIN BookingDetail bd ON b.BookingID = bd.BookingID WHERE b.GuestID = g.GuestID AND strftime('%Y', b.CheckInDate) = '2024'), 0) + COALESCE((SELECT SUM(bs.TotalCost) FROM Booking b JOIN BookingService bs ON b.BookingID = bs.BookingID WHERE b.GuestID = g.GuestID AND strftime('%Y', b.CheckInDate) = '2024'), 0) AS TotalRevenue FROM Guest g), MaxRev AS (SELECT Nationality, MAX(TotalRevenue) AS MaxTotalRev FROM GuestRevenue GROUP BY Nationality) SELECT gr.Nationality, gr.GuestID, gr.GuestName, ROUND(gr.TotalRevenue, 2) AS TotalRevenue FROM GuestRevenue gr JOIN MaxRev mr ON gr.Nationality = mr.Nationality AND gr.TotalRevenue = mr.MaxTotalRev ORDER BY gr.Nationality ASC, gr.GuestID ASC;"
+        solutionSQL: "WITH GuestRevenue AS (SELECT g.Nationality, g.GuestID, g.FirstName + ' ' + g.LastName AS GuestName, COALESCE((SELECT SUM(bd.SubTotal) FROM Booking b JOIN BookingDetail bd ON b.BookingID = bd.BookingID WHERE b.GuestID = g.GuestID AND YEAR(b.CheckInDate) = 2024), 0) + COALESCE((SELECT SUM(bs.TotalCost) FROM Booking b JOIN BookingService bs ON b.BookingID = bs.BookingID WHERE b.GuestID = g.GuestID AND YEAR(b.CheckInDate) = 2024), 0) AS TotalRevenue FROM Guest g), MaxRev AS (SELECT Nationality, MAX(TotalRevenue) AS MaxTotalRev FROM GuestRevenue GROUP BY Nationality) SELECT gr.Nationality, gr.GuestID, gr.GuestName, ROUND(gr.TotalRevenue, 2) AS TotalRevenue FROM GuestRevenue gr JOIN MaxRev mr ON gr.Nationality = mr.Nationality AND gr.TotalRevenue = mr.MaxTotalRev ORDER BY gr.Nationality ASC, gr.GuestID ASC;"
       },
       {
         id: 8,
@@ -2658,21 +2658,21 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 5: Total Bookings and Revenue by Room Category",
         description: "Calculate total bookings, total nights, and total revenue for each RoomType in 2024.",
         initialCode: "-- Question 5: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT rt.RoomTypeID, rt.TypeName, COUNT(DISTINCT b.BookingID) AS TotalBookings, COALESCE(SUM(bd.SubTotal), 0) AS TotalRevenue FROM RoomType rt LEFT JOIN Room r ON rt.RoomTypeID = r.RoomTypeID LEFT JOIN BookingDetail bd ON r.RoomID = bd.RoomID LEFT JOIN Booking b ON bd.BookingID = b.BookingID AND strftime('%Y', b.BookingDate) = '2024' GROUP BY rt.RoomTypeID, rt.TypeName ORDER BY TotalRevenue DESC;"
+        solutionSQL: "SELECT rt.RoomTypeID, rt.TypeName, COUNT(DISTINCT b.BookingID) AS TotalBookings, COALESCE(SUM(bd.SubTotal), 0) AS TotalRevenue FROM RoomType rt LEFT JOIN Room r ON rt.RoomTypeID = r.RoomTypeID LEFT JOIN BookingDetail bd ON r.RoomID = bd.RoomID LEFT JOIN Booking b ON bd.BookingID = b.BookingID AND YEAR(b.BookingDate) = 2024 GROUP BY rt.RoomTypeID, rt.TypeName ORDER BY TotalRevenue DESC;"
       },
       {
         id: 6,
         title: "Question 6: Guests with more than 2 bookings in 2024",
         description: "List all guests who have made more than 2 bookings in year 2024.",
         initialCode: "-- Question 6: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT g.GuestID, g.FirstName || ' ' || g.LastName AS FullName, COUNT(b.BookingID) AS BookingCount FROM Guest g JOIN Booking b ON g.GuestID = b.GuestID WHERE strftime('%Y', b.BookingDate) = '2024' GROUP BY g.GuestID, FullName HAVING COUNT(b.BookingID) > 2 ORDER BY BookingCount DESC;"
+        solutionSQL: "SELECT g.GuestID, g.FirstName + ' ' + g.LastName AS FullName, COUNT(b.BookingID) AS BookingCount FROM Guest g JOIN Booking b ON g.GuestID = b.GuestID WHERE YEAR(b.BookingDate) = 2024 GROUP BY g.GuestID, FullName HAVING COUNT(b.BookingID) > 2 ORDER BY BookingCount DESC;"
       },
       {
         id: 7,
         title: "Question 7: Highest Revenue Service in Hotel",
         description: "Find the top 3 services generating the highest total revenue across all bookings.",
         initialCode: "-- Question 7: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT s.ServiceID, s.ServiceName, SUM(bs.TotalCost) AS TotalRevenue FROM Service s JOIN BookingService bs ON s.ServiceID = bs.ServiceID GROUP BY s.ServiceID, s.ServiceName ORDER BY TotalRevenue DESC LIMIT 3;"
+        solutionSQL: "SELECT TOP 3 s.ServiceID, s.ServiceName, SUM(bs.TotalCost) AS TotalRevenue FROM Service s JOIN BookingService bs ON s.ServiceID = bs.ServiceID GROUP BY s.ServiceID, s.ServiceName ORDER BY TotalRevenue DESC;"
       },
       {
         id: 8,
@@ -3859,7 +3859,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 3: Bookings with Deluxe or Suite Room Types",
         description: "Display BookingID, GuestName, RoomNumber, TypeName, PricePerNight for all bookings that include Deluxe or Suite rooms.",
         initialCode: "-- Question 3: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT b.BookingID, g.FirstName || ' ' || g.LastName AS GuestName, r.RoomNumber, rt.TypeName, bd.PricePerNight FROM Booking b JOIN Guest g ON b.GuestID = g.GuestID JOIN BookingDetail bd ON b.BookingID = bd.BookingID JOIN Room r ON bd.RoomID = r.RoomID JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID WHERE rt.TypeName IN ('Deluxe', 'Suite') ORDER BY b.BookingID;"
+        solutionSQL: "SELECT b.BookingID, g.FirstName + ' ' + g.LastName AS GuestName, r.RoomNumber, rt.TypeName, bd.PricePerNight FROM Booking b JOIN Guest g ON b.GuestID = g.GuestID JOIN BookingDetail bd ON b.BookingID = bd.BookingID JOIN Room r ON bd.RoomID = r.RoomID JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID WHERE rt.TypeName IN ('Deluxe', 'Suite') ORDER BY b.BookingID;"
       },
       {
         id: 4,
@@ -3873,7 +3873,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 5: Monthly Booking Statistics in 2024",
         description: "Display Month (1 to 12), NumberOfBookings, and TotalAmount collected for each month in 2024.",
         initialCode: "-- Question 5: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT strftime('%m', BookingDate) AS Month, COUNT(BookingID) AS NumberOfBookings, SUM(TotalAmount) AS TotalRevenue FROM Booking WHERE strftime('%Y', BookingDate) = '2024' GROUP BY Month ORDER BY Month ASC;"
+        solutionSQL: "SELECT MONTH(BookingDate) AS Month, COUNT(BookingID) AS NumberOfBookings, SUM(TotalAmount) AS TotalRevenue FROM Booking WHERE YEAR(BookingDate) = 2024 GROUP BY Month ORDER BY Month ASC;"
       },
       {
         id: 6,
@@ -3887,7 +3887,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 7: Guest with Most Diverse Services Used",
         description: "Find the guest who used the highest number of distinct services.",
         initialCode: "-- Question 7: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT g.GuestID, g.FirstName || ' ' || g.LastName AS GuestName, COUNT(DISTINCT bs.ServiceID) AS DistinctServices FROM Guest g JOIN Booking b ON g.GuestID = b.GuestID JOIN BookingService bs ON b.BookingID = bs.BookingID GROUP BY g.GuestID, GuestName ORDER BY DistinctServices DESC LIMIT 1;"
+        solutionSQL: "SELECT TOP 1 g.GuestID, g.FirstName + ' ' + g.LastName AS GuestName, COUNT(DISTINCT bs.ServiceID) AS DistinctServices FROM Guest g JOIN Booking b ON g.GuestID = b.GuestID JOIN BookingService bs ON b.BookingID = bs.BookingID GROUP BY g.GuestID, GuestName ORDER BY DistinctServices DESC;"
       },
       {
         id: 8,
@@ -5081,7 +5081,7 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 4: Room Booking Occupancy Details",
         description: "Display RoomNumber, TypeName, GuestName, IsPrimaryGuest for all room bookings in 2024.",
         initialCode: "-- Question 4: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT r.RoomNumber, rt.TypeName, g.FirstName || ' ' || g.LastName AS GuestName, bg.IsPrimaryGuest FROM BookingGuest bg JOIN Guest g ON bg.GuestID = g.GuestID JOIN BookingDetail bd ON bg.DetailID = bd.DetailID JOIN Room r ON bd.RoomID = r.RoomID JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID ORDER BY r.RoomNumber;"
+        solutionSQL: "SELECT r.RoomNumber, rt.TypeName, g.FirstName + ' ' + g.LastName AS GuestName, bg.IsPrimaryGuest FROM BookingGuest bg JOIN Guest g ON bg.GuestID = g.GuestID JOIN BookingDetail bd ON bg.DetailID = bd.DetailID JOIN Room r ON bd.RoomID = r.RoomID JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID ORDER BY r.RoomNumber;"
       },
       {
         id: 5,
@@ -5095,14 +5095,14 @@ INSERT INTO BookingService (BookingServiceID, BookingID, ServiceID, Quantity, Se
         title: "Question 6: Guests with Total Spending Above 5000",
         description: "Find all guests whose total booking spending exceeds 5000.",
         initialCode: "-- Question 6: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT g.GuestID, g.FirstName || ' ' || g.LastName AS FullName, SUM(b.TotalAmount) AS TotalSpent FROM Guest g JOIN Booking b ON g.GuestID = b.GuestID GROUP BY g.GuestID, FullName HAVING SUM(b.TotalAmount) > 5000 ORDER BY TotalSpent DESC;"
+        solutionSQL: "SELECT g.GuestID, g.FirstName + ' ' + g.LastName AS FullName, SUM(b.TotalAmount) AS TotalSpent FROM Guest g JOIN Booking b ON g.GuestID = b.GuestID GROUP BY g.GuestID, FullName HAVING SUM(b.TotalAmount) > 5000 ORDER BY TotalSpent DESC;"
       },
       {
         id: 7,
         title: "Question 7: Most Booked Room in the Hotel",
         description: "Find the RoomID and RoomNumber that has the highest number of bookings.",
         initialCode: "-- Question 7: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT r.RoomID, r.RoomNumber, COUNT(bd.BookingID) AS TotalBookings FROM Room r JOIN BookingDetail bd ON r.RoomID = bd.RoomID GROUP BY r.RoomID, r.RoomNumber ORDER BY TotalBookings DESC LIMIT 1;"
+        solutionSQL: "SELECT TOP 1 r.RoomID, r.RoomNumber, COUNT(bd.BookingID) AS TotalBookings FROM Room r JOIN BookingDetail bd ON r.RoomID = bd.RoomID GROUP BY r.RoomID, r.RoomNumber ORDER BY TotalBookings DESC;"
       },
       {
         id: 8,
@@ -5250,7 +5250,7 @@ INSERT INTO Cars VALUES (5, 'SN005', 'Coupe Supra', 'Black', 2021);
         title: "Question 5: Mechanic with Most Working Hours in 2021",
         description: "Find the mechanic who worked the highest sum of hours in year 2021.",
         initialCode: "-- Question 5: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT M.mechanicName, SUM(SM.hours) AS sumHours FROM ServiceMechanic SM JOIN Mechanic M ON SM.mechanicID = M.mechanicID JOIN ServiceTicket ST ON SM.serviceTicketID = ST.serviceTicketID WHERE strftime('%Y', ST.dateReturned) = '2021' GROUP BY M.mechanicName ORDER BY sumHours DESC LIMIT 1;"
+        solutionSQL: "SELECT TOP 1 M.mechanicName, SUM(SM.hours) AS sumHours FROM ServiceMechanic SM JOIN Mechanic M ON SM.mechanicID = M.mechanicID JOIN ServiceTicket ST ON SM.serviceTicketID = ST.serviceTicketID WHERE YEAR(ST.dateReturned) = 2021 GROUP BY M.mechanicName ORDER BY sumHours DESC;"
       },
       {
         id: 6,
@@ -6418,7 +6418,7 @@ VALUES
         title: "Question 6: Customers with Most Orders",
         description: "Find the top 5 customers with the highest count of orders.",
         initialCode: "-- Question 6: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT c.CustomerID, c.CustomerName, COUNT(o.OrderID) AS OrderCount FROM customers c JOIN orders o ON c.CustomerID = o.CustomerID GROUP BY c.CustomerID, c.CustomerName ORDER BY OrderCount DESC LIMIT 5;"
+        solutionSQL: "SELECT TOP 5 c.CustomerID, c.CustomerName, COUNT(o.OrderID) AS OrderCount FROM customers c JOIN orders o ON c.CustomerID = o.CustomerID GROUP BY c.CustomerID, c.CustomerName ORDER BY OrderCount DESC;"
       },
       {
         id: 7,
@@ -6729,9 +6729,9 @@ INSERT INTO order_items (order_id, item_id, product_id, quantity, list_price, di
       {
         id: 3,
         title: "Question 3: Staff Members and their Store Locations",
-        description: "Select s.staff_id, s.first_name || ' ' || s.last_name AS staff_name, st.store_name, st.city from staffs s join stores st on s.store_id = st.store_id.",
+        description: "Select s.staff_id, s.first_name + ' ' + s.last_name AS staff_name, st.store_name, st.city from staffs s join stores st on s.store_id = st.store_id.",
         initialCode: "-- Question 3: Write your SQL query here\nSELECT ",
-        solutionSQL: "SELECT s.staff_id, s.first_name || ' ' || s.last_name AS staff_name, st.store_name, st.city FROM staffs s JOIN stores st ON s.store_id = st.store_id ORDER BY s.staff_id;"
+        solutionSQL: "SELECT s.staff_id, s.first_name + ' ' + s.last_name AS staff_name, st.store_name, st.city FROM staffs s JOIN stores st ON s.store_id = st.store_id ORDER BY s.staff_id;"
       },
       {
         id: 4,

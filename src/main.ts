@@ -178,6 +178,28 @@ class AppRouter {
         setTimeout(() => toast.remove(), 300);
       }, 2500);
     });
+
+    document.getElementById('btn-copy-db-script')?.addEventListener('click', () => {
+      const script = peSimulator.getCurrentExamScript();
+      if (!script) return;
+
+      navigator.clipboard.writeText(script).then(() => {
+        const existingToast = document.querySelector('.pe-toast-notification');
+        if (existingToast) existingToast.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'pe-toast-notification';
+        toast.innerHTML = '📋 <strong>Đã copy Script T-SQL!</strong> Bạn có thể mở SSMS (SQL Server Management Studio) và Paste (Ctrl+V) để chạy tạo CSDL ngay.';
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.classList.add('fade-out');
+          setTimeout(() => toast.remove(), 300);
+        }, 3000);
+      }).catch(() => {
+        alert('Không thể tự động sao chép. Vui lòng thử lại.');
+      });
+    });
   }
 
   private initKeyboardListeners() {
